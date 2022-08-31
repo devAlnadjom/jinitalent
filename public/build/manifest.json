@@ -25,7 +25,7 @@
       "resources/js/Pages/Welcome.vue"
     ],
     "css": [
-      "assets/app.503d464c.css"
+      "assets/app.621c8e30.css"
     ]
   },
   "resources/js/Pages/API/Index.vue": {
@@ -399,7 +399,7 @@
     ]
   },
   "resources/js/app.css": {
-    "file": "assets/app.503d464c.css",
+    "file": "assets/app.621c8e30.css",
     "src": "resources/js/app.css"
   }
 }

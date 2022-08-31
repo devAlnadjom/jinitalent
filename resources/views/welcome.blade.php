@@ -4,7 +4,9 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title inertia>{{ config('app.name', 'Laravel') }}</title>
+        <title >JiniTalent - Home </title>
+        <meta name="description" content="At JiniTalent we specialize in the recruitment and placement of qualified technical personnel"/>
+
 
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap">
@@ -34,7 +36,7 @@
             <div class="container xl:max-w-6xl mx-auto px-4 ">
                 <div class="lg:flex lg:justify-between">
                     <div class="flex justify-between">
-                    <div class="mx-w-10 text-4xl font-bold capitalize text-gray-900 flex items-center"><span class="text-blue-800">Jini</span> <span class="text-orange-600">Talent</span> </div>
+                    <div class="mx-w-10 text-4xl font-bold capitalize text-gray-900 flex items-center"><span class="text-blue-800">jini</span> <span class="text-orange-600">Talent</span> </div>
                         <!-- mobile nav -->
                     <div class="flex flex-row items-center py-4 lg:py-0">
                         <div class="relative text-gray-900 hover:text-black block lg:hidden">
@@ -59,15 +61,11 @@
                     <li class="relative hover:text-black">
                         <a class="active block py-3 lg:py-7 px-6 border-b-2 border-transparent" href="#hero">Home</a>
                     </li>
-                    <li class="relative hover:text-black">
-                        <a class="block py-3 lg:py-7 px-6 border-b-2 border-transparent" href="#services">What we do</a>
-                    </li>
+
                     <li class="relative hover:text-black">
                         <a class="block py-3 lg:py-7 px-6 border-b-2 border-transparent" href="#portfolio">Our works</a>
                     </li>
-                    <li class="relative hover:text-black">
-                        <a class="block py-3 lg:py-7 px-6 border-b-2 border-transparent" href="#clients">Clients</a>
-                    </li>
+
                     <li class="relative hover:text-black">
                         <a class="block py-3 lg:py-7 px-6 border-b-2 border-transparent" href="#contact">Contact</a>
                     </li>
@@ -116,132 +114,23 @@
                   </div>
                 </div><!-- end Hero -->
 
-                <!-- start services -->
-                <div id="services" class="section relative pt-20 pb-8 md:pt-16 md:pb-0 bg-white">
-                  <div class="container xl:max-w-6xl mx-auto px-4">
-                    <!-- Heading start -->
-                        <header class="text-center mx-auto mb-12 lg:px-20">
-                          <h2 class="text-2xl leading-normal mb-2 font-bold text-black">What We Do</h2>
-                          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 60" style="margin: 0 auto;height: 35px;" xml:space="preserve">
-                        <circle cx="50.1" cy="30.4" r="5" class="stroke-primary" style="fill: transparent;stroke-width: 2;stroke-miterlimit: 10;"></circle>
-                        <line x1="55.1" y1="30.4" x2="100" y2="30.4" class="stroke-primary" style="stroke-width: 2;stroke-miterlimit: 10;"></line>
-                        <line x1="45.1" y1="30.4" x2="0" y2="30.4" class="stroke-primary" style="stroke-width: 2;stroke-miterlimit: 10;"></line>
-                    </svg>
-                          <p class="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2">Save time managing advertising & Content for your business.</p>
-                        </header><!-- End heading -->
-
-                    <!-- row -->
-                    <div class="flex flex-wrap flex-row -mx-4 text-center">
-                      <div class="flex-shrink px-4 max-w-full w-full sm:w-1/2 lg:w-1/3 lg:px-6 wow fadeInUp" data-wow-duration="1s">
-                        <!-- service block -->
-                        <div class="py-8 px-12 mb-12 bg-gray-50 border-b border-gray-100 transform transition duration-300 ease-in-out hover:-translate-y-2">
-                          <div class="inline-block text-gray-900 mb-4">
-                            <!-- icon -->
-                            <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                            </svg>
-                          </div>
-                          <h3 class="text-lg leading-normal mb-2 font-semibold text-black">SEO Services</h3>
-                          <p class="text-gray-500">This is a wider card with supporting text below as a natural content.</p>
-                        </div> <!-- end service block -->
-                      </div>
-
-                      <div class="flex-shrink px-4 max-w-full w-full sm:w-1/2 lg:w-1/3 lg:px-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
-                        <!-- service block -->
-                        <div class="py-8 px-12 mb-12 bg-gray-50 border-b border-gray-100 transform transition duration-300 ease-in-out hover:-translate-y-2">
-                          <div class="inline-block text-gray-900 mb-4">
-                            <!-- icon -->
-                            <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" fill="currentColor" class="bi bi-chat-square-dots" viewBox="0 0 16 16">
-                              <path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
-                              <path d="M5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
-                            </svg>
-
-                          </div>
-                          <h3 class="text-lg leading-normal mb-2 font-semibold text-black">Social Content</h3>
-                          <p class="text-gray-500">This is a wider card with supporting text below as a natural content.</p>
-                        </div><!-- end service block -->
-                      </div>
-
-                      <div class="flex-shrink px-4 max-w-full w-full sm:w-1/2 lg:w-1/3 lg:px-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-                        <!-- service block -->
-                        <div class="py-8 px-12 mb-12 bg-gray-50 border-b border-gray-100 transform transition duration-300 ease-in-out hover:-translate-y-2">
-                          <div class="inline-block text-gray-900 mb-4">
-                            <!-- icon -->
-                            <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" fill="currentColor" class="bi bi-badge-ad" viewBox="0 0 16 16">
-                              <path d="M3.7 11l.47-1.542h2.004L6.644 11h1.261L5.901 5.001H4.513L2.5 11h1.2zm1.503-4.852l.734 2.426H4.416l.734-2.426h.053zm4.759.128c-1.059 0-1.753.765-1.753 2.043v.695c0 1.279.685 2.043 1.74 2.043.677 0 1.222-.33 1.367-.804h.057V11h1.138V4.685h-1.16v2.36h-.053c-.18-.475-.68-.77-1.336-.77zm.387.923c.58 0 1.002.44 1.002 1.138v.602c0 .76-.396 1.2-.984 1.2-.598 0-.972-.449-.972-1.248v-.453c0-.795.37-1.24.954-1.24z"/>
-                              <path d="M14 3a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h12zM2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2z"/>
-                            </svg>
-                          </div>
-                          <h3 class="text-lg leading-normal mb-2 font-semibold text-black">Creative ads</h3>
-                          <p class="text-gray-500">This is a wider card with supporting text below as a natural content.</p>
-                        </div><!-- end service block -->
-                      </div>
-
-                      <div class="flex-shrink px-4 max-w-full w-full sm:w-1/2 lg:w-1/3 lg:px-6 wow fadeInUp" data-wow-duration="1s">
-                        <!-- service block -->
-                        <div class="py-8 px-12 mb-12 bg-gray-50 border-b border-gray-100 transform transition duration-300 ease-in-out hover:-translate-y-2">
-                          <div class="inline-block text-gray-900 mb-4">
-                            <!-- icon -->
-                            <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" fill="currentColor" class="bi bi-card-checklist" viewBox="0 0 16 16">
-                              <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
-                              <path d="M7 5.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0zM7 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z"/>
-                            </svg>
-                          </div>
-                          <h3 class="text-lg leading-normal mb-2 font-semibold text-black">Brand Identity</h3>
-                          <p class="text-gray-500">This is a wider card with supporting text below as a natural content.</p>
-                        </div><!-- end service block -->
-                      </div>
-
-                      <div class="flex-shrink px-4 max-w-full w-full sm:w-1/2 lg:w-1/3 lg:px-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
-                        <!-- service block -->
-                        <div class="py-8 px-12 mb-12 bg-gray-50 border-b border-gray-100 transform transition duration-300 ease-in-out hover:-translate-y-2">
-                          <div class="inline-block text-gray-900 mb-4">
-                            <!-- icon -->
-                            <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" fill="currentColor" class="bi bi-wallet2" viewBox="0 0 16 16">
-                              <path d="M12.136.326A1.5 1.5 0 0 1 14 1.78V3h.5A1.5 1.5 0 0 1 16 4.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 13.5v-9a1.5 1.5 0 0 1 1.432-1.499L12.136.326zM5.562 3H13V1.78a.5.5 0 0 0-.621-.484L5.562 3zM1.5 4a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z"/>
-                            </svg>
-                          </div>
-                          <h3 class="text-lg leading-normal mb-2 font-semibold text-black">Budget & Marketing</h3>
-                          <p class="text-gray-500">This is a wider card with supporting text below as a natural content.</p>
-                        </div><!-- end service block -->
-                      </div>
-
-                      <div class="flex-shrink px-4 max-w-full w-full sm:w-1/2 lg:w-1/3 lg:px-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-                        <!-- service block -->
-                        <div class="py-8 px-12 mb-12 bg-gray-50 border-b border-gray-100 transform transition duration-300 ease-in-out hover:-translate-y-2">
-                          <div class="inline-block text-gray-900 mb-4">
-                            <!-- icon -->
-                            <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" fill="currentColor" class="bi bi-funnel" viewBox="0 0 16 16">
-                              <path d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2zm1 .5v1.308l4.372 4.858A.5.5 0 0 1 7 8.5v5.306l2-.666V8.5a.5.5 0 0 1 .128-.334L13.5 3.308V2h-11z"/>
-                            </svg>
-                          </div>
-                          <h3 class="text-lg leading-normal mb-2 font-semibold text-black">Optimize conversions</h3>
-                          <p class="text-gray-500">This is a wider card with supporting text below as a natural content.</p>
-                        </div><!-- end service block -->
-                      </div>
-                    </div><!-- end row -->
-                  </div>
-                </div><!-- End Service -->
 
                 <!-- Portfolio Content -->
                 <div id="portfolio" class="section relative z-0 bg-slate-200">
                     <div class="flex -flex-wrap flex-row">
-                        <div class=" bg-blue-900 md:w-2/5 md:h-96  lg:w-1/2 md:py-12 md:px-4 lg:px-8 lg:pl-32 md:pl-28">
-                            <h3 class=" text-3xl font-bold text-white">
+                        <div class=" bg-blue-900 md:w-2/5 md:min-h-96 px-10 py-20 lg:py-40 lg:w-1/2 md:py-12 md:px-4 lg:px-8 lg:pl-32 md:pl-24 items-center">
+                            <h3 class=" text-3xl md:text-4xl font-bold text-white">
                                 Over 500 CVs of experienced technical staff on file
                             </h3>
-                            <div class="text-gray-50 mt-4">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, temporibus? Quam blanditiis fuga harum aliquam hic earum ut recusandae repellendus, deserunt magnam, quos dolorem totam eum eaque saepe minus pariatur.
+                            <div class="text-gray-50 text-lg mt-6 md:mt-10">
+                                Including engineers, software developers, analysts, drafters, managers, technical writers, planners, designers, technologists, buyers, technicians and tradespersons, as well as senior management.
                             </div>
                         </div>
 
                         <div class="flex-1 bg-cover  bg-center  w-full" style="background-image: url({{asset('img/img4.jpeg')}})">
                             <!--img src="{{asset('img/img1.webp')}}" class="w-full max-w-full h-auto rounded-lg shadow-md" alt="creative agency"-->
                             <div class="md:py-12 bg-slate-900 bg-opacity-10 h-full md:px-12 hover:bg-opacity-20 transition-all duration-300">
-                                <!--h3 class=" text-3xl font-bold text-white"> Our Fields</h3>
-                                <div class="text-gray-50 mt-4">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, temporibus? Quam blanditiis fuga harum aliquam hic earum ut recusandae repellendus, deserunt magnam, quos dolorem totam eum eaque saepe minus pariatur.
-                                </div-->
+
                             </div>
 
                           </div><!-- end content -->
@@ -250,118 +139,27 @@
 
                 </div><!--  End Content -->
 
-                <!-- start clients ->
-                <div id="clients" class="section relative py-8 bg-white dark:bg-gray-800">
-                  <div class="container xl:max-w-6xl mx-auto px-4">
-                    <div class="lex flex-wrap flex-row -mx-4 justify-center">
-                      <div class="w-full px-4">
-                        <!-- slider client ->
-                        <div id="post-carousel" class="navslider-hover splide post-carousel">
-                      <div class="splide__track">
-                        <div class="splide__list grayscale">
-                          <div class="splide__slide">
-                                      <div class="w-full px-4 text-center pb-3">
-                                        <a href="#" target="_blank">
-                                          <img class="grayscale mx-auto opacity-80 hover:opacity-100 max-w-full h-auto" src="src/img/dummy/img1.png" alt="Image Description">
-                                        </a>
-                                      </div>
-                                    </div>
-                                    <div class="splide__slide">
-                                      <div class="w-full px-4 text-center pb-3">
-                                        <a href="#" target="_blank">
-                                          <img class="grayscale mx-auto opacity-80 hover:opacity-100 max-w-full h-auto" src="src/img/dummy/img2.png" alt="Image Description">
-                                        </a>
-                                      </div>
-                                    </div>
-                                    <div class="splide__slide">
-                                      <div class="w-full px-4 text-center pb-3">
-                                        <a href="#" target="_blank">
-                                          <img class="grayscale mx-auto opacity-80 hover:opacity-100 max-w-full h-auto" src="src/img/dummy/img3.png" alt="Image Description">
-                                        </a>
-                                      </div>
-                                    </div>
-                                    <div class="splide__slide">
-                                      <div class="w-full px-4 text-center pb-3">
-                                        <a href="#" target="_blank">
-                                          <img class="grayscale mx-auto opacity-80 hover:opacity-100 max-w-full h-auto" src="src/img/dummy/img4.png" alt="Image Description">
-                                        </a>
-                                      </div>
-                                    </div>
-                                    <div class="splide__slide">
-                                      <div class="w-full px-4 text-center pb-3">
-                                        <a href="#" target="_blank">
-                                          <img class="grayscale mx-auto opacity-80 hover:opacity-100 max-w-full h-auto" src="src/img/dummy/img5.png" alt="Image Description">
-                                        </a>
-                                      </div>
-                                    </div>
-                                    <div class="splide__slide">
-                                      <div class="w-full px-4 text-center pb-3">
-                                        <a href="#" target="_blank">
-                                          <img class="grayscale mx-auto opacity-80 hover:opacity-100 max-w-full h-auto" src="src/img/dummy/img6.png" alt="Image Description">
-                                        </a>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                        </div><!- end slider client ->
-                      </div>
-                    </div>
-                  </div>
-                </div><!- End brand-->
+
 
 
                 <!-- contact start -->
-                <div id="contact" class="section relative pb-20 bg-white dark:bg-gray-800">
-                  <div class="container xl:max-w-6xl mx-auto px-4">
-                    <div class="flex flex-wrap flex-row -mx-4 justify-center">
-                      <div class="max-w-ful px-4 w-full lg:w-8/12">
-                        <div class="bg-gray-50 border-b border-gray-100 w-full p-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
-                          <!-- section header -->
-                          <header class="text-center mx-auto mb-12 lg:px-20">
-                            <h2 class="text-2xl leading-normal mb-2 font-bold text-gray-800 dark:text-gray-100"><span class="font-light">Contact</span> Us</h2>
-                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 60" style="margin: 0 auto;height: 35px;" xml:space="preserve">
-                                    <circle cx="50.1" cy="30.4" r="5" class="stroke-primary" style="fill: transparent;stroke-width: 2;stroke-miterlimit: 10;"></circle>
-                                    <line x1="55.1" y1="30.4" x2="100" y2="30.4" class="stroke-primary" style="stroke-width: 2;stroke-miterlimit: 10;"></line>
-                                    <line x1="45.1" y1="30.4" x2="0" y2="30.4" class="stroke-primary" style="stroke-width: 2;stroke-miterlimit: 10;"></line>
-                                </svg>
-                            <p class="text-gray-600 leading-relaxed font-light text-xl mx-auto pb-2">Have questions about service, please contact us.</p>
-                          </header><!-- end section header -->
+                <div id="contact" class="section relative py-20 lg:py-36 bg-white dark:bg-gray-800">
+                    <div class="mx-auto w-full md:w-3/5 px-10 ">
+                        <p class="text-center text-xl md:text-2xl lg:text-3xl font-bold">
+                            Recruiting qualified talent requires searching, targeting, approaching, meeting, evaluating, verifying, convincing, nurturing and continuing... and that's our job!
+                        </p>
+                        <p class="text-center text-lg mt-5 ">
+                            Recruiting qualified talent requires searching, targeting, approaching, meeting, evaluating, verifying, convincing, nurturing and continuing... and that's our job!
+                        </p>
 
-                          <!-- contact form -->
-                          <form action="#">
-                            <div class="flex flex-wrap flex-row -mx-4">
-                              <div class="flex-shrink w-full max-w-full md:w-1/2 px-4 mb-6">
-                                <label class="inline-block mb-2" for="name">Your Name</label>
-                                <input type="text" name="name" class="w-full leading-5 relative py-3 px-5 rounded text-gray-800 bg-white border-b border-gray-100 overflow-x-auto focus:outline-none focus:border-gray-400 focus:ring-0 dark:text-gray-400 dark:bg-gray-700 dark:border-gray-700 dark:focus:border-gray-600" id="name">
-                                <div class="validate"></div>
-                              </div>
-                              <div class="flex-shrink w-full max-w-full md:w-1/2 px-4 mb-6">
-                                <label class="inline-block mb-2" for="email">Your Email</label>
-                                <input type="email" class="w-full leading-5 relative py-3 px-5 rounded text-gray-800 bg-white border-b border-gray-100 overflow-x-auto focus:outline-none focus:border-gray-400 focus:ring-0 dark:text-gray-400 dark:bg-gray-700 dark:border-gray-700 dark:focus:border-gray-600" name="email" id="email">
-                                <div class="validate"></div>
-                              </div>
-                            </div>
-                            <div class="mb-6">
-                              <label class="inline-block mb-2" for="subject">Subject</label>
-                              <input type="text" class="w-full leading-5 relative py-3 px-5 rounded text-gray-800 bg-white border-b border-gray-100 overflow-x-auto focus:outline-none focus:border-gray-400 focus:ring-0 dark:text-gray-400 dark:bg-gray-700 dark:border-gray-700 dark:focus:border-gray-600" name="subject" id="subject">
-                              <div class="validate"></div>
-                            </div>
-                            <div class="mb-6">
-                              <label class="inline-block mb-2" for="messages">Message</label>
-                              <textarea class="w-full leading-5 relative py-3 px-5 rounded text-gray-800 bg-white border-b border-gray-100 overflow-x-auto focus:outline-none focus:border-gray-400 focus:ring-0 dark:text-gray-400 dark:bg-gray-700 dark:border-gray-700 dark:focus:border-gray-600" name="message" rows="10" id="messages"></textarea>
-                              <div class="validate"></div>
-                            </div>
-                            <div class="text-center mb-6">
-                              <a class="py-2.5 px-10 inline-block text-center leading-normal text-gray-100 bg-black border border-black hover:text-white hover:ring-0 focus:outline-none focus:ring-0" href="#project">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.5rem" height="1.5rem" class="inline-block mr-1" fill="currentColor" viewBox="0 0 512 512"><rect x="48" y="96" width="416" height="320" rx="40" ry="40" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><polyline points="112 160 256 272 400 160" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/></svg>
-                                     Send message
-                                  </a>
-                            </div>
-                          </form><!-- end contact form -->
-                        </div>
-                      </div>
+                        <p class="text-center text-lg mt-10  ">
+                            <a class="mx-auto py-2.5 px-10 inline-block text-center leading-normal text-gray-100 bg-orange-600  border-b border-orange-800 hover:bg-orange-500 hover:text-white hover:ring-0 focus:outline-none focus:ring-0" href="mailto:info@jinitalent.com">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1.5rem" height="1.5rem" class="inline-block mr-1" fill="currentColor" viewBox="0 0 512 512"><rect x="48" y="96" width="416" height="320" rx="40" ry="40" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><polyline points="112 160 256 272 400 160" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/></svg>
+                                Contact Us
+                            </a>
+                        </p>
                     </div>
-                  </div>
+
                 </div><!-- End contact -->
           </main><!-- end main -->
 
@@ -412,7 +210,7 @@
                       <div class="flex-shrink max-w-full w-1/2 md:w-1/3 mb-6 lg:mb-0">
                         <h4 class="text-base leading-normal mb-3 uppercase text-gray-800">Comming Soon</h4>
                         <ul>
-                          <li class="py-1 hover:text-gray-900"><a href="mailto:infos@jinitalent.com">Contact</a></li>
+                          <li class="py-1 hover:text-gray-900"><a href="mailto:info@jinitalent.com">Contact</a></li>
                         </ul>
                       </div>
 
