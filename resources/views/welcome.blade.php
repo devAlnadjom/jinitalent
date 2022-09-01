@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="scroll-smooth">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,9 +14,10 @@
         <!-- Scripts -->
 
         @vite('resources/js/app.js')
+        <script defer src="https://unpkg.com/alpinejs@3.10.3/dist/cdn.min.js"></script>
     </head>
-    <body class="font-sans antialiased">
-        <div class="preloader loaded-success  .fixed inset-0 z-50 bg-gray-50 lg:hidden">
+    <body x-data="jinitalent" x-init="hideloader" class="font-sans antialiased">
+        <div class="preloader loaded-success  fixed inset-0 z-50 bg-gray-50 " x-show="showloader">
             <div class="absolute left-1/2 top-1/2 transform -translate-y-1/2">
               <div class="relative mx-auto my-12">
                 <div class="inline-block">
@@ -36,23 +37,24 @@
             <div class="container xl:max-w-6xl mx-auto px-4 ">
                 <div class="lg:flex lg:justify-between">
                     <div class="flex justify-between">
-                    <div class="mx-w-10 text-4xl font-bold capitalize text-gray-900 flex items-center"><span class="text-blue-800">jini</span> <span class="text-orange-600">Talent</span> </div>
+                        <div class="mx-w-10 text-4xl font-bold capitalize text-gray-900 flex items-center"><span class="text-blue-800">jini</span> <span class="text-orange-600">Talent</span> </div>
                         <!-- mobile nav -->
-                    <div class="flex flex-row items-center py-4 lg:py-0">
-                        <div class="relative text-gray-900 hover:text-black block lg:hidden">
-                        <button type="button" class="menu-mobile block py-3 px-6 border-b-2 border-transparent">
-                            <span class="sr-only">Mobile menu</span>
-                            <svg class="open h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                            </svg>
+                        <div class="flex flex-row items-center py-4 lg:py-0">
+                            <div class="relative text-gray-900 hover:text-black block lg:hidden">
+                            <button @click="toggle" type="button" class="menu-mobile block py-3 px-6 border-b-2 border-transparent">
+                                <span class="sr-only">Mobile menu</span>
+                                <svg x-show="!open" class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                                </svg>
 
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="close bi bi-x-lg h-8 w-8" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/>
-                            <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>
-                        </svg>
-                        </button>
+                                <svg x-show="open" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="close bi bi-x-lg h-8 w-8" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/>
+                                    <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>
+                                </svg>
+                            </button>
+                            </div>
                         </div>
-                    </div>
+
                     </div>
 
                 <div class="flex flex-row">
@@ -73,12 +75,35 @@
                 </div>
                 </div>
             </div>
+            <div class="flex flex-col w-full shadow-md md:hidden transition-all" x-show="open"
+                    x-transition:enter="transition duration-500"
+                    x-transition:enter-start="transform translate-x-full"
+                    x-transition:enter-end="transform translate-x-0"
+                    x-transition:leave="transition duration-500"
+                    x-transition:leave-start="transform"
+                    x-transition:leave-end="transform translate-x-full"
+                >
+                <!-- nav menu -->
+                <ul class="navbar bg-white lg:bg-transparent w-full text-center text-gray-900 text-lg items-center font-bold">
+                <li class="relative hover:text-black hover:bg-orange-100" @click="toggle">
+                    <a class="active block py-3 lg:py-7 px-6 border-b-2 border-transparent" href="#hero">Home</a>
+                </li>
+
+                <li class="relative hover:text-black hover:bg-orange-100" @click="toggle">
+                    <a class="block py-3 lg:py-7 px-6 border-b-2 border-transparent" href="#portfolio">Our works</a>
+                </li>
+
+                <li class="relative hover:text-black hover:bg-orange-100" @click="toggle">
+                    <a class="block py-3 lg:py-7 px-6 border-b-2 border-transparent" href="#contact">Contact</a>
+                </li>
+                </ul>
+            </div>
             </nav>
         </header><!-- end header -->
 
         <main id="content">
             <!-- hero start -->
-                <div id="hero" class="section relative z-0 py-16 md:pt-32 md:pb-20 bg-gray-50">
+                <div id="hero" class="section relative z-0 py-28 md:pt-32 md:pb-20 bg-gray-50">
                   <div class="container xl:max-w-6xl mx-auto px-4">
                     <div class="flex flex-wrap flex-row -mx-4 justify-center">
                       <!-- content -->
@@ -240,6 +265,22 @@
             </svg>
           </a>
 
+          <script type="text/javascript">
+           document.addEventListener('alpine:init', () => {
+                Alpine.data('jinitalent', () => ({
+                    open: false,
+                    showloader: true,
 
+                    toggle() {
+                        this.open = ! this.open
+                    },
+                    hideloader(){
+                        setTimeout(() =>{this.showloader = false;}, 1000);
+                    },
+                }));
+
+                //alert("bonjour");
+            })
+          </script>
     </body>
 </html>
