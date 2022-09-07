@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        <meta name="csrf-token" content="{{ csrf_token() }}" />
         <title >JiniTalent - Home </title>
         <meta name="description" content="At JiniTalent we specialize in the recruitment and placement of qualified technical personnel"/>
 
@@ -67,6 +67,9 @@
                     <li class="relative hover:text-black">
                         <a class="block py-3 lg:py-7 px-6 border-b-2 border-transparent" href="#portfolio">Our works</a>
                     </li>
+                    <li class="relative hover:text-black">
+                        <a class="block py-3 lg:py-7 px-6 border-b-2 border-transparent" href="#whyus">Why Us?</a>
+                    </li>
 
                     <li class="relative hover:text-black">
                         <a class="block py-3 lg:py-7 px-6 border-b-2 border-transparent" href="#contact">Contact</a>
@@ -91,6 +94,9 @@
 
                 <li class="relative hover:text-black hover:bg-orange-100" @click="toggle">
                     <a class="block py-3 lg:py-7 px-6 border-b-2 border-transparent" href="#portfolio">Our works</a>
+                </li>
+                <li class="relative hover:text-black hover:bg-orange-100" @click="toggle">
+                    <a class="block py-3 lg:py-7 px-6 border-b-2 border-transparent" href="#whyus">Why Us?</a>
                 </li>
 
                 <li class="relative hover:text-black hover:bg-orange-100" @click="toggle">
@@ -164,7 +170,50 @@
 
                 </div><!--  End Content -->
 
+                <div id="whyus" class="section relative z-0 bg-slate-600">
+                    <div class="flex -flex-wrap flex-row">
 
+
+                        <div class="flex-1 bg-cover  bg-center  w-full" style="background-image: url({{asset('img/img2.webp')}})">
+                            <!--img src="{{asset('img/img1.webp')}}" class="w-full max-w-full h-auto rounded-lg shadow-md" alt="creative agency"-->
+                            <div class="md:py-12 bg-slate-900 bg-opacity-10 h-full md:px-12 hover:bg-opacity-20 transition-all duration-300">
+
+                            </div>
+
+                        </div><!-- end content -->
+
+                        <div class=" bg-orange-600 md:w-2/5 md:min-h-96 px-10 py-20 lg:py-40 lg:w-1/2 md:py-12 md:px-4 lg:px-8 lg:pr-26 md:pr-12 items-center">
+                            <h3 class=" text-3xl md:text-4xl font-bold text-white">
+                                No matter rarity or the complexty of the desired profile, we will find your candidate thanks to:
+                            </h3>
+                            <div class="text-gray-50 text-lg mt-6 md:mt-10  lg:ml-10 grid grid-cols-1 md:grid-cols-2 gap-6">
+                              <div>
+                                <ul class="list-disc">
+                                  <li class=" p-3 hover:border-l-white hover:border-l-4 rounded  hover:bg-black hover:bg-opacity-5 transition-all duration-500">A network of candidates and rich data bases</li>
+
+                                  <li class=" p-3 mt-2 hover:border-l-white hover:border-l-4 rounded  hover:bg-black hover:bg-opacity-5 transition-all duration-500">
+                                    Significant web and social media connections.
+                                  </li>
+                                </ul>
+                              </div>
+                              <div>
+                                <ul class="list-disc">
+                                  <li class=" p-3 hover:border-l-white hover:border-l-4 rounded  hover:bg-black hover:bg-opacity-5 transition-all duration-500">
+                                    Cutting-edge research tools and headhunting techniques
+                                  </li>
+
+                                  <li class=" p-3 mt-2 hover:border-l-white hover:border-l-4 rounded  hover:bg-black hover:bg-opacity-5 transition-all duration-500">
+                                    Our knowledgeof the job market and its changes
+                                  </li>
+                                </ul>
+                              </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div><!--  End Content -->
 
 
                 <!-- contact start -->
