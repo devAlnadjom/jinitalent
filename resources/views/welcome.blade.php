@@ -189,20 +189,20 @@
                             <div class="text-gray-50 text-lg mt-6 md:mt-10  lg:ml-10 grid grid-cols-1 md:grid-cols-2 gap-6">
                               <div>
                                 <ul class="list-disc">
-                                  <li class=" p-3 hover:border-l-white hover:border-l-4 rounded  hover:bg-black hover:bg-opacity-5 transition-all duration-500">A network of candidates and rich data bases</li>
+                                  <li class=" p-3 hover:border-l-white hover:border-l-4 rounded  hover:bg-black hover:bg-opacity-5 transition-all duration-300">A network of candidates and rich data bases</li>
 
-                                  <li class=" p-3 mt-2 hover:border-l-white hover:border-l-4 rounded  hover:bg-black hover:bg-opacity-5 transition-all duration-500">
+                                  <li class=" p-3 mt-2 hover:border-l-white hover:border-l-4 rounded  hover:bg-black hover:bg-opacity-5 transition-all duration-300">
                                     Significant web and social media connections.
                                   </li>
                                 </ul>
                               </div>
                               <div>
                                 <ul class="list-disc">
-                                  <li class=" p-3 hover:border-l-white hover:border-l-4 rounded  hover:bg-black hover:bg-opacity-5 transition-all duration-500">
+                                  <li class=" p-3 hover:border-l-white hover:border-l-4 rounded  hover:bg-black hover:bg-opacity-5 transition-all duration-300">
                                     Cutting-edge research tools and headhunting techniques
                                   </li>
 
-                                  <li class=" p-3 mt-2 hover:border-l-white hover:border-l-4 rounded  hover:bg-black hover:bg-opacity-5 transition-all duration-500">
+                                  <li class=" p-3 mt-2 hover:border-l-white hover:border-l-4 rounded  hover:bg-black hover:bg-opacity-5 transition-all duration-300">
                                     Our knowledgeof the job market and its changes
                                   </li>
                                 </ul>
@@ -235,6 +235,75 @@
                     </div>
 
                 </div><!-- End contact -->
+
+                <div id="whyus" class="section relative z-0 bg-slate-600">
+                  <div class="flex -flex-wrap flex-col md:flex-row ">
+
+
+                      <div class="flex-1 bg-cover  bg-center  w-full" style="background-image: url({{asset('img/img2.webp')}})">
+                          <!--img src="{{asset('img/img1.webp')}}" class="w-full max-w-full h-auto rounded-lg shadow-md" alt="creative agency"-->
+                          <div class="md:py-20 bg-slate-900 bg-opacity-40 h-full md:px-2 lg:px-10 hover:bg-opacity-50 transition-all duration-300 items-center">
+                            <h3 class=" text-xl py-10 md:py-20 md:text-3xl lg:text-4xl px-6 font-bold text-white">
+                              No matter rarity or the complexty of the desired profile, we will find your candidate.
+                            </h3>
+                            <div class=" hidden lg:block text-white text-2xl">
+                                Have questions about service, please contact us.
+                            </div>
+                          </div>
+
+                      </div><!-- end content -->
+
+                      <div class=" bg-gray-200 md:w-3/5 .md:min-h-96 px-6 py-10  lg:w-1/2  md:px-4 lg:px-8 lg:pr-26 md:pr-12 items-center">
+
+                          <div class="bg-gray-200 border-b border-gray-100 w-full p-6 wow fadeInUp" >
+                            <!-- section header -->
+                            <header class="text-center mx-auto mb-10 lg:px-20">
+                              <p class="text-gray-600 leading-relaxed font-light text-xl mx-auto pb-2">Have questions about service, please contact us.</p>
+                            </header><!-- end section header -->
+
+                            <!-- contact form -->
+                            <form action="#">
+                                @csrf
+
+                                <input type="hidden"  name="surname" value=""/>
+                                <input type="hidden"  name="hash-key" value="{{sha1(time())."_|_".time()}}"/>
+                              <div class="flex flex-wrap flex-row -mx-4">
+                                <div class="flex-shrink w-full max-w-full md:w-1/2 px-4 mb-6">
+                                  <label class="inline-block mb-2" for="name">Your Name</label>
+                                  <input type="text" name="name" class="w-full leading-5 relative py-3 px-5 rounded text-gray-800 bg-white border-b border-gray-100 overflow-x-auto focus:outline-none focus:border-gray-400 focus:ring-0 dark:text-gray-400 dark:bg-gray-700 dark:border-gray-700 dark:focus:border-gray-600" id="name">
+                                  <div class="validate"></div>
+                                </div>
+                                <div class="flex-shrink w-full max-w-full md:w-1/2 px-4 mb-6">
+                                  <label class="inline-block mb-2" for="email">Your Email</label>
+                                  <input type="email" class="w-full leading-5 relative py-3 px-5 rounded text-gray-800 bg-white border-b border-gray-100 overflow-x-auto focus:outline-none focus:border-gray-400 focus:ring-0 dark:text-gray-400 dark:bg-gray-700 dark:border-gray-700 dark:focus:border-gray-600" name="email" id="email">
+                                  <div class="validate"></div>
+                                </div>
+                              </div>
+                              <div class="mb-6">
+                                <label class="inline-block mb-2" for="subject">Subject</label>
+                                <input type="text" class="w-full leading-5 relative py-3 px-5 rounded text-gray-800 bg-white border-b border-gray-100 overflow-x-auto focus:outline-none focus:border-gray-400 focus:ring-0 dark:text-gray-400 dark:bg-gray-700 dark:border-gray-700 dark:focus:border-gray-600" name="subject" id="subject">
+                                <div class="validate"></div>
+                              </div>
+                              <div class="mb-6">
+                                <label class="inline-block mb-2" for="messages">Message</label>
+                                <textarea class="w-full leading-5 relative py-3 px-5 rounded text-gray-800 bg-white border-b border-gray-100 overflow-x-auto focus:outline-none focus:border-gray-400 focus:ring-0 dark:text-gray-400 dark:bg-gray-700 dark:border-gray-700 dark:focus:border-gray-600" name="message" rows="10" id="messages"></textarea>
+                                <div class="validate"></div>
+                              </div>
+                              <div class="text-center">
+                                <a class="py-2.5 px-10 inline-block text-center leading-normal text-gray-100 bg-black border border-black hover:text-white hover:ring-0 focus:outline-none focus:ring-0" href="#project">
+                                      <svg xmlns="http://www.w3.org/2000/svg" width="1.5rem" height="1.5rem" class="inline-block mr-1" fill="currentColor" viewBox="0 0 512 512"><rect x="48" y="96" width="416" height="320" rx="40" ry="40" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><polyline points="112 160 256 272 400 160" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/></svg>
+                                       Send message
+                                    </a>
+                              </div>
+                            </form><!-- end contact form -->
+                          </div>
+                      </div>
+
+                  </div>
+
+              </div><!--  End Content -->
+
+
           </main><!-- end main -->
 
           <footer class="bg-gray-50 text-gray-700">
