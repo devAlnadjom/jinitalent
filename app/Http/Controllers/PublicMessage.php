@@ -19,7 +19,7 @@ class PublicMessage extends Controller
     public function __invoke(RequestsPublicmessage $request)
     {
         $data= $request->validated();
-        Mail::to("dev.alnadjom@gmail.com")->send(new MessageReceived($data));
+        Mail::to(["dev.alnadjom@gmail.com","monsieurdanko@gmail.com"])->send(new MessageReceived($data));
 
             return Redirect::back()->with('message', "Your Message has been sent");
     }
