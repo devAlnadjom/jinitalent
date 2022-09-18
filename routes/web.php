@@ -1,8 +1,10 @@
 <?php
 
-use Illuminate\Foundation\Application;
-use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use Illuminate\Support\Facades\Route;
+use Illuminate\Foundation\Application;
+use App\Http\Controllers\PublicMessage;
+use Spatie\Honeypot\ProtectAgainstSpam;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +18,7 @@ use Inertia\Inertia;
 */
 
 Route::view('/', 'welcome');
+Route::post('/public/sendmessage', PublicMessage::class)->middleware(ProtectAgainstSpam::class);
 
 Route::get('/welcome', function () {
     return Inertia::render('Welcome', [
