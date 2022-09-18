@@ -18,7 +18,7 @@ use Spatie\Honeypot\ProtectAgainstSpam;
 */
 
 Route::view('/', 'welcome');
-Route::post('/public/sendmessage', PublicMessage::class)->middleware(ProtectAgainstSpam::class);
+Route::post('/public/sendmessage', PublicMessage::class)->middleware(ProtectAgainstSpam::class)->name('public.message');
 
 Route::get('/welcome', function () {
     return Inertia::render('Welcome', [

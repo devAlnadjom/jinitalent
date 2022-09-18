@@ -276,7 +276,7 @@
                                     {{ Session::get('message') }}
                                 </div>
                             @endif
-                            <form action="/public/sendmessage" method="post" >
+                            <form action="{{ route('public.message')}}" method="post" >
                                 @csrf
                                 @honeypot
                               <div class="flex flex-wrap flex-row -mx-4">
