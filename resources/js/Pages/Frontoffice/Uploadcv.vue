@@ -12,6 +12,7 @@ const props = defineProps({
     status: String,
     canLogin: Boolean,
     canRegister: Boolean,
+    honeypot: Object,
 });
 
 
@@ -24,7 +25,9 @@ const form = useForm({
     country: '',
     city: '',
     address: '',
-    resume: null
+    resume: null,
+    [props.honeypot.nameFieldName]: '',
+    [props.honeypot.validFromFieldName]: props.honeypot.encryptedValidFrom,
     /*password: '',
     password_confirmation: '',*/
 });
@@ -74,6 +77,10 @@ const verificationLinkSent = computed(() => props.status === 'verification-link-
         </template>
 
         <form @submit.prevent="submit">
+            <div v-if="honeypot.enabled" :name="`${honeypot.nameFieldName}_wrap`" style="display:none;">
+                <input type="text" v-model="form[honeypot.nameFieldName]" :name="honeypot.nameFieldName" :id="honeypot.nameFieldName" />
+                <input type="text" v-model="form[honeypot.validFromFieldName]" :name="honeypot.validFromFieldName" />
+            </div>
             <div>
                 <JetLabel for="first_name" value="First Name" />
                 <JetInput id="first_name" v-model="form.first_name" type="text" class="mt-1 block w-full" required
@@ -127,9 +134,8 @@ const verificationLinkSent = computed(() => props.status === 'verification-link-
 
             <div class="mt-4">
                 <BreezeLabel for="description" value="Upoload Driver license" />
-                <input type="file" @input="form.resume = $event.target.files[0]" ref="photo" class="
-                              w-full px-4 py-2 mt-2 border  rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600
-                          " />
+                <input type="file" @input="form.resume = $event.target.files[0]" ref="photo" accept=".pdf"
+                class=" w-full px-4 py-2 mt-2 border  rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600" />
 
 
             </div>

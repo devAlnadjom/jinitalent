@@ -1,11 +1,14 @@
 <?php
 
-use App\Http\Controllers\CandidateRegisterController;
 use Inertia\Inertia;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Application;
 use App\Http\Controllers\PublicMessage;
 use Spatie\Honeypot\ProtectAgainstSpam;
+use App\Http\Controllers\CandidateController;
+use App\Http\Controllers\CandidateRegisterController;
+use App\Http\Controllers\JobsController;
+use App\Http\Controllers\OrganizationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,7 +23,7 @@ use Spatie\Honeypot\ProtectAgainstSpam;
 
 Route::view('/', 'welcome');
 Route::post('/globals/sendmessage', PublicMessage::class)->middleware(ProtectAgainstSpam::class)->name('public.message');
-Route::post('/globals/uploadcv', [CandidateRegisterController::class, 'UploadCv'])->name('public.storecv');
+Route::post('/globals/uploadcv', [CandidateRegisterController::class, 'UploadCv'])->middleware(ProtectAgainstSpam::class)->name('public.storecv');
 Route::get('/globals/uploadcv', [CandidateRegisterController::class, 'index'])->name('public.uploadcv');
 
 Route::get('/welcome', function () {
@@ -40,4 +43,8 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return Inertia::render('Dashboard');
     })->name('dashboard');
+
+    Route::resource('candidates', CandidateController::class);
+    Route::resource('organizations', OrganizationController::class);
+    Route::resource('jobs', JobsController::class);
 });

@@ -2,19 +2,24 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\jobs;
 use Inertia\Inertia;
-use App\Models\Candidate;
+use App\Models\organization;
 use Illuminate\Http\Request;
 
-class CandidateController extends Controller
+class OrganizationController extends Controller
 {
-
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function index(Request $request)
     {
-        return Inertia::render('Candidates/Index', [
+        return Inertia::render('Organizations/Index', [
             //'orders' => Order::paginate(),
             'filters' => $request->all('search', 'trashed'),
-            'candidates' => Candidate::Select('*')
+            'organizations' => organization::Select('*')
                 ->filter($request->only('search'/*, 'trashed'*/))
                 ->paginate(10)
                 ->withQueryString()
@@ -45,10 +50,10 @@ class CandidateController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Candidate  $candidate
+     * @param  \App\Models\organization  $organization
      * @return \Illuminate\Http\Response
      */
-    public function show(Candidate $candidate)
+    public function show(organization $organization)
     {
         //
     }
@@ -56,10 +61,10 @@ class CandidateController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Candidate  $candidate
+     * @param  \App\Models\organization  $organization
      * @return \Illuminate\Http\Response
      */
-    public function edit(Candidate $candidate)
+    public function edit(organization $organization)
     {
         //
     }
@@ -68,10 +73,10 @@ class CandidateController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Candidate  $candidate
+     * @param  \App\Models\organization  $organization
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Candidate $candidate)
+    public function update(Request $request, organization $organization)
     {
         //
     }
@@ -79,10 +84,10 @@ class CandidateController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Candidate  $candidate
+     * @param  \App\Models\organization  $organization
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Candidate $candidate)
+    public function destroy(organization $organization)
     {
         //
     }

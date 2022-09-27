@@ -9,12 +9,13 @@ use Inertia\Inertia;
 
 class CandidateRegisterController extends Controller
 {
-    public function index(){
+    public function index(\Spatie\Honeypot\Honeypot $honeypot){
 
         return Inertia::render('Frontoffice/Uploadcv', [
             'status'=>'success',
             'canLogin' => true,
             'canRegister' => true,
+            'honeypot' => $honeypot,
         ]);
 
     }

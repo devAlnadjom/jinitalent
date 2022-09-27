@@ -2,23 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use Inertia\Inertia;
-use App\Models\Candidate;
+use App\Models\job_category;
 use Illuminate\Http\Request;
 
-class CandidateController extends Controller
+class JobCategoryController extends Controller
 {
-
-    public function index(Request $request)
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
     {
-        return Inertia::render('Candidates/Index', [
-            //'orders' => Order::paginate(),
-            'filters' => $request->all('search', 'trashed'),
-            'candidates' => Candidate::Select('*')
-                ->filter($request->only('search'/*, 'trashed'*/))
-                ->paginate(10)
-                ->withQueryString()
-        ]);
+        //
     }
 
     /**
@@ -45,10 +41,10 @@ class CandidateController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Candidate  $candidate
+     * @param  \App\Models\job_category  $job_category
      * @return \Illuminate\Http\Response
      */
-    public function show(Candidate $candidate)
+    public function show(job_category $job_category)
     {
         //
     }
@@ -56,10 +52,10 @@ class CandidateController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Candidate  $candidate
+     * @param  \App\Models\job_category  $job_category
      * @return \Illuminate\Http\Response
      */
-    public function edit(Candidate $candidate)
+    public function edit(job_category $job_category)
     {
         //
     }
@@ -68,10 +64,10 @@ class CandidateController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Candidate  $candidate
+     * @param  \App\Models\job_category  $job_category
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Candidate $candidate)
+    public function update(Request $request, job_category $job_category)
     {
         //
     }
@@ -79,10 +75,10 @@ class CandidateController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Candidate  $candidate
+     * @param  \App\Models\job_category  $job_category
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Candidate $candidate)
+    public function destroy(job_category $job_category)
     {
         //
     }
