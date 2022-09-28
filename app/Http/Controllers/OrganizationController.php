@@ -2,18 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreOrganizationRequest;
 use App\Models\jobs;
 use Inertia\Inertia;
 use App\Models\organization;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 
 class OrganizationController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index(Request $request)
     {
         return Inertia::render('Organizations/Index', [
@@ -33,18 +31,17 @@ class OrganizationController extends Controller
      */
     public function create()
     {
-        //
+        return Inertia::render('Organizations/Create', [
+
+        ]);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+
+    public function store(StoreOrganizationRequest $request)
     {
-        //
+        $validated = $request->validated();
+        organization::create($validated);
+        return Redirect::route("organizations.index")->with('success',"Organization created successfully.");
     }
 
     /**

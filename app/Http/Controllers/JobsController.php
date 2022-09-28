@@ -3,18 +3,25 @@
 namespace App\Http\Controllers;
 
 use App\Models\jobs;
+use Inertia\Inertia;
 use Illuminate\Http\Request;
 
 class JobsController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+
+    public function index(Request $request)
     {
-        //
+
+
+        return Inertia::render('Jobs/Index', [
+            //'orders' => Order::paginate(),
+            'filters' => $request->all('search', 'trashed'),
+            'jobs' => Jobs::Select(['id', 'name as job_tite', 'no_of_vacancy','status','style','date_start_job','organization_id'])
+                ->with(['organization:id,name'])
+                ->filter($request->only('search'/*, 'trashed'*/))
+                ->paginate(10)
+                ->withQueryString()
+        ]);
     }
 
     /**
@@ -38,15 +45,14 @@ class JobsController extends Controller
         //
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\jobs  $jobs
-     * @return \Illuminate\Http\Response
-     */
-    public function show(jobs $jobs)
+
+    public function show(Jobs $job)
     {
-        //
+        $organization = $job->organization()->first();
+        return Inertia::render('Jobs/Show', [
+            'jobs' => $job,
+            'organization' => $organization,
+        ]);
     }
 
     /**
