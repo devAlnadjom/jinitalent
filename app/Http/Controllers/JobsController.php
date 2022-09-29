@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\jobs;
 use Inertia\Inertia;
 use Illuminate\Http\Request;
+use App\Http\Requests\StoreJobRequest;
+use Illuminate\Support\Facades\Redirect;
 
 class JobsController extends Controller
 {
@@ -31,18 +33,19 @@ class JobsController extends Controller
      */
     public function create()
     {
-        //
+        return Inertia::render('Jobs/Create', [
+
+        ]);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+
+    public function store(StoreJobRequest $request)
     {
-        //
+        $validated = $request->validated();
+
+        Jobs::create($validated);
+        return Redirect::route("jobs.index")->with('success',"Jobs created successfully.");
+
     }
 
 

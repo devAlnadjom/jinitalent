@@ -405,11 +405,9 @@
                         this.open = ! this.open
                     },
                     hideloader(){
-                        setTimeout(() =>{this.showloader = false;}, 1000);
+                        setTimeout(() =>{this.showloader = false;}, 100);
                     },
                 }));
-
-                //alert("bonjour");
             })
           </script>
     </body>

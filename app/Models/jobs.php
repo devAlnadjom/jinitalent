@@ -11,11 +11,12 @@ class jobs extends Model
     use HasFactory;
 
     protected $table = 'positions';
-    protected $guarded=[];
+
+    protected $guarded =[];
 
     public function organization():BelongsTo
     {
-        return $this->belongsTo(Organization::class);
+        return $this->belongsTo(organization::class);
     }
 
     public function scopeFilter($query, array $filters)

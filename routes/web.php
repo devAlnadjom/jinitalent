@@ -25,6 +25,7 @@ Route::view('/', 'welcome');
 Route::post('/globals/sendmessage', PublicMessage::class)->middleware(ProtectAgainstSpam::class)->name('public.message');
 Route::post('/globals/uploadcv', [CandidateRegisterController::class, 'UploadCv'])->middleware(ProtectAgainstSpam::class)->name('public.storecv');
 Route::get('/globals/uploadcv', [CandidateRegisterController::class, 'index'])->name('public.uploadcv');
+Route::get('/globals/confirm/{id}/success/{shakey}', [CandidateRegisterController::class, 'confirmCvSaved'])->name('public.confirmcv');
 
 Route::get('/welcome', function () {
     return Inertia::render('Welcome', [

@@ -1,0 +1,2 @@
+import{d as t,o as n,e as s}from"./app.010375be.js";const u=["value"],d={__name:"Textarea",props:{modelValue:String},emits:["update:modelValue"],setup(a){return t(null),(o,e)=>(n(),s("textarea",{class:"text-gray-900 border-gray-300 focus:border-orange-200 focus:ring focus:ring-orange-100 focus:ring-opacity-50 rounded-md shadow-sm",value:a.modelValue,onInput:e[0]||(e[0]=r=>o.$emit("update:modelValue",r.target.value))},`
+    `,40,u))}};export{d as _};

@@ -7,6 +7,7 @@ import JetButton from '@/Components/Button.vue';
 import JetInput from '@/Components/Input.vue';
 import JetInputError from '@/Components/InputError.vue';
 import JetLabel from '@/Components/Label.vue';
+import JetText from '@/Components/Textarea.vue';
 
 const props = defineProps({
     status: String,
@@ -71,8 +72,13 @@ const verificationLinkSent = computed(() => props.status === 'verification-link-
 
     <JetAuthenticationCard>
         <template #logo>
-            <div class="mx-w-10 text-4xl font-bold capitalize text-gray-900 flex items-center"><span
-                    class="text-blue-800">jini</span> <span class="text-orange-600">Talent</span> </div>
+            <div class="mx-w-10 text-4xl font-bold capitalize text-gray-900 flex items-center transition-all duration-500 hover:scale-[1.05]">
+                <a href="/" title="home">
+                    <span
+                    class="text-blue-800">jini</span> <span class="text-orange-600">Talent</span>
+                </a>
+            </div>
+
 
         </template>
 
@@ -114,27 +120,27 @@ const verificationLinkSent = computed(() => props.status === 'verification-link-
                 </div>
                 <div>
                     <JetLabel for="city" value="City" />
-                    <JetInput id="city" v-model="form.city" type="text" class="mt-1 block w-full" required  />
+                    <JetInput id="city" v-model="form.city" type="text" class="mt-1 block w-full"  />
                     <JetInputError class="mt-2" :message="form.errors.city" />
                 </div>
             </div>
 
             <div>
                 <JetLabel for="address" value="Full Address" />
-                <JetInput id="address" v-model="form.address" type="tel" class="mt-1 block w-full" required  />
+                <JetInput id="address" v-model="form.address" type="tel" class="mt-1 block w-full"   />
                 <JetInputError class="mt-2" :message="form.errors.address" />
             </div>
 
             <div>
                 <JetLabel for="sumary" value="Summary" />
-                <JetInput id="sumary" v-model="form.summary" type="tel" class="mt-1 block w-full" required />
+                <JetText id="sumary" v-model="form.summary"  class="mt-1 block w-full text-sm" rows="5" placehoder="Any Sumamry?..." />
                 <JetInputError class="mt-2" :message="form.errors.summary" />
             </div>
 
 
             <div class="mt-4">
-                <BreezeLabel for="description" value="Upoload Driver license" />
-                <input type="file" @input="form.resume = $event.target.files[0]" ref="photo" accept=".pdf"
+                <BreezeLabel for="afile" value="Upoload Driver license" />
+                <input id="afile" type="file" @input="form.resume = $event.target.files[0]" ref="photo" accept=".pdf"
                 class=" w-full px-4 py-2 mt-2 border  rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600" />
 
 

@@ -13,7 +13,7 @@ class StoreJobRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,27 @@ class StoreJobRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'code' =>'required|string|max:10',
+            'name' =>'required|string|max:40',
+            'location' =>'required|string|max:100',
+            'level' =>'nullable|numeric',
+            'salary' =>'numeric|nullable',
+            'description' =>'required|string|max:3000',
+            'no_of_vacancy' =>'required|numeric',
+            'status' =>'nullable|alpha_num',
+            'public' =>'nullable|boolean',
+            'style' =>'required|string|max:20',
+            'organization_id' =>'nullable|numeric',
+            'date_start_job' =>'nullable|date',
+            'created_by' =>'nullable|numeric',
         ];
+    }
+
+
+    protected function prepareForValidation()
+    {
+        $this->merge([
+            'created_by' => auth()->user()->id,
+        ]);
     }
 }
