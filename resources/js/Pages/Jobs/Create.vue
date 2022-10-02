@@ -12,9 +12,14 @@ import JetActionMessage from '@/Components/ActionMessage.vue';
 import JetSecondaryButton from '@/Components/SecondaryButton.vue';
 import JetText from '@/Components/Textarea.vue';
 import JetCheckbox from '@/Components/Checkbox.vue';
+import { QuillEditor } from '@vueup/vue-quill'
+import '@vueup/vue-quill/dist/vue-quill.snow.css';
 
 const props = defineProps({
 });
+
+const textContenu = ref(null);
+const moneditor = ref(null);
 
 const form = useForm({
     code: 'JOB-',
@@ -32,10 +37,13 @@ const form = useForm({
 });
 
 const submitForm = () => {
-
+    form.description = moneditor.value.getHTML();
+    //textContenu.value = moneditor.value.getHTML()+"<br/><p><strong>Merci Choupi</strong></p>";
+    //setTimeout(()=>{moneditor.value.setHTML(textContenu.value)}, 900);
+    //return;
     form.post(route('jobs.store'), {
         //preserveScroll: true,
-        onSuccess: () => {alert("ok") },
+        onSuccess: () => {},
         onError: (e) => {console.log(e) },
     });
 };
@@ -78,15 +86,20 @@ const submitForm = () => {
                                             <div class="col-span-4 sm:col-span-4">
                                                 <JetLabel for="name" value="Job Title" />
                                                 <JetInput id="name" v-model="form.name" type="text"
-                                                    class="mt-1 block w-full" autocomplete="name"
+                                                    class="mt-1 block w-full" autocomplete="off"
                                                     placeholder="EX: Manager SKU" />
                                                 <JetInputError :message="form.errors.name" class="mt-2" />
                                             </div>
 
-                                            <div class="col-span-6">
+                                            <!--div class="col-span-6">
                                                 <JetLabel for="description" value="Job Description" />
-                                                <JetText id="description" v-model="form.description"
+                                                <JetText id="description" v-model="textContenu"
                                                     class="mt-1 block w-full" rows="10" />
+                                                <JetInputError :message="form.errors.description" class="mt-2" />
+                                            </div-->
+                                            <div class="col-span-6 mb-6">
+                                                <JetLabel for="description" value="Job Description" class="mb-2"/>
+                                                <QuillEditor theme="snow"  v-model:content="form.description" ref="moneditor" />
                                                 <JetInputError :message="form.errors.description" class="mt-2" />
                                             </div>
 

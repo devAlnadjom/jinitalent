@@ -1,5 +1,5 @@
 <script setup>
-import { computed, ref, watch } from 'vue';
+import { computed, ref, watch, onMounted } from 'vue';
 import { Inertia } from '@inertiajs/inertia';
 import { Head, Link, useForm } from '@inertiajs/inertia-vue3';
 import AppLayout from '@/Layouts/AppLayout.vue';
@@ -9,20 +9,25 @@ import pickBy from 'lodash/pickBy';
 import throttle from 'lodash/throttle';
 import mapValues from 'lodash/mapValues';
 
+import { QuillEditor } from '@vueup/vue-quill'
+import '@vueup/vue-quill/dist/vue-quill.bubble.css';
+
 const props = defineProps({
     jobs: Object,
     organization: Object,
 });
 
+
+const moneditor = ref(null);
 const form = useForm({
     search: '',
     trashed: null
 });
 
-watch(form, throttle(function () {
-    Inertia.get(route('jobs.index'), pickBy(form), { preserveState: true })
-}, 900));
 
+onMounted(()=>{
+    moneditor.value.setHTML(props.jobs?.description);
+});
 const reset = () => { form = mapValues(form, () => null) }
 
 </script>
@@ -121,9 +126,17 @@ const reset = () => { form = mapValues(form, () => null) }
                         <!--Description-->
                         <div class="border rounded-md p-4 mt-4 bg-white px-4 pb-8">
                             <h3 class="font-semibold text-gray-800 leading-tight">Description</h3>
-                            <div class=" w-full mt-3 border-t text-sm pt-4">
-                                {{jobs?.description}}
+                            <div  class=" w-full mt-3 border-t text-sm pt-2">
+
+                                <QuillEditor toolbar="#my-toolbar" theme="bubble"  ref="moneditor"  :read-only="true"/>
+                                <template>
+                                    <div id="my-toolbar">
+                                    </div>
+                                </template>
+
+
                             </div>
+
 
                             <h3 class="font-semibold text-gray-800 leading-tight mt-8">Qualifiqations</h3>
                             <div class=" w-full mt-3 border-t text-sm pt-4">

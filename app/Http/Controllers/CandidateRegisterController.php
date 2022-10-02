@@ -29,7 +29,7 @@ class CandidateRegisterController extends Controller
 
         $candidate= Candidate::create($validated);
 
-        if($request->has('resume') && $request['resume']){
+        if($request->hasFile('resume')){
             try{
                 $file= $request['resume'];
                 $fileName = 'resume-'.time().'.'.$file->getClientOriginalExtension();
