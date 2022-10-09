@@ -14,8 +14,12 @@ import JetText from '@/Components/Textarea.vue';
 import JetCheckbox from '@/Components/Checkbox.vue';
 import { QuillEditor } from '@vueup/vue-quill'
 import '@vueup/vue-quill/dist/vue-quill.snow.css';
+import vSelect from 'vue-select';
+import 'vue-select/dist/vue-select.css';
+
 
 const props = defineProps({
+    organization : Object,
 });
 
 const textContenu = ref(null);
@@ -32,7 +36,7 @@ const form = useForm({
     status: 1,
     public: 0,
     style: '',
-    organization_id: 1,
+    organization_id:null,
     date_start_job: '',
 });
 
@@ -201,7 +205,12 @@ const submitForm = () => {
                                                     class="mt-1 block w-full" />
                                                 <JetInputError :message="form.errors.no_of_vacancy" class="mt-2" />
                                             </div>
+                                            <div class="col-span-6 sm:col-span-6 lg:col-span-2">
+                                                <JetLabel for="position_open" value="Organization" />
 
+                                                <vSelect label="name" :options="organization" v-model="form.organization_id" :key="organization.id" :reduce="data => data.id" ></vSelect>
+                                                <JetInputError :message="form.errors.organization_id" class="mt-2" />
+                                            </div>
 
 
                                         </div>

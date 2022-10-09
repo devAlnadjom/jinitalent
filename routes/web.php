@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ApplicationController;
 use Inertia\Inertia;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Application;
@@ -45,7 +46,11 @@ Route::middleware([
         return Inertia::render('Dashboard');
     })->name('dashboard');
 
+    Route::resource('applications', ApplicationController::class);
     Route::resource('candidates', CandidateController::class);
     Route::resource('organizations', OrganizationController::class);
+
+
+    Route::get('/jobs/{job}/applications', [JobsController::class, 'showApplications'])->name('jobs.applicationlist');
     Route::resource('jobs', JobsController::class);
 });

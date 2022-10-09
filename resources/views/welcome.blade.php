@@ -65,7 +65,7 @@
                     </li>
 
                     <li class="relative hover:text-black">
-                        <a class="block py-3 lg:py-7 px-6 border-b-2 border-transparent" href="#portfolio">Our works</a>
+                        <a class="block py-3 lg:py-7 px-6 border-b-2 border-transparent" href="#portfolio">Our work</a>
                     </li>
                     <li class="relative hover:text-black">
                         <a class="block py-3 lg:py-7 px-6 border-b-2 border-transparent" href="#whyus">Why Us?</a>
@@ -184,7 +184,7 @@
 
                         <div class=" bg-orange-600 md:w-2/5 md:min-h-96 px-10 py-20 lg:py-40 lg:w-1/2 md:py-12 md:px-4 lg:px-8 lg:pr-26 md:pr-12 items-center">
                             <h3 class=" text-3xl md:text-4xl font-bold text-white">
-                                No matter rarity or the complexty of the desired profile, we will find your candidate thanks to:
+                                No matter rarity or the complexity of the desired profile, we will find your candidate thanks to:
                             </h3>
                             <div class="text-gray-50 text-lg mt-6 md:mt-10  lg:ml-10 grid grid-cols-1 md:grid-cols-2 gap-6">
                               <div>
@@ -222,9 +222,9 @@
                         <p class="text-center text-xl md:text-2xl lg:text-3xl font-bold">
                             Recruiting qualified talent requires searching, targeting, approaching, meeting, evaluating, verifying, convincing, nurturing and continuing... and that's our job!
                         </p>
-                        <p class="text-center text-lg mt-5 ">
+                        <!--p class="text-center text-lg mt-5 ">
                             Recruiting qualified talent requires searching, targeting, approaching, meeting, evaluating, verifying, convincing, nurturing and continuing... and that's our job!
-                        </p>
+                        </p-->
 
                         <p class="text-center text-lg mt-10  ">
                             <a class="mx-auto py-2.5 px-10 inline-block text-center leading-normal text-gray-100 bg-orange-600  border-b border-orange-800 hover:bg-orange-500 hover:text-white hover:ring-0 focus:outline-none focus:ring-0" href="mailto:info@jinitalent.com">
@@ -244,7 +244,7 @@
                           <!--img src="{{asset('img/img1.webp')}}" class="w-full max-w-full h-auto rounded-lg shadow-md" alt="creative agency"-->
                           <div class="md:py-20 bg-slate-900 bg-opacity-40 h-full md:px-2 lg:px-10 hover:bg-opacity-50 transition-all duration-300 items-center">
                             <h3 class=" text-xl py-10 md:py-20 md:text-3xl lg:text-4xl px-6 font-bold text-white">
-                              No matter rarity or the complexty of the desired profile, we will find your candidate.
+                              No matter rarity or the complexity of the desired profile, we will find your candidate.
                             </h3>
                             <div class=" hidden lg:block text-white text-2xl">
                                 Have questions about service, please contact us.

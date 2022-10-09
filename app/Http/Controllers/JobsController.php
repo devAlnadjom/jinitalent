@@ -6,6 +6,8 @@ use App\Models\jobs;
 use Inertia\Inertia;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreJobRequest;
+use App\Models\Candidate;
+use App\Models\organization;
 use Illuminate\Support\Facades\Redirect;
 
 class JobsController extends Controller
@@ -33,8 +35,9 @@ class JobsController extends Controller
      */
     public function create()
     {
+        //dd(Organization::where('status','1')->get(['id','name']));
         return Inertia::render('Jobs/Create', [
-
+            'organization'=>Organization::where('status','1')->get(['id','name']),
         ]);
     }
 
@@ -52,9 +55,18 @@ class JobsController extends Controller
     public function show(Jobs $job)
     {
         $organization = $job->organization()->first();
+
+        //Select that are not actualy on another Job
+        //dd(Jobs::where('id',$job->id)->with("applicants")->get());
+
+        $candidates = Candidate::Select(['id','first_name','last_name','resume'])
+                        ->get();
+
+
         return Inertia::render('Jobs/Show', [
             'jobs' => $job,
             'organization' => $organization,
+            'candidates' => $candidates,
         ]);
     }
 
@@ -90,5 +102,34 @@ class JobsController extends Controller
     public function destroy(jobs $jobs)
     {
         //
+    }
+
+
+
+    public function showApplications(Jobs $job)
+    {
+        $organization = $job->organization()->first();
+
+
+        $job->load(["applications"=> function ($query) {
+                $query->with("candidate");
+            }]);
+
+      /* dd(Jobs::where('id',$job->id)->
+            with(["applications"=> function ($query) {
+                $query->with("candidate");
+            }])
+       ->get());*/
+
+
+        $candidates = Candidate::Select(['id','first_name','last_name','resume'])
+                        ->get();
+
+
+        return Inertia::render('Jobs/ShowApplications', [
+            'jobs' => $job,
+            'organization' => $organization,
+            'candidates' => $candidates,
+        ]);
     }
 }

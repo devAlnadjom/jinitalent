@@ -2,9 +2,11 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class jobs extends Model
 {
@@ -18,6 +20,19 @@ class jobs extends Model
     {
         return $this->belongsTo(organization::class);
     }
+
+    public function applications(): HasMany
+    {
+        return $this->hasMany(Application::class,'position_id');
+    }
+
+    public function applicants(): BelongsToMany
+    {
+        return $this->belongsToMany(Candidate::class,'applications', 'position_id', 'candidate_id');
+                   // ->wherePivotIn('priority', [1, 2]);
+    }
+
+
 
     public function scopeFilter($query, array $filters)
     {

@@ -8,23 +8,53 @@ import JetNavLink from '@/Components/NavLink.vue';
 import pickBy from 'lodash/pickBy';
 import throttle from 'lodash/throttle';
 import mapValues from 'lodash/mapValues';
-
 import { QuillEditor } from '@vueup/vue-quill'
 import '@vueup/vue-quill/dist/vue-quill.bubble.css';
+import JetDialogModal from '@/Components/DialogModal.vue';
+import vSelect from 'vue-select';
+import 'vue-select/dist/vue-select.css';
+
+import JetButton from '@/Components/Button.vue';
+import JetFormSection from '@/Components/FormSection.vue';
+import JetInput from '@/Components/Input.vue';
+import JetInputError from '@/Components/InputError.vue';
+import JetLabel from '@/Components/Label.vue';
+import JetActionMessage from '@/Components/ActionMessage.vue';
+import JetSecondaryButton from '@/Components/SecondaryButton.vue';
+import JetCheckbox from '@/Components/Checkbox.vue';
+
+import dayjs from 'dayjs';
+import relativeTime from 'dayjs/plugin/relativeTime';
+
+dayjs.extend(relativeTime);
 
 const props = defineProps({
     jobs: Object,
     organization: Object,
+    candidates: Object,
 });
 
-
 const moneditor = ref(null);
+const openApplicationForm = ref(false);
 const form = useForm({
     search: '',
     trashed: null
 });
 
+const applicationForm = useForm({
+    position_id: props.jobs?.id,
+    candidate_id: null,
+    ratings: 3,
+    source: '',
+});
 
+const submitApplication =() =>{
+    applicationForm.post(route('applications.store'), {
+        //preserveScroll: true,
+        onSuccess: () => {applicationForm.candidate_id = null, openApplicationForm.value=false},
+        onError: (e) => {console.log(e) },
+    });
+};
 onMounted(()=>{
     moneditor.value.setHTML(props.jobs?.description);
 });
@@ -50,7 +80,7 @@ const reset = () => { form = mapValues(form, () => null) }
                                 </JetNavLink>
                             </div>
                             <div class="hidden space-x-8 p-2 sm:-my-px sm:ml-10 sm:flex hover:bg-orange-50">
-                                <JetNavLink :href="route('dashboard')" :active="route().current('dashboard')">
+                                <JetNavLink :href="route('jobs.applicationlist',jobs.id)" :active="route().current('dashboard')">
                                         Applications
                                 </JetNavLink>
                             </div>
@@ -59,7 +89,8 @@ const reset = () => { form = mapValues(form, () => null) }
                                         Logs
                                 </JetNavLink>
                             </div>
-                            <button class="hidden space-x-8 p-2 px-4 sm:-my-px sm:ml-10 sm:flex  rounded border border-orange-500 text-orange-500 hover:bg-orange-600 hover:text-white">
+                            <button @click="openApplicationForm=true"
+                                class="hidden space-x-8 p-2 px-4 sm:-my-px sm:ml-10 sm:flex  rounded border border-orange-500 text-orange-500 hover:bg-orange-600 hover:text-white">
                                <span class=" flex-1 mr-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M19 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zM4 19.235v-.11a6.375 6.375 0 0112.75 0v.109A12.318 12.318 0 0110.374 21c-2.331 0-4.512-.645-6.374-1.766z" />
@@ -107,7 +138,7 @@ const reset = () => { form = mapValues(form, () => null) }
 
                                 <div class="flex gap-x-2 text-sm mt-4">
                                     <h5 class=" text-gray-600">Due date :</h5>
-                                    <span class="font-semibold">{{jobs?.date_start_job}} </span>
+                                    <span class="font-semibold"> {{ dayjs(jobs?.date_start_job).fromNow() }} </span>
                                 </div>
 
                                 <div class="flex gap-x-2 text-sm mt-4">
@@ -216,6 +247,62 @@ const reset = () => { form = mapValues(form, () => null) }
                 </div>
 
             </div>
+
+
+            <!--Dialog of Apllication source -->
+            <JetDialogModal :show="openApplicationForm" @close="openApplicationForm = !openApplicationForm">
+                <template #title>
+
+                    <h2 class="font-bold text-2xl mb-6 text-gray-800 border-b pb-2">
+                        <span class="inline-block">Link candidate to this job</span>
+                    </h2>
+                </template>
+
+                <template #content>
+
+                    <div class="w-full  bg-white   block ">
+
+                        <div class="mb-4">
+                                <label class="text-gray-800 block mb-1 font-bold text-sm uppercase tracking-wide">Liste
+                                </label>
+                                <vSelect v-model="applicationForm.candidate_id" :options="props.candidates" :reduce="candidate => candidate.id" label="first_name" placeholder="Select. Candidate" >
+                                    <template #option="{id, first_name, last_name,resume}">
+                                        <em class="text-sm">{{id}} {{ first_name }}-{{ last_name }} <span v-if="!resume" class="ml-8 text-orange-600">No Resume</span></em>
+
+                                    </template>
+                                </vSelect>
+                                <JetInputError :message="applicationForm.errors.candidate_id" class="mt-2" />
+                        </div>
+                        <div class="mb-12">
+                            <label
+                                class="text-gray-800 block mb-1 font-bold text-sm uppercase tracking-wide">Description</label>
+                            <textarea id="description" rows="3" type="text" v-model="applicationForm.source"
+                                placeholder="Description..."
+                                class="border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm mt-1 block w-full"></textarea>
+                                <JetInputError :message="applicationForm.errors.source" class="mt-2" />
+                        </div>
+
+
+                    </div>
+                </template>
+
+                <template #footer>
+                    <JetSecondaryButton @click="openApplicationForm = !openApplicationForm">
+                        Close
+                    </JetSecondaryButton>
+
+                    <JetButton class="ml-3" @click="submitApplication">
+                        <span class="flex-1 mr-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-5 h-5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                            </svg>
+
+                        </span>
+                        Link
+                    </JetButton>
+                </template>
+            </JetDialogModal>
         </div>
     </AppLayout>
 </template>
