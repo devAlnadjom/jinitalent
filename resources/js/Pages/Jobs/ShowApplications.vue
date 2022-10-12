@@ -75,7 +75,7 @@ const reset = () => { form = mapValues(form, () => null) }
 
                     <!-- Navigation Links -->
                     <div class="hidden space-x-8 p-2 sm:-my-px sm:ml-10 sm:flex hover:bg-orange-50">
-                        <JetNavLink :href="route('dashboard')" :active="route().current('dashboard')">
+                        <JetNavLink :href="route('jobs.show',props.jobs?.id)" :active="route().current('dashboard')">
                             Jobs detils
                         </JetNavLink>
                     </div>
@@ -87,7 +87,7 @@ const reset = () => { form = mapValues(form, () => null) }
                             Logs
                         </JetNavLink>
                     </div>
-                    <!--button @click="openApplicationForm=true"
+                    <button @click="openApplicationForm=true"
                         class="hidden space-x-8 p-2 px-4 sm:-my-px sm:ml-10 sm:flex  rounded border border-orange-500 text-orange-500 hover:bg-orange-600 hover:text-white">
                         <span class=" flex-1 mr-2">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -97,7 +97,7 @@ const reset = () => { form = mapValues(form, () => null) }
                             </svg>
 
                         </span> Link Candidate
-                    </button-->
+                    </button>
                 </div>
             </div>
 
@@ -152,8 +152,7 @@ const reset = () => { form = mapValues(form, () => null) }
                                 </td>
                                 <td class="px-4 py-3 text-sm">
                                     <span class="flex flex-row">
-                                        <span class="mb-1">{{ item.candidate.first_name }} {{ item.candidate.last_name
-                                        }}</span>
+                                        <span class="mb-1">{{ item.candidate.first_name }} {{ item.candidate.last_name}}</span>
 
                                     </span>
                                 </td>
@@ -241,12 +240,25 @@ const reset = () => { form = mapValues(form, () => null) }
                         </div>
                         <div class="mb-12">
                             <label
-                                class="text-gray-800 block mb-1 font-bold text-sm uppercase tracking-wide">Description</label>
+                                class="text-gray-800 block mb-1 font-bold text-sm uppercase tracking-wide">Source</label>
+                                <select class="p-2 w-full rounded" v-model="applicationForm.source">
+                                    <option value="null">Selec. Source</option>
+                                    <option value="PORTAL">Portal</option>
+                                    <option value="CRM">Crm</option>
+                                    <option value="LINKEDIN">Linkedin</option>
+                                    <option value="INDEED">Indeed</option>
+                                    <option value="OTHER">Other</option>
+                                </select>
+                            <JetInputError :message="applicationForm.errors.source" class="mt-2" />
+                        </div>
+                        <!--div class="mb-12">
+                            <label
+                                class="text-gray-800 block mb-1 font-bold text-sm uppercase tracking-wide">Comment</label>
                             <textarea id="description" rows="3" type="text" v-model="applicationForm.source"
                                 placeholder="Description..."
                                 class="border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm mt-1 block w-full"></textarea>
                             <JetInputError :message="applicationForm.errors.source" class="mt-2" />
-                        </div>
+                        </div-->
 
 
                     </div>

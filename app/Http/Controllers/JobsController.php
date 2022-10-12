@@ -6,6 +6,7 @@ use App\Models\jobs;
 use Inertia\Inertia;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreJobRequest;
+use App\Http\Requests\UpdateJobsRequest;
 use App\Models\Candidate;
 use App\Models\organization;
 use Illuminate\Support\Facades\Redirect;
@@ -70,35 +71,26 @@ class JobsController extends Controller
         ]);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\jobs  $jobs
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(jobs $jobs)
+
+    public function edit(Jobs $job)
     {
-        //
+       // dd($job);
+        return Inertia::render('Jobs/Edit', [
+            'jobs' => $job,
+            'organization'=>Organization::where('status','1')->get(['id','name']),
+        ]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\jobs  $jobs
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, jobs $jobs)
+
+    public function update(UpdateJobsRequest $request, jobs $job)
     {
-        //
+        $validated = $request->validated();
+
+        $job->update($validated);
+        return Redirect::route("jobs.show",$job->id)->with('success',"Jobs updated successfully.");
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\jobs  $jobs
-     * @return \Illuminate\Http\Response
-     */
+
     public function destroy(jobs $jobs)
     {
         //

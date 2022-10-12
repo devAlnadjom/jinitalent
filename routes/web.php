@@ -10,6 +10,7 @@ use App\Http\Controllers\CandidateController;
 use App\Http\Controllers\CandidateRegisterController;
 use App\Http\Controllers\JobsController;
 use App\Http\Controllers\OrganizationController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,11 +41,11 @@ Route::get('/welcome', function () {
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
-    'verified',
+    'verified','only.admin'
 ])->group(function () {
     Route::get('/dashboard', function () {
         return Inertia::render('Dashboard');
-    })->name('dashboard');
+            })->name('dashboard');
 
     Route::resource('applications', ApplicationController::class);
     Route::resource('candidates', CandidateController::class);
@@ -53,4 +54,6 @@ Route::middleware([
 
     Route::get('/jobs/{job}/applications', [JobsController::class, 'showApplications'])->name('jobs.applicationlist');
     Route::resource('jobs', JobsController::class);
+    Route::resource('users', UserController::class)->only("index");
+
 });
