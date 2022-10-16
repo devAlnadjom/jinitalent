@@ -2,7 +2,7 @@
 import { computed, ref, watch, onMounted } from 'vue';
 import { Inertia } from '@inertiajs/inertia';
 import { Head, Link, useForm } from '@inertiajs/inertia-vue3';
-import AppLayout from '@/Layouts/AppLayout.vue';
+import PortalLayout from '@/Layouts/PortalLayout.vue';
 import Welcome from '@/Components/Welcome.vue';
 import JetNavLink from '@/Components/NavLink.vue';
 import pickBy from 'lodash/pickBy';
@@ -56,14 +56,14 @@ const submitApplication =() =>{
     });
 };
 onMounted(()=>{
-    moneditor.value.setHTML(props.jobs?.description);
+    setTimeout(()=>{moneditor.value.setHTML(props.jobs?.description)},100);
 });
 const reset = () => { form = mapValues(form, () => null) }
 
 </script>
 
 <template>
-    <AppLayout title="One Job">
+    <PortalLayout title="One Job">
         <template #header>
             <div class="w-full flex justify-center gap-4">
                 <div class="flex-1">
@@ -73,26 +73,7 @@ const reset = () => { form = mapValues(form, () => null) }
                 </div>
                 <div class="flex">
 
-                            <!-- Navigation Links -->
-                            <div class="hidden space-x-8 p-2 sm:-my-px sm:ml-10 sm:flex hover:bg-orange-50">
-                                <JetNavLink :href="route('jobs.edit',jobs.id)" :active="route().current('dashboard')">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 mr-2">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
-                                    </svg>
-                                    Edit
-                                </JetNavLink>
-                            </div>
-                            <div class="hidden space-x-8 p-2 sm:-my-px sm:ml-10 sm:flex hover:bg-orange-50">
-                                <JetNavLink :href="route('jobs.applicationlist',jobs.id)" :active="route().current('dashboard')">
-                                        Applications
-                                </JetNavLink>
-                            </div>
-                            <div class="hidden space-x-8 p-2 sm:-my-px sm:ml-10 sm:flex hover:bg-orange-50">
-                                <JetNavLink :href="route('dashboard')" :active="route().current('dashboard')">
-                                        Logs
-                                </JetNavLink>
-                            </div>
-                            <button @click="openApplicationForm=true"
+                            <!--button @click="openApplicationForm=true"
                                 class="hidden space-x-8 p-2 px-4 sm:-my-px sm:ml-10 sm:flex  rounded border border-orange-500 text-orange-500 hover:bg-orange-600 hover:text-white">
                                <span class=" flex-1 mr-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
@@ -100,7 +81,7 @@ const reset = () => { form = mapValues(form, () => null) }
                                 </svg>
 
                                </span> Link Candidate
-                            </button>
+                            </button-->
                 </div>
             </div>
 
@@ -171,14 +152,6 @@ const reset = () => { form = mapValues(form, () => null) }
 
                             </div>
 
-
-                            <h3 class="font-semibold text-gray-800 leading-tight mt-8">Qualifiqations</h3>
-                            <div class=" w-full mt-3 border-t text-sm pt-4">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi provident molestiae, voluptatum deserunt accusamus perspiciatis ut.
-                                Obcaecati culpa aliquid iusto quia minus corporis esse animi mollitia deleniti. Reiciendis, dolores eaque.
-                                <br />
-
-                            </div>
                         </div>
 
                     </div>
@@ -204,48 +177,11 @@ const reset = () => { form = mapValues(form, () => null) }
                                 </h5>
                                     <span class="font-semibold">{{ organization?.address}} </span>
                             </div>
-                            <div class=" w-full mt-3 border-t text-sm pt-2 flex flex-col md:flex-row md:justify-between gap-2">
-                                <h5 class=" text-gray-600">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-5 h-5">
-                                     <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
-                                    </svg>
 
-                                </h5>
-                                    <span class="font-semibold">{{ organization?.email}}  </span>
-                            </div>
-                            <div class=" w-full mt-3 border-t text-sm pt-2 flex flex-col md:flex-row md:justify-between gap-2">
-                                <h5 class=" text-gray-600">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-5 h-5">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
-                                        </svg>
-
-                                </h5>
-                                    <span class="font-semibold">{{ organization?.phone_number}}  </span>
-                            </div>
-                        </div>
-
-                        <!--Candidates Info-->
-                        <div class="border rounded-md p-4 bg-white mt-4">
-                            <h3 class="font-semibold text-gray-800 leading-tight">Candidates</h3>
-                            <span class="text-orange-800 text-sm"> Last application added...</span>
-
-                            <div class=" w-full mt-3 border-t text-sm pt-2 flex flex-col md:flex-row  gap-2">
-                                <span class=" text-gray-600 text-xs font-bold bg-orange-300 rounded-full items-center w-10 h-10 p-3">MA</span>
-                                <div class="font-semibold">
-                                    <span>{{ organization?.address}} </span>
-                                    <span class="text-xs text-orange-500 block"> New</span>
-                                </div>
-                            </div>
-
-                            <div class=" w-full mt-3 border-t text-sm pt-2 flex flex-col md:flex-row  gap-2">
-                                <span class=" text-gray-600 text-xs font-bold bg-orange-300 rounded-full items-center w-10 h-10 p-3">MA</span>
-                                <div class="font-semibold">
-                                    <span>{{ organization?.address}} </span>
-                                    <span class="text-xs text-green-500 block"> Hired</span>
-                                </div>
-                            </div>
 
                         </div>
+
+
                     </div>
                 </div>
 
@@ -307,5 +243,5 @@ const reset = () => { form = mapValues(form, () => null) }
                 </template>
             </JetDialogModal>
         </div>
-    </AppLayout>
+    </PortalLayout>
 </template>

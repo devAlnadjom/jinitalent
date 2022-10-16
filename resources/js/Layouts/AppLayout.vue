@@ -42,7 +42,7 @@ const logout = () => {
                         <div class="flex">
                             <!-- Logo -->
                             <div class="shrink-0 flex items-center">
-                                <Link :href="route('dashboard')">
+                                <Link :href="route('dashboard')" class="font-bold text-lg">
                                     <JetApplicationMark class="block h-9 w-auto" />
                                 </Link>
                             </div>
@@ -54,17 +54,17 @@ const logout = () => {
                                 </JetNavLink>
                             </div>
                             <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                                <JetNavLink :href="route('candidates.index')" :active="route().current('candidates')">
+                                <JetNavLink :href="route('candidates.index')" :active="route().current('candidates.index')">
                                     Candidates
                                 </JetNavLink>
                             </div>
                             <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                                <JetNavLink :href="route('jobs.index')" :active="route().current('candidates')">
+                                <JetNavLink :href="route('jobs.index')" :active="route().current('jobs.index')">
                                     Jobs
                                 </JetNavLink>
                             </div>
                             <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                                <JetNavLink :href="route('organizations.index')" :active="route().current('candidates')">
+                                <JetNavLink :href="route('organizations.index')" :active="route().current('organizations.index')">
                                     Organizations
                                 </JetNavLink>
                             </div>

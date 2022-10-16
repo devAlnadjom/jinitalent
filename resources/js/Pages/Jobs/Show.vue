@@ -56,7 +56,7 @@ const submitApplication =() =>{
     });
 };
 onMounted(()=>{
-    moneditor.value.setHTML(props.jobs?.description);
+    setTimeout(()=>{moneditor.value.setHTML(props.jobs?.description)},100);
 });
 const reset = () => { form = mapValues(form, () => null) }
 

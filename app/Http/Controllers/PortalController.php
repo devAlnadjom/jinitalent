@@ -11,12 +11,12 @@ class PortalController extends Controller
     public function index(Request $request)
     {
 
-        $jobs= Jobs::Select(['id', 'name as job_tite', 'no_of_vacancy','status','style','date_start_job','organization_id'])
+        $jobs= Jobs::Select(['id', 'name as job_tite','location','salary','level', 'no_of_vacancy','status','style','date_start_job','organization_id'])
                     ->with(['organization:id,name'])
                     ->filter($request->only('search'/*, 'trashed'*/))
                     ->paginate(20)
                     ->withQueryString();
-       //dd($jobs);
+
 
         return Inertia::render('Portal/Index', [
             //'orders' => Order::paginate(),
@@ -30,7 +30,7 @@ class PortalController extends Controller
     public function show(Jobs $job)
     {
         $organization = $job->organization()->first();
-
+        //dd($job);
         return Inertia::render('Portal/Show', [
             'jobs' => $job,
             'organization' => $organization,
