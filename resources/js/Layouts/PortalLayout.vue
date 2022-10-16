@@ -49,13 +49,13 @@ const logout = () => {
                             </div>
 
 
-                            <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                            <!--div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                                 <JetNavLink :href="route('candidates.index')" :active="route().current('candidates')">
                                     Home
                                 </JetNavLink>
-                            </div>
+                            </div-->
                             <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                                <JetNavLink :href="route('jobs.index')" :active="route().current('candidates')">
+                                <JetNavLink :href="route('portal.index')" :active="route().current('portal.index')">
                                     Jobs
                                 </JetNavLink>
                             </div>
