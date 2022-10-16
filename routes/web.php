@@ -10,6 +10,7 @@ use App\Http\Controllers\CandidateController;
 use App\Http\Controllers\CandidateRegisterController;
 use App\Http\Controllers\JobsController;
 use App\Http\Controllers\OrganizationController;
+use App\Http\Controllers\PortalController;
 use App\Http\Controllers\UserController;
 
 /*
@@ -24,8 +25,14 @@ use App\Http\Controllers\UserController;
 */
 
 Route::view('/', 'welcome');
+
+//Portals Routes
+Route::get('/portal/jobs/{job}/info', [PortalController::class, 'show'])->name('portal.show');
+Route::get('/portal/jobs', [PortalController::class, 'index'])->name('portal.index');
+
 Route::post('/globals/sendmessage', PublicMessage::class)->middleware(ProtectAgainstSpam::class)->name('public.message');
 Route::post('/globals/uploadcv', [CandidateRegisterController::class, 'UploadCv'])->middleware(ProtectAgainstSpam::class)->name('public.storecv');
+
 Route::get('/globals/uploadcv', [CandidateRegisterController::class, 'index'])->name('public.uploadcv');
 Route::get('/globals/confirm/{id}/success/{shakey}', [CandidateRegisterController::class, 'confirmCvSaved'])->name('public.confirmcv');
 
