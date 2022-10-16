@@ -10,9 +10,7 @@ import throttle from 'lodash/throttle';
 import mapValues from 'lodash/mapValues';
 import { QuillEditor } from '@vueup/vue-quill'
 import '@vueup/vue-quill/dist/vue-quill.bubble.css';
-import JetDialogModal from '@/Components/DialogModal.vue';
-import vSelect from 'vue-select';
-import 'vue-select/dist/vue-select.css';
+//import JetDialogModal from '@/Components/DialogModal.vue';
 
 import JetButton from '@/Components/Button.vue';
 import JetFormSection from '@/Components/FormSection.vue';
@@ -142,13 +140,7 @@ const reset = () => { form = mapValues(form, () => null) }
                         <div class="border rounded-md p-4 mt-4 bg-white px-4 pb-8">
                             <h3 class="font-semibold text-gray-800 leading-tight">Description</h3>
                             <div  class=" w-full mt-3 border-t text-sm pt-2">
-
-                                <QuillEditor toolbar="#my-toolbar" theme="bubble"  ref="moneditor"  :read-only="true"/>
-                                <template>
-                                    <div id="my-toolbar">
-                                    </div>
-                                </template>
-
+                                <QuillEditor  theme="bubble"  ref="moneditor"  :read-only="true"/>
 
                             </div>
 
@@ -188,60 +180,6 @@ const reset = () => { form = mapValues(form, () => null) }
             </div>
 
 
-            <!--Dialog of Apllication source -->
-            <JetDialogModal :show="openApplicationForm" @close="openApplicationForm = !openApplicationForm">
-                <template #title>
-
-                    <h2 class="font-bold text-2xl mb-6 text-gray-800 border-b pb-2">
-                        <span class="inline-block">Link candidate to this job</span>
-                    </h2>
-                </template>
-
-                <template #content>
-
-                    <div class="w-full  bg-white   block ">
-
-                        <div class="mb-4">
-                                <label class="text-gray-800 block mb-1 font-bold text-sm uppercase tracking-wide">Liste
-                                </label>
-                                <vSelect v-model="applicationForm.candidate_id" :options="props.candidates" :reduce="candidate => candidate.id" label="first_name" placeholder="Select. Candidate" >
-                                    <template #option="{id, first_name, last_name,resume}">
-                                        <em class="text-sm">{{id}} {{ first_name }}-{{ last_name }} <span v-if="!resume" class="ml-8 text-orange-600">No Resume</span></em>
-
-                                    </template>
-                                </vSelect>
-                                <JetInputError :message="applicationForm.errors.candidate_id" class="mt-2" />
-                        </div>
-                        <div class="mb-12">
-                            <label
-                                class="text-gray-800 block mb-1 font-bold text-sm uppercase tracking-wide">Description</label>
-                            <textarea id="description" rows="3" type="text" v-model="applicationForm.source"
-                                placeholder="Description..."
-                                class="border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm mt-1 block w-full"></textarea>
-                                <JetInputError :message="applicationForm.errors.source" class="mt-2" />
-                        </div>
-
-
-                    </div>
-                </template>
-
-                <template #footer>
-                    <JetSecondaryButton @click="openApplicationForm = !openApplicationForm">
-                        Close
-                    </JetSecondaryButton>
-
-                    <JetButton class="ml-3" @click="submitApplication">
-                        <span class="flex-1 mr-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                stroke="currentColor" class="w-5 h-5">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-                            </svg>
-
-                        </span>
-                        Link
-                    </JetButton>
-                </template>
-            </JetDialogModal>
         </div>
     </PortalLayout>
 </template>

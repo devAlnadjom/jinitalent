@@ -161,24 +161,17 @@ const reset = () => { form = mapValues(form, () => null) }
                         <div class="border rounded-md p-4 mt-4 bg-white px-4 pb-8">
                             <h3 class="font-semibold text-gray-800 leading-tight">Description</h3>
                             <div  class=" w-full mt-3 border-t text-sm pt-2">
-
-                                <QuillEditor toolbar="#my-toolbar" theme="bubble"  ref="moneditor"  :read-only="true"/>
-                                <template>
-                                    <div id="my-toolbar">
-                                    </div>
-                                </template>
-
+                                <QuillEditor theme="bubble"  ref="moneditor"  :read-only="true"/>
 
                             </div>
 
-
-                            <h3 class="font-semibold text-gray-800 leading-tight mt-8">Qualifiqations</h3>
+                            <!--h3 class="font-semibold text-gray-800 leading-tight mt-8">Qualifiqations</h3>
                             <div class=" w-full mt-3 border-t text-sm pt-4">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi provident molestiae, voluptatum deserunt accusamus perspiciatis ut.
                                 Obcaecati culpa aliquid iusto quia minus corporis esse animi mollitia deleniti. Reiciendis, dolores eaque.
                                 <br />
 
-                            </div>
+                            </div-->
                         </div>
 
                     </div>
@@ -229,21 +222,14 @@ const reset = () => { form = mapValues(form, () => null) }
                             <h3 class="font-semibold text-gray-800 leading-tight">Candidates</h3>
                             <span class="text-orange-800 text-sm"> Last application added...</span>
 
-                            <div class=" w-full mt-3 border-t text-sm pt-2 flex flex-col md:flex-row  gap-2">
+                            <!--div class=" w-full mt-3 border-t text-sm pt-2 flex flex-col md:flex-row  gap-2">
                                 <span class=" text-gray-600 text-xs font-bold bg-orange-300 rounded-full items-center w-10 h-10 p-3">MA</span>
                                 <div class="font-semibold">
                                     <span>{{ organization?.address}} </span>
                                     <span class="text-xs text-orange-500 block"> New</span>
                                 </div>
-                            </div>
+                            </div-->
 
-                            <div class=" w-full mt-3 border-t text-sm pt-2 flex flex-col md:flex-row  gap-2">
-                                <span class=" text-gray-600 text-xs font-bold bg-orange-300 rounded-full items-center w-10 h-10 p-3">MA</span>
-                                <div class="font-semibold">
-                                    <span>{{ organization?.address}} </span>
-                                    <span class="text-xs text-green-500 block"> Hired</span>
-                                </div>
-                            </div>
 
                         </div>
                     </div>
