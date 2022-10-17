@@ -71,11 +71,7 @@
                         </li>
 
                         <li class="relative hover:text-blue-900 border-blue-900 hover:border-b-2 transition-all duration-200">
-                            <a class="block py-3 lg:py-7 px-6 border-b-2 border-transparent" href="#services">Our Services</a>
-                        </li>
-
-                        <li class="relative hover:text-blue-900 border-blue-900 hover:border-b-2 transition-all duration-200">
-                            <a class="block py-3 lg:py-7 px-6 border-b-2 border-transparent" href="#bitcoins">Bitcoin industry</a>
+                            <a class="block py-3 lg:py-7 px-6 border-b-2 border-transparent" href="#services">Headhunting/Consulting</a>
                         </li>
                         <!--li class="relative hover:text-blue-900 border-blue-900 hover:border-b-2 transition-all duration-200">
                             <a class="block py-3 lg:py-7 px-6 border-b-2 border-transparent" href="#whyus">Why Us?</a>
@@ -103,11 +99,7 @@
                 </li>
 
                 <li class="relative hover:text-blue-900 hover:bg-orange-100" @click="toggle">
-                    <a class="block py-3 lg:py-7 px-6 border-b-2 border-transparent" href="#services">Our Services</a>
-                </li>
-
-                <li class="relative hover:text-blue-900 hover:bg-orange-100" @click="toggle">
-                    <a class="block py-3 lg:py-7 px-6 border-b-2 border-transparent" href="#bitcoins">Bitcoin industry</a>
+                    <a class="block py-3 lg:py-7 px-6 border-b-2 border-transparent" href="#portfolio">Headhunting/Consulting</a>
                 </li>
                 <!--li class="relative hover:text-blue-900 hover:bg-orange-100" @click="toggle">
                     <a class="block py-3 lg:py-7 px-6 border-b-2 border-transparent" href="#whyus">Why Us?</a>
@@ -169,41 +161,43 @@
                         <h2 class="text-center text-3xl font-bold">Our Services</h2>
                     </div>
 
-                    <div class="md:flex flex-row ">
-
+                    <div class="flex  flex-row ">
                         <div class=" big-blue-900 md:w-2/5 md:min-h-96 px-10 py-10  lg:w-1/2 md:py-12 md:px-4 lg:px-8 lg:pl-32 md:pl-24 items-center">
-                            <div class="flex items-center">
-                                <div class="w-16 p-2 bg-blue-200 rounded-full">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12  rounded-full">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
-                                      </svg>
-                                </div>
-                                <h3 class="ml-4 text-3xl md:text-4xl font-bold text-slate-800 items-center">
-                                    Headhunting
-                                </h3>
+                            <div class="w-16 p-2 bg-blue-200 rounded-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12  rounded-full">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
+                                  </svg>
+
                             </div>
+                            <h3 class=" text-3xl md:text-4xl font-bold text-slate-800">
+                                Headhunting
+                            </h3>
+                            <div class="text-slate-400 text-lg mt-6 md:mt-10">
+                                Including engineers, software developers, analysts, drafters, managers, technical writers, planners, designers, technologists, buyers, technicians and tradespersons, as well as senior management.
+                            </div>
+                        </div>
+                        <div class="flex-1 big-blue-900 md:w-2/5 md:min-h-96 px-10 py-10  lg:w-1/2 md:py-12 md:px-4 lg:px-8 lg:pl-32 md:pl-24 items-center">
+                            <div class="w-16 p-2 bg-blue-200 rounded-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12  rounded-full">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
+                                  </svg>
+
+                            </div>
+                            <h3 class=" text-3xl md:text-4xl font-bold text-slate-800">
+                                Headhunting
+                            </h3>
                             <div class="text-slate-400 text-lg mt-6 md:mt-10">
                                 Including engineers, software developers, analysts, drafters, managers, technical writers, planners, designers, technologists, buyers, technicians and tradespersons, as well as senior management.
                             </div>
                         </div>
 
-                        <div class="flex-1 big-blue-900  md:min-h-96 px-10 py-10  lg:w-1/2 md:py-12 md:px-4 lg:px-8 lg:pl-32 md:pl-24 items-center">
-                            <div class="flex items-center">
-                                <div class="w-16 p-2 bg-blue-200 rounded-full">
-                                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z" />
-                                      </svg>
-                                </div>
-                                <h3 class="ml-4 text-3xl md:text-4xl font-bold text-slate-800 items-center">
-                                    Consulting
-                                </h3>
+                        <div class="flex-1 bg-cover  bg-center  w-full" style="baackground-image: url({{asset('img/img4.jpeg')}})">
+                            <!--img src="{{asset('img/img1.webp')}}" class="w-full max-w-full h-auto rounded-lg shadow-md" alt="creative agency"-->
+                            <div class="md:py-12  bg-opacity-10 h-full md:px-12 hover:bg-opacity-20 transition-all duration-300">
+
                             </div>
 
-                            <div class="text-slate-400 text-lg mt-6 md:mt-10">
-                                Including engineers, software developers, analysts, drafters, managers, technical writers, planners, designers, technologists, buyers, technicians and tradespersons, as well as senior management.
-                            </div>
-                        </div>
-
+                          </div><!-- end content -->
 
                     </div>
 
@@ -232,12 +226,12 @@
 
                 </div><!--  End Content -->
 
-                <div id="bitcoins" class="section relative z-0 bg-slate-600">
+                <div id="whyus" class="section relative z-0 bg-slate-600">
                     <div class="flex -flex-wrap flex-row">
 
 
-                        <div class="flex-1 bg-cover  bg-center  w-full" style="background-image: url({{asset('img/img5.jpg')}})">
-                            <!--img src="{{asset('img/img2.webp')}}" class="w-full max-w-full h-auto rounded-lg shadow-md" alt="creative agency"-->
+                        <div class="flex-1 bg-cover  bg-center  w-full" style="background-image: url({{asset('img/img2.webp')}})">
+                            <!--img src="{{asset('img/img1.webp')}}" class="w-full max-w-full h-auto rounded-lg shadow-md" alt="creative agency"-->
                             <div class="md:py-12 bg-slate-900 bg-opacity-10 h-full md:px-12 hover:bg-opacity-20 transition-all duration-300">
 
                             </div>
@@ -246,27 +240,26 @@
 
                         <div class=" bg-orange-600 md:w-2/5 md:min-h-96 px-10 py-20 lg:py-40 lg:w-1/2 md:py-12 md:px-4 lg:px-8 lg:pr-26 md:pr-12 items-center">
                             <h3 class=" text-3xl md:text-4xl font-bold text-white">
-                                Bitcoin Industry:
+                                No matter rarity or the complexity of the desired profile, we will find your candidate thanks to:
                             </h3>
                             <div class="text-gray-50 text-lg mt-6 md:mt-10  lg:ml-10 grid grid-cols-1 md:grid-cols-2 gap-6">
                               <div>
                                 <ul class="list-disc">
-                                  <li class=" p-2 hover:border-l-white hover:border-l-4 rounded  hover:bg-black hover:bg-opacity-5 transition-all duration-200">
-                                    Helping African youth seize job opportunities in bitcoin</li>
+                                  <li class=" p-3 hover:border-l-white hover:border-l-4 rounded  hover:bg-black hover:bg-opacity-5 transition-all duration-300">A network of candidates and rich data bases</li>
 
-                                  <li class=" p-2 mt-2 hover:border-l-white hover:border-l-4 rounded  hover:bg-black hover:bg-opacity-5 transition-all duration-200">
-                                    helping bitcoin companies find their talent in africa
+                                  <li class=" p-3 mt-2 hover:border-l-white hover:border-l-4 rounded  hover:bg-black hover:bg-opacity-5 transition-all duration-300">
+                                    Significant web and social media connections.
                                   </li>
                                 </ul>
                               </div>
                               <div>
                                 <ul class="list-disc">
-                                  <li class=" p-2 hover:border-l-white hover:border-l-4 rounded  hover:bg-black hover:bg-opacity-5 transition-all duration-200">
-                                    Informing young Africans about job opportunities in bitcoin
+                                  <li class=" p-3 hover:border-l-white hover:border-l-4 rounded  hover:bg-black hover:bg-opacity-5 transition-all duration-300">
+                                    Cutting-edge research tools and headhunting techniques
                                   </li>
 
-                                  <li class=" p-2 mt-2 hover:border-l-white hover:border-l-4 rounded  hover:bg-black hover:bg-opacity-5 transition-all duration-200">
-                                    Connecting bitcoin companies with African job seekers
+                                  <li class=" p-3 mt-2 hover:border-l-white hover:border-l-4 rounded  hover:bg-black hover:bg-opacity-5 transition-all duration-300">
+                                    Our knowledgeof the job market and its changes
                                   </li>
                                 </ul>
                               </div>
