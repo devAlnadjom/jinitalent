@@ -48,7 +48,7 @@
       "resources/js/Pages/Welcome.vue"
     ],
     "css": [
-      "assets/app.1ac409f3.css"
+      "assets/app.ca8a2ea5.css"
     ]
   },
   "resources/js/Pages/API/Index.vue": {
@@ -896,16 +896,16 @@
       "resources/js/app.js"
     ]
   },
+  "vue-quill.css": {
+    "file": "assets/vue-quill.991b2e00.css",
+    "src": "vue-quill.css"
+  },
   "vue-select.css": {
     "file": "assets/vue-select.b0fac2a1.css",
     "src": "vue-select.css"
   },
   "resources/js/app.css": {
-    "file": "assets/app.1ac409f3.css",
+    "file": "assets/app.ca8a2ea5.css",
     "src": "resources/js/app.css"
-  },
-  "vue-quill.css": {
-    "file": "assets/vue-quill.991b2e00.css",
-    "src": "vue-quill.css"
   }
 }

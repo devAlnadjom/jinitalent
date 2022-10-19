@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}" />
+        <meta name="google-site-verification" content="Fvxek13UxYMyU6SIIssxirdTcrpS-rfoQQRqe9u-q3o" />
         <title >JiniTalent - Find your talented genius with us.</title>
         <meta name="description" content="At JiniTalent we specialize in the recruitment and placement of qualified technical personnel"/>
 
@@ -77,6 +78,12 @@
                         <li class="relative hover:text-blue-900 border-blue-900 hover:border-b-2 transition-all duration-200">
                             <a class="block py-3 lg:py-7 px-6 border-b-2 border-transparent" href="#bitcoins">Bitcoin industry</a>
                         </li>
+                        <li class="relative hover:text-blue-900 border-blue-900 hover:border-b-2 transition-all duration-200">
+                            <a class="block py-3 lg:py-7 px-6 border-b-2 border-transparent" href="{{ route('public.uploadcv')}}" title="Spontaneous Application">Be a Jini</a>
+                        </li>
+                        <li class="relative hover:text-blue-900 border-blue-900 hover:border-b-2 transition-all duration-200">
+                            <a class="block py-3 lg:py-7 px-6 border-b-2 border-transparent" href="{{ route('public.uploadcv')}}">Find Your Jini</a>
+                        </li>
                         <!--li class="relative hover:text-blue-900 border-blue-900 hover:border-b-2 transition-all duration-200">
                             <a class="block py-3 lg:py-7 px-6 border-b-2 border-transparent" href="#whyus">Why Us?</a>
                         </li-->
@@ -88,7 +95,7 @@
                 </div>
                 </div>
             </div>
-            <div class="flex flex-col w-full shadow-md md:hidden transition-all" x-show="open"
+            <div class="flex flex-col w-full shadow-md lg:hidden transition-all" x-show="open"
                     x-transition:enter="transition duration-500"
                     x-transition:enter-start="transform translate-x-full"
                     x-transition:enter-end="transform translate-x-0"
@@ -123,7 +130,21 @@
 
         <main id="content">
             <!-- hero start -->
-                <div id="hero" class="section relative z-0 py-28 md:pt-32 md:pb-20 bg-gray-50">
+                <div id="hero" class="section relative z-0  bg-gray-50 bg-cover  bg-center " style="background-image: url({{asset('img/img3.jpeg')}})">
+
+                  <div class="py-32  md:pt-32 md:pb-20 md:min-h-screen bg-blue-900 bg-opacity-20 flex items-center justify-center align-middle">
+                    <div class="container max-w-full text-center px-10 w-full lg:w-6xl min-h-min h-full my-auto self-center place-items-center mx-auto" >
+                        <h1 class="font-extrabold text-3xl lg:text-5xl text-white leading-normal lg:leading-relaxed py-4 ">
+                          SPECIALIST IN THE RECRUITMENT OF QUALIFIED PROFESSIONALS
+                        </h1>
+                        <h3 class="font-bold text-white text-2xl mt-10 md:mt-4 ">
+                          We find talent for bitcoin companies in <span class="p-1 transition duration-300 rounded hover:bg-orange-500">Africa</span>
+                        </h3>
+                    </div><!-- end content -->
+                  </div>
+
+                </div><!-- end Hero -->
+                <div id="hero2" class="section relative z-0 py-28 md:pt-32 md:pb-20 bg-gray-50">
                   <div class="container xl:max-w-6xl mx-auto px-4">
                     <div class="flex flex-wrap flex-row -mx-4 justify-center">
                       <!-- content -->
@@ -136,9 +157,26 @@
                         <div class="text-center lg:text-left mt-6 lg:mt-0">
                           <div class="mb-12 lg:pl-10">
                             <h1 class="text-3xl leading-normal text-blue-900 font-bold mb-4">
-                                At JiniTalent, We are specialized in the search for specifically qualified profiles
+                                Our Mission
                             </h1>
-                            <p class="text-gray-500 leading-relaxed font-light text-base mx-auto pb-2">On either a permanent or temporary basis. Our extensive search and technical recruiting experience gives our clients faster access to a larger selection of qualified candidates</p>
+                            <p class="text-blue-900 leading-relaxed font-light text-base mx-auto pb-2">
+                              <ul class="list-disc">
+                                <li class=" p-2 hover:border-l-white hover:border-l-4 rounded  hover:bg-blue-900 hover:bg-opacity-5 transition-all duration-200">
+                                  Helping African youth seize job opportunities in bitcoin</li>
+
+                                <li class=" p-2 mt-2 hover:border-l-white hover:border-l-4 rounded  hover:bg-blue-900 hover:bg-opacity-5 transition-all duration-200">
+                                  helping bitcoin companies find their talent in africa
+                                </li>
+
+                                <li class=" p-2 hover:border-l-white hover:border-l-4 rounded  hover:bg-blue-900 hover:bg-opacity-5 transition-all duration-200">
+                                  Informing young Africans about job opportunities in bitcoin
+                                </li>
+
+                                <li class=" p-2 mt-2 hover:border-l-white hover:border-l-4 rounded  hover:bg-blue-900 hover:bg-opacity-5 transition-all duration-200">
+                                  Connecting bitcoin companies with African job seekers
+                                </li>
+                              </ul>
+                            </p>
                             <!--p class="text-gray-800 leading-relaxed font-light text-base mx-auto pb-2">We are at your service.Our offices are open and our consultants are ready to help with your technical staffing needs during the COVID-19 pandemic. You can reach us quickly at 514-XXX-XXX.</p-->
                           </div>
                           <div class="lg:px-10">
@@ -463,10 +501,11 @@
                         this.open = ! this.open
                     },
                     hideloader(){
-                        setTimeout(() =>{this.showloader = false;}, 100);
+                        setTimeout(() =>{this.showloader = false;}, 200);
                     },
                 }));
             })
           </script>
+
     </body>
 </html>
