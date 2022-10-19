@@ -159,27 +159,27 @@
                             <h1 class="text-3xl leading-normal text-blue-900 font-bold mb-4">
                                 Our Mission
                             </h1>
-                            <p class="text-blue-900 leading-relaxed font-light text-base mx-auto pb-2">
-                              <ul class="list-disc">
+                            <p class="text-blue-900 leading-relaxed font-light text-base mx-auto pb-2 ">
+                              <ul class="">
                                 <li class=" p-2 hover:border-l-white hover:border-l-4 rounded  hover:bg-blue-900 hover:bg-opacity-5 transition-all duration-200">
-                                  Helping African youth seize job opportunities in bitcoin</li>
+                                  - Helping African youth seize job opportunities in bitcoin</li>
 
                                 <li class=" p-2 mt-2 hover:border-l-white hover:border-l-4 rounded  hover:bg-blue-900 hover:bg-opacity-5 transition-all duration-200">
-                                  helping bitcoin companies find their talent in africa
+                                  - helping bitcoin companies find their talent in africa
                                 </li>
 
                                 <li class=" p-2 hover:border-l-white hover:border-l-4 rounded  hover:bg-blue-900 hover:bg-opacity-5 transition-all duration-200">
-                                  Informing young Africans about job opportunities in bitcoin
+                                  - Informing young Africans about job opportunities in bitcoin
                                 </li>
 
                                 <li class=" p-2 mt-2 hover:border-l-white hover:border-l-4 rounded  hover:bg-blue-900 hover:bg-opacity-5 transition-all duration-200">
-                                  Connecting bitcoin companies with African job seekers
+                                  - Connecting bitcoin companies with African job seekers
                                 </li>
                               </ul>
                             </p>
                             <!--p class="text-gray-800 leading-relaxed font-light text-base mx-auto pb-2">We are at your service.Our offices are open and our consultants are ready to help with your technical staffing needs during the COVID-19 pandemic. You can reach us quickly at 514-XXX-XXX.</p-->
                           </div>
-                          <div class="lg:px-10">
+                          <div class="flex flex-col md:flex-row gap-2 lg:px-10">
                             <a class="py-2.5 px-10 inline-block text-center leading-normal text-gray-900 bg-white border-b border-gray-500 hover:text-blue-900 hover:ring-0 hover:bg-blue-100 focus:outline-none focus:ring-0 mr-4" href="#services">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="inline-block mr-1" width="1.5rem" height="1.5rem" fill="currentColor" viewBox="0 0 512 512"><path d="M304,384V360c0-29,31.54-56.43,52-76,28.84-27.57,44-64.61,44-108,0-80-63.73-144-144-144A143.6,143.6,0,0,0,112,176c0,41.84,15.81,81.39,44,108,20.35,19.21,52,46.7,52,76v24" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><line x1="224" y1="480" x2="288" y2="480" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><line x1="208" y1="432" x2="304" y2="432" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><line x1="256" y1="384" x2="256" y2="256" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><path d="M294,240s-21.51,16-38,16-38-16-38-16" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/></svg>
                                 Our Services
@@ -202,12 +202,12 @@
 
 
                  <!-- services Content -->
-                 <div id="services" class="section relative z-0 bg-blue-50 py-20">
+                 <div id="services" class="hidden md:block section relative z-0 bg-blue-50 py-20">
                     <div class="py-10">
                         <h2 class="text-center text-3xl font-bold">Our Services</h2>
                     </div>
 
-                    <div class="md:flex flex-row ">
+                    <div class=" md:flex flex-row  ">
 
                         <div class=" big-blue-900 md:w-2/5 md:min-h-96 px-10 py-10  lg:w-1/2 md:py-12 md:px-4 lg:px-8 lg:pl-32 md:pl-24 items-center">
                             <div class="flex items-center">
@@ -318,14 +318,14 @@
 
 
                 <!-- contact start -->
-                <div id="contact" class="section relative py-20 lg:py-36 bg-white dark:bg-gray-800">
+                <!--div id="contact" class="section relative py-20 lg:py-36 bg-white dark:bg-gray-800">
                     <div class="mx-auto w-full md:w-3/5 px-10 ">
                         <p class="text-center text-xl md:text-2xl lg:text-3xl font-bold">
                             Recruiting qualified talent requires searching, targeting, approaching, meeting, evaluating, verifying, convincing, nurturing and continuing... and that's our job!
                         </p>
                         <!--p class="text-center text-lg mt-5 ">
                             Recruiting qualified talent requires searching, targeting, approaching, meeting, evaluating, verifying, convincing, nurturing and continuing... and that's our job!
-                        </p-->
+                        </p->
 
                         <p class="text-center text-lg mt-10  ">
                             <a class="mx-auto py-2.5 px-10 inline-block text-center leading-normal text-gray-100 bg-orange-600  border-b border-orange-800 hover:bg-orange-500 hover:text-white hover:ring-0 focus:outline-none focus:ring-0" href="mailto:info@jinitalent.com">
@@ -335,7 +335,7 @@
                         </p>
                     </div>
 
-                </div><!-- End contact -->
+                </div--><!-- End contact -->
 
                 <div id="whyus" class="section relative z-0 bg-slate-600">
                   <div class="flex -flex-wrap flex-col md:flex-row ">
@@ -344,7 +344,7 @@
                       <div class="flex-1 bg-cover  bg-center  w-full" style="background-image: url({{asset('img/img2.webp')}})">
                           <!--img src="{{asset('img/img1.webp')}}" class="w-full max-w-full h-auto rounded-lg shadow-md" alt="creative agency"-->
                           <div class="md:py-20 bg-slate-900 bg-opacity-40 h-full md:px-2 lg:px-10 hover:bg-opacity-50 transition-all duration-300 items-center">
-                            <h3 class=" text-xl py-10 md:py-20 md:text-3xl lg:text-4xl px-6 font-bold text-white">
+                            <h3 class=" text-xl py-20 md:text-3xl lg:text-4xl px-6 font-bold text-white">
                               No matter rarity or the complexity of the desired profile, we will find your candidate.
                             </h3>
                             <div class=" hidden lg:block text-white text-2xl">
