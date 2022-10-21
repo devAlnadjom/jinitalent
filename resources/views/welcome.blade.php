@@ -221,7 +221,7 @@
                                 </h3>
                             </div>
                             <div class="text-slate-400 text-lg mt-6 md:mt-10">
-                                Including engineers, software developers, analysts, drafters, managers, technical writers, planners, designers, technologists, buyers, technicians and tradespersons, as well as senior management.
+
                             </div>
                         </div>
 
@@ -238,7 +238,7 @@
                             </div>
 
                             <div class="text-slate-400 text-lg mt-6 md:mt-10">
-                                Including engineers, software developers, analysts, drafters, managers, technical writers, planners, designers, technologists, buyers, technicians and tradespersons, as well as senior management.
+
                             </div>
                         </div>
 
@@ -345,10 +345,10 @@
                           <!--img src="{{asset('img/img1.webp')}}" class="w-full max-w-full h-auto rounded-lg shadow-md" alt="creative agency"-->
                           <div class="md:py-20 bg-slate-900 bg-opacity-40 h-full md:px-2 lg:px-10 hover:bg-opacity-50 transition-all duration-300 items-center">
                             <h3 class=" text-xl py-20 md:text-3xl lg:text-4xl px-6 font-bold text-white">
-                              No matter rarity or the complexity of the desired profile, we will find your candidate.
+
                             </h3>
                             <div class=" hidden lg:block text-white text-2xl">
-                                Have questions about service, please contact us.
+
                             </div>
                           </div>
 
