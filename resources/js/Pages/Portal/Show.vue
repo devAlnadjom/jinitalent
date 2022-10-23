@@ -87,7 +87,7 @@ const reset = () => { form = mapValues(form, () => null) }
 
         <div class="py-12">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                <div class="w-full flex gap-4">
+                <div class="w-full md:flex gap-4">
                     <!--Details-->
                     <div class=" md:w-2/3 lg:w-3/4 ">
                         <div class="border rounded-md p-4 bg-white">

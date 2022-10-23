@@ -43,25 +43,23 @@ const logout = () => {
                             <!-- Logo -->
                             <div class="shrink-0 flex items-center">
                                 <a :href="'/'" class="font-bold text-lg">
-                                    <span
-                                             class=" text-blue-800">jini</span> <span class="text-orange-600">Talent</span>
+                                    <div class="max-w-10 text-4xl font-bold capitalize text-gray-900 flex items-center">
+                                            <img class="h-16 " :src="'/img/logo.jpg'" title="logo" />
+                                            <!--span class="text-blue-800">jini</span> <span class="text-orange-600">Talent</span-->
+                                    </div>
                                 </a>
                             </div>
 
 
-                            <!--div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                                <JetNavLink :href="route('candidates.index')" :active="route().current('candidates')">
-                                    Home
-                                </JetNavLink>
-                            </div-->
-                            <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                        </div>
+
+                        <div class="hidden sm:flex sm:items-center sm:ml-6">
+
+                            <div class="hidden space-x-8 md:mr-8 sm:-my-px sm:ml-10 sm:flex">
                                 <JetNavLink :href="route('portal.index')" :active="route().current('portal.index')">
                                     Jobs
                                 </JetNavLink>
                             </div>
-                        </div>
-
-                        <div class="hidden sm:flex sm:items-center sm:ml-6">
 
                             <button v-if="!$page.props.user?.name"
                             class="flex ml-auto text-white bg-orange-600 border-0 py-1 px-4 focus:outline-none hover:bg-orange-800 rounded"

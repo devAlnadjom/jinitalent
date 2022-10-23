@@ -25,7 +25,7 @@ watch(form, throttle(function () {
     Inertia.get(route('portal.index'), pickBy(form), { preserveState: true })
 }, 900));
 
-const reset = () => { form = mapValues(form, () => null) }
+const reset = () => { form.search=""; }
 
 </script>
 
@@ -52,7 +52,7 @@ const reset = () => { form = mapValues(form, () => null) }
                                 </select>
                             </div>
                             <div class="flex w-full bg-white shadow rounded">
-                                <input class="relative w-full px-4 py-1 rounded-r -focus:ring border" autocomplete="off"
+                                <input class="relative w-full px-4 py-1 rounded-r focus:border-orange-500 focus:ring-orange-500 border" autocomplete="off"
                                     type="text" name="search" placeholder="Search…" v-model="form.search" />
                             </div>
                             <button class="ml-3 text-sm text-gray-500 hover:text-gray-700 focus:text-indigo-500 "

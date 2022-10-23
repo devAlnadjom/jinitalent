@@ -42,7 +42,7 @@
                 <div class="lg:flex lg:justify-between">
                     <div class="flex justify-between">
                         <div class="max-w-10 text-4xl font-bold capitalize text-gray-900 flex items-center">
-                            <img class="h-20 " src="{{asset('img/logo.jpg')}}" title="logo" />
+                            <img class="h-16 " src="{{asset('img/logo.jpg')}}" title="logo" />
                             <!--span class="text-blue-800">jini</span> <span class="text-orange-600">Talent</span-->
                         </div>
                         <!-- mobile nav -->
@@ -221,8 +221,8 @@
                                 </h3>
                             </div>
                             <div class="text-slate-400 text-lg mt-6 md:mt-10">
-
-                            </div>
+                                We’ve placed candidates in technology companies across North America, and often cross-hire across industries and subindustries, especially in the field of technology.
+                                 We cast a wide net to different types of companies to find just the right talent and personality that your business requires. </div>
                         </div>
 
                         <div class="flex-1 big-blue-900  md:min-h-96 px-10 py-10  lg:w-1/2 md:py-12 md:px-4 lg:px-8 lg:pl-32 md:pl-24 items-center">
@@ -286,6 +286,9 @@
                             <h3 class=" text-3xl md:text-4xl font-bold text-white">
                                 Bitcoin Industry:
                             </h3>
+                            <p class="text-white mt-3 text-lg">
+                                We are official partner of  <a href="https://www.afrobitcoin.org" target="_blank" class="hover:underline transition duration-300 underline-offset-2" title="AfroBitcoin"> AfroBitcoin</a> , an international conference for Bitcoin in Africa.
+                            </p>
                             <div class="text-gray-50 text-lg mt-6 md:mt-10  lg:ml-10 grid grid-cols-1 md:grid-cols-2 gap-6">
                               <div>
                                 <ul class="list-disc">
