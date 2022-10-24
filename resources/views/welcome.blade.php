@@ -76,7 +76,7 @@
                         </li>
 
                         <li class="relative hover:text-blue-900 border-blue-900 hover:border-b-2 transition-all duration-200">
-                            <a class="block py-3 lg:py-7 px-6 border-b-2 border-transparent" href="#bitcoins">Bitcoin industry</a>
+                            <a class="block py-3 lg:py-7 px-6 border-b-2 border-transparent" href="#bitcoins">Bitcoin Industry</a>
                         </li>
                         <li class="relative hover:text-blue-900 border-blue-900 hover:border-b-2 transition-all duration-200">
                             <a class="block py-3 lg:py-7 px-6 border-b-2 border-transparent" href="{{ route('public.uploadcv')}}" title="Spontaneous Application">Be a Jini</a>
@@ -116,9 +116,13 @@
                 <li class="relative hover:text-blue-900 hover:bg-orange-100" @click="toggle">
                     <a class="block py-3 lg:py-7 px-6 border-b-2 border-transparent" href="#bitcoins">Bitcoin industry</a>
                 </li>
-                <!--li class="relative hover:text-blue-900 hover:bg-orange-100" @click="toggle">
-                    <a class="block py-3 lg:py-7 px-6 border-b-2 border-transparent" href="#whyus">Why Us?</a>
-                </li-->
+                <li class="relative hover:text-blue-900 hover:bg-orange-100" @click="toggle">
+                    <a class="block py-3 lg:py-7 px-6 border-b-2 border-transparent" href="{{ route('public.uploadcv')}}">Be a Jini</a>
+                </li>
+                <li class="relative hover:text-blue-900 hover:bg-orange-100" @click="toggle">
+                    <a class="block py-3 lg:py-7 px-6 border-b-2 border-transparent" href="{{ route('public.uploadcv')}}">Find Your Jini</a>
+                </li>
+
 
                 <li class="relative hover:text-blue-900 hover:bg-orange-100" @click="toggle">
                     <a class="block py-3 lg:py-7 px-6 border-b-2 border-transparent" href="#contact">Contact</a>
@@ -406,7 +410,7 @@
                                 <div class="validate"></div>
                               </div>
                               <div class="text-center">
-                                <button type="submit" class="py-2.5 px-10 inline-block text-center leading-normal text-gray-100 bg-black border border-black hover:text-white hover:ring-0 focus:outline-none focus:ring-0" href="#project">
+                                <button type="submit" class="py-2.5 px-10 inline-block text-center leading-normal text-gray-100 bg-black  hover:bg-orange-600  hover:text-white hover:ring-0 focus:outline-none focus:ring-0" href="#project">
                                       <svg xmlns="http://www.w3.org/2000/svg" width="1.5rem" height="1.5rem" class="inline-block mr-1" fill="currentColor" viewBox="0 0 512 512"><rect x="48" y="96" width="416" height="320" rx="40" ry="40" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><polyline points="112 160 256 272 400 160" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/></svg>
                                        Send message
                                     </button>
@@ -424,7 +428,7 @@
 
           <footer class="bg-gray-50 text-gray-700">
             <!--Footer content-->
-            <div id="footer-content" class="relative pt-8 xl:pt-16 pb-6 xl:pb-12">
+            <div id="footer-content" class="relative pt-4 xl:pt-16 pb-6 xl:pb-12">
               <div class="container xl:max-w-6xl mx-auto px-4 overflow-hidden">
                 <div class="flex flex-wrap flex-row lg:justify-between -mx-3">
                   <div class="flex-shrink max-w-full w-full lg:w-2/5 px-3 lg:pr-16">
@@ -460,8 +464,8 @@
                   </div>
                   <div class="flex-shrink max-w-full w-full lg:w-3/5 px-3">
                     <div class="flex flex-wrap flex-row">
-                      <div class="flex-shrink max-w-full w-1/2 md:w-1/3 mb-6 lg:mb-0">
-                        <h4 class="text-base leading-normal mb-3 uppercase text-gray-800">Comming Soon</h4>
+                      <div class="flex-shrink max-w-full w-1/2 md:w-1/3 mb-6 lg:mb-0 md:mt-4">
+                        <h4 class="text-base leading-normal mb-3 uppercase text-gray-800 font-semibold">Resources</h4>
                         <ul>
                           <li class="py-1 hover:text-gray-900"><a href="mailto:info@jinitalent.com">Contact</a></li>
                           <li class="py-1 hover:text-gray-900"><a href="{{ route('portal.index') }}">Job Portal</a></li>
@@ -476,7 +480,7 @@
 
             <!--Start footer copyright-->
             <div class="footer-dark">
-              <div class="container xl:max-w-6xl mx-auto px-4 py-4 border-t border-gray-200 border-opacity-10">
+              <div class="container xl:max-w-6xl mx-auto px-4 py-2 border-t border-gray-200 border-opacity-10">
                 <div class="row">
                   <div class="col-12 col-md text-center">
                     <p class="d-block my-3">Copyright © Jini Talent | by <a href="https://devalnadjom.com" class="hover:text-gray-900">@alnadjom</a></p>
