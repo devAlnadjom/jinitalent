@@ -152,6 +152,11 @@ const logout = () => {
                             Home
                         </JetResponsiveNavLink>
                     </div>
+                    <div class="pt-2 pb-3 space-y-1">
+                        <JetResponsiveNavLink :href="route('portal.index')" :active="route().current('portal.index')">
+                            Jobs
+                        </JetResponsiveNavLink>
+                    </div>
 
                     <!-- Responsive Settings Options -->
                     <div v-if="$page.props.user?.id"  class="pt-4 pb-1 border-t border-gray-200">
@@ -250,7 +255,7 @@ const logout = () => {
 
         <footer class="bg-gray-50 text-gray-700">
             <!--Footer content-->
-            <div id="footer-content" class="relative pt-8 xl:pt-16 pb-6 xl:pb-12">
+            <div id="footer-content" class="relative pt-4 xl:pt-16 pb-6 xl:pb-12">
               <div class="container xl:max-w-6xl mx-auto px-4 overflow-hidden">
                 <div class="flex flex-wrap flex-row lg:justify-between -mx-3">
                   <div class="flex-shrink max-w-full w-full lg:w-2/5 px-3 lg:pr-16">
@@ -286,11 +291,11 @@ const logout = () => {
                   </div>
                   <div class="flex-shrink max-w-full w-full lg:w-3/5 px-3">
                     <div class="flex flex-wrap flex-row">
-                      <div class="flex-shrink max-w-full w-1/2 md:w-1/3 mb-6 lg:mb-0">
-                        <h4 class="text-base leading-normal mb-3 uppercase text-gray-800">Comming Soon</h4>
+                      <div class="flex-shrink max-w-full w-1/2 md:w-1/3 mb-6 lg:mb-0 md:mt-4">
+                        <h4 class="text-base leading-normal mb-3 uppercase text-gray-800 font-semibold">Resources</h4>
                         <ul>
                           <li class="py-1 hover:text-gray-900"><a href="mailto:info@jinitalent.com">Contact</a></li>
-                          <li class="py-1 hover:text-gray-900"><a :href="route('portal.index')">Job Portal</a></li>
+                          <li class="py-1 hover:text-gray-900"><a href="{{ route('portal.index') }}">Job Portal</a></li>
                         </ul>
                       </div>
 
@@ -302,7 +307,7 @@ const logout = () => {
 
             <!--Start footer copyright-->
             <div class="footer-dark">
-              <div class="container xl:max-w-6xl mx-auto px-4 py-4 border-t border-gray-200 border-opacity-10">
+              <div class="container xl:max-w-6xl mx-auto px-4 py-2 border-t border-gray-200 border-opacity-10">
                 <div class="row">
                   <div class="col-12 col-md text-center">
                     <p class="d-block my-3">Copyright © Jini Talent | by <a href="https://devalnadjom.com" class="hover:text-gray-900">@alnadjom</a></p>
