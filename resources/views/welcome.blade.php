@@ -13,14 +13,15 @@
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
         <link rel="manifest" href="/site.webmanifest">
         <!-- Fonts -->
-        <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap">
-
+        <!--link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap"-->
+        <link rel="preconnect" href="https://fonts.bunny.net">
+        <link href="https://fonts.bunny.net/css?family=alata:400|roboto:400" rel="stylesheet" />
         <!-- Scripts -->
 
         @vite('resources/js/app.js')
         <script defer src="https://unpkg.com/alpinejs@3.10.3/dist/cdn.min.js"></script>
     </head>
-    <body x-data="jinitalent" x-init="hideloader" class="font-sans antialiased">
+    <body x-data="jinitalent" x-init="hideloader" class="font-sans antialiased" style="font-family: Alata">
         <div class="preloader loaded-success  fixed inset-0 z-50 bg-gray-50 " x-show="showloader">
             <div class="absolute left-1/2 top-1/2 transform -translate-y-1/2">
               <div class="relative mx-auto my-12">
@@ -38,7 +39,7 @@
   <!-- ========== { HEADER }==========  -->
         <header class="fixed top-0 left-0 right-0 z-40">
             <nav class="main-nav bg-white">
-            <div class="container xl:max-w-6xl mx-auto px-4 ">
+            <div class="container xl:max-w-7xl mx-auto px-4 ">
                 <div class="lg:flex lg:justify-between">
                     <div class="flex justify-between">
                         <div class="max-w-10 text-4xl font-bold capitalize text-gray-900 flex items-center">
@@ -133,10 +134,12 @@
         </header><!-- end header -->
 
         <main id="content">
+
+
             <!-- hero start -->
                 <div id="hero" class="section relative z-0  bg-gray-50 bg-cover  bg-center " style="background-image: url({{asset('img/img3.jpeg')}})">
 
-                  <div class="py-32  md:pt-32 md:pb-20 md:min-h-screen bg-blue-900 bg-opacity-20 flex items-center justify-center align-middle">
+                  <div class="py-32  md:pt-32 md:pb-20 md:min-h-screen bg-black bg-opacity-50 flex items-center justify-center align-middle">
                     <div class="container max-w-full text-center px-10 w-full lg:w-6xl min-h-min h-full my-auto self-center place-items-center mx-auto" >
                         <h1 class="font-extrabold text-3xl lg:text-5xl text-white leading-normal lg:leading-relaxed py-4 ">
                           SPECIALIST IN THE RECRUITMENT OF QUALIFIED PROFESSIONALS
@@ -148,9 +151,109 @@
                   </div>
 
                 </div><!-- end Hero -->
+
+                <!-- Our Story -->
+                <div id="Our Story" class="section relative z-0 py-28 md:pt-32 md:pb-20 bg-gray-50">
+                    <div class="container xl:max-w-6xl mx-auto px-4">
+                      <div class="flex flex-wrap flex-row md:flex-row-reverse -mx-4 justify-center">
+                        <!-- content -->
+                        <div class="flex-shrink max-w-full lg:h-96 bg-cover rounded-lg bg-center shadow-xl  -px-4 sm:px-12 -lg:px-10 w-full sm:w-9/12 lg:w-1/2  h-full -self-center" style="background-image: url({{asset('img/img6.jpg')}})">
+                          <!--img src="{{asset('img/img6.jpg')}}" class="w-full max-w-full h-auto rounded-lg shadow-md" alt="creative agency"-->
+                        </div><!-- end content -->
+
+                        <!-- text -->
+                        <div class="flex-shrink max-w-full px-4 w-full md:w-9/12 lg:w-1/2 self-center lg:pr-12">
+                          <div class="text-center lg:text-left mt-6 lg:mt-0">
+                            <div class="mb-8 lg:pl-10">
+                              <h2 class="text-3xl leading-normal text-blue-900 font-bold mb-4">
+                                  Our Story
+                              </h2>
+                              <p class="text-blue-900 leading-relaxed font-light text-base mx-auto pb-2 ">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, aspernatur! Fugiat, eveniet atque officiis suscipit excepturi asperiores architecto ducimus aliquam doloribus quae dolorem eos,
+                                 maxime consequatur! Velit sed delectus aperiam.Voluptatibus sequi enim sit cumque corporis id voluptatum rerum delectus libero, deserunt ipsum consectetur tempore esse officia odit unde nemo maiores iure quibusdam impedit harum nam.
+                                Quis quibusdam laboriosam corrupti.
+                              </p>
+                              <!--p class="text-gray-800 leading-relaxed font-light text-base mx-auto pb-2">We are at your service.Our offices are open and our consultants are ready to help with your technical staffing needs during the COVID-19 pandemic. You can reach us quickly at 514-XXX-XXX.</p-->
+                            </div>
+                            <div class="flex flex-col md:flex-row gap-2 lg:px-10 items-end">
+                              <a href="#" class=" italic font-mono font-light text-orange-400 hover:text-orange-600 transition-colors duration-300"> AZALAKA Pinhou</a>
+                            </div>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div><!-- end Hero -->
+
+
+                <!-- For  company-->
+                <!-- Hero 2 -->
+                <div id="hero2" class="section relative z-0 py-28 md:pt-32 md:pb-20 bg-blue-50">
+                    <div class="container xl:max-w-6xl mx-auto px-4">
+                      <div class="flex flex-wrap flex-row -mx-4 justify-center">
+                        <!-- content -->
+                        <div class="flex-shrink max-w-full lg:h-96 bg-cover rounded-lg bg-center shadow-xl  -px-4 sm:px-12 -lg:px-10 w-full sm:w-9/12 lg:w-1/2  h-full -self-center" style="background-image: url({{asset('img/img3.jpeg')}})">
+                          <!--img src="{{asset('img/img1.webp')}}" class="w-full max-w-full h-auto rounded-lg shadow-md" alt="creative agency"-->
+                        </div><!-- end content -->
+
+                        <!-- text -->
+                        <div class="flex-shrink max-w-full px-4 w-full md:w-9/12 lg:w-1/2 self-center lg:pr-12">
+                          <div class="text-center lg:text-left mt-6 lg:mt-0">
+                            <div class="mb-12 lg:pl-10">
+                              <h2 class="text-3xl leading-normal text-blue-900 font-bold mb-4">
+                                  For Companies
+                              </h2>
+                              <p class="text-blue-900 leading-relaxed font-light text-base mx-auto pb-2 ">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt nam non velit?
+                                Temporibus cupiditate dicta magni corporis sunt nostrum magnam aspernatur a in qui error sint soluta, doloribus earum eius?
+                              </p>
+
+                              <p class="text-blue-900 leading-relaxed font-light text-base mx-auto pb-2 ">
+                                <ul class="">
+                                  <li class=" px-2 py-1  hover:border-l-white hover:border-l-4 rounded  hover:bg-blue-900 hover:bg-opacity-5 transition-all duration-200">
+                                    - Helping African youth seize job opportunities in bitcoin</li>
+
+                                  <li class=" px-2 py-1 mt-1 hover:border-l-white hover:border-l-4 rounded  hover:bg-blue-900 hover:bg-opacity-5 transition-all duration-200">
+                                    - helping bitcoin companies find their talent in africa
+                                  </li>
+
+                                  <li class=" px-2 py-1 hover:border-l-white hover:border-l-4 rounded  hover:bg-blue-900 hover:bg-opacity-5 transition-all duration-200">
+                                    - Informing young Africans about job opportunities in bitcoin
+                                  </li>
+
+                                  <li class=" px-2 py-1 mt-1 hover:border-l-white hover:border-l-4 rounded  hover:bg-blue-900 hover:bg-opacity-5 transition-all duration-200">
+                                    - Connecting bitcoin companies with African job seekers
+                                  </li>
+                                </ul>
+                              </p>
+                              <!--p class="text-gray-800 leading-relaxed font-light text-base mx-auto pb-2">We are at your service.Our offices are open and our consultants are ready to help with your technical staffing needs during the COVID-19 pandemic. You can reach us quickly at 514-XXX-XXX.</p-->
+                            </div>
+                            <div class="flex flex-col md:flex-row gap-2 lg:px-10">
+                              <a class="py-2.5 px-10 inline-block text-center leading-normal text-gray-900 bg-white border-b border-gray-500 hover:text-blue-900 hover:ring-0 hover:bg-blue-100 focus:outline-none focus:ring-0 mr-4" href="#services">
+                                  <svg xmlns="http://www.w3.org/2000/svg" class="inline-block mr-1" width="1.5rem" height="1.5rem" fill="currentColor" viewBox="0 0 512 512"><path d="M304,384V360c0-29,31.54-56.43,52-76,28.84-27.57,44-64.61,44-108,0-80-63.73-144-144-144A143.6,143.6,0,0,0,112,176c0,41.84,15.81,81.39,44,108,20.35,19.21,52,46.7,52,76v24" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><line x1="224" y1="480" x2="288" y2="480" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><line x1="208" y1="432" x2="304" y2="432" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><line x1="256" y1="384" x2="256" y2="256" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><path d="M294,240s-21.51,16-38,16-38-16-38-16" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/></svg>
+                                  Submit Company
+                              </a>
+
+                              <!--a class="py-2.5 px-10 inline-block text-center leading-normal text-gray-100 bg-orange-600  border-b border-orange-800 hover:bg-orange-500 hover:text-white hover:ring-0 focus:outline-none focus:ring-0" href="{{route('public.uploadcv')}}"  title="Spontaneous Application">
+                                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 inline-block mr-1">
+                                      <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5" />
+                                    </svg>
+
+                                  Be a Jini
+                              </a-->
+                            </div>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div><!-- end Hero -->
+                <!-- end  company-->
+
+                <!-- Hero 2 -->
                 <div id="hero2" class="section relative z-0 py-28 md:pt-32 md:pb-20 bg-gray-50">
                   <div class="container xl:max-w-6xl mx-auto px-4">
-                    <div class="flex flex-wrap flex-row -mx-4 justify-center">
+                    <div class="flex flex-wrap flex-row md:flex-row-reverse -mx-4 justify-center">
                       <!-- content -->
                       <div class="flex-shrink max-w-full lg:h-96 bg-cover rounded-lg bg-center shadow-xl  -px-4 sm:px-12 -lg:px-10 w-full sm:w-9/12 lg:w-1/2  h-full -self-center" style="background-image: url({{asset('img/img3.jpeg')}})">
                         <!--img src="{{asset('img/img1.webp')}}" class="w-full max-w-full h-auto rounded-lg shadow-md" alt="creative agency"-->
@@ -160,42 +263,43 @@
                       <div class="flex-shrink max-w-full px-4 w-full md:w-9/12 lg:w-1/2 self-center lg:pr-12">
                         <div class="text-center lg:text-left mt-6 lg:mt-0">
                           <div class="mb-12 lg:pl-10">
-                            <h1 class="text-3xl leading-normal text-blue-900 font-bold mb-4">
-                                Our Mission
-                            </h1>
-                            <p class="text-blue-900 leading-relaxed font-light text-base mx-auto pb-2 ">
+                            <h3 class="text-2xl leading-normal text-blue-900 font-bold mb-4">
+                                Looking for new Oportunity?
+                            </h3>
+                            <p class="text-slate-600 leading-relaxed font-light text-base mx-auto pb-2 ">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt nam non velit?
+                                Temporibus cupiditate dicta magni corporis sunt nostrum magnam aspernatur a in qui error sint soluta, doloribus earum eius?
+                              </p>
+
+                            <p class="text-blue-900 leading-relaxed text-base font-light mx-auto pb-2" style="font-weight: 300">
                               <ul class="">
-                                <li class=" p-2 hover:border-l-white hover:border-l-4 rounded  hover:bg-blue-900 hover:bg-opacity-5 transition-all duration-200">
+                                <li class=" px-2 py-1 hover:border-l-white hover:border-l-4 rounded  hover:bg-blue-900 hover:bg-opacity-5 transition-all duration-200">
                                   - Helping African youth seize job opportunities in bitcoin</li>
 
-                                <li class=" p-2 mt-2 hover:border-l-white hover:border-l-4 rounded  hover:bg-blue-900 hover:bg-opacity-5 transition-all duration-200">
-                                  - helping bitcoin companies find their talent in africa
-                                </li>
 
-                                <li class=" p-2 hover:border-l-white hover:border-l-4 rounded  hover:bg-blue-900 hover:bg-opacity-5 transition-all duration-200">
+
+                                <li class=" px-2 py-1 hover:border-l-white hover:border-l-4 rounded  hover:bg-blue-900 hover:bg-opacity-5 transition-all duration-200">
                                   - Informing young Africans about job opportunities in bitcoin
-                                </li>
-
-                                <li class=" p-2 mt-2 hover:border-l-white hover:border-l-4 rounded  hover:bg-blue-900 hover:bg-opacity-5 transition-all duration-200">
-                                  - Connecting bitcoin companies with African job seekers
                                 </li>
                               </ul>
                             </p>
                             <!--p class="text-gray-800 leading-relaxed font-light text-base mx-auto pb-2">We are at your service.Our offices are open and our consultants are ready to help with your technical staffing needs during the COVID-19 pandemic. You can reach us quickly at 514-XXX-XXX.</p-->
                           </div>
                           <div class="flex flex-col md:flex-row gap-2 lg:px-10">
-                            <a class="py-2.5 px-10 inline-block text-center leading-normal text-gray-900 bg-white border-b border-gray-500 hover:text-blue-900 hover:ring-0 hover:bg-blue-100 focus:outline-none focus:ring-0 mr-4" href="#services">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="inline-block mr-1" width="1.5rem" height="1.5rem" fill="currentColor" viewBox="0 0 512 512"><path d="M304,384V360c0-29,31.54-56.43,52-76,28.84-27.57,44-64.61,44-108,0-80-63.73-144-144-144A143.6,143.6,0,0,0,112,176c0,41.84,15.81,81.39,44,108,20.35,19.21,52,46.7,52,76v24" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><line x1="224" y1="480" x2="288" y2="480" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><line x1="208" y1="432" x2="304" y2="432" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><line x1="256" y1="384" x2="256" y2="256" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><path d="M294,240s-21.51,16-38,16-38-16-38-16" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/></svg>
-                                Our Services
+                            <a class="py-2.5 px-10 inline-block text-center leading-normal text-gray-900 bg-white border-b border-gray-500 hover:text-blue-900 hover:ring-0 hover:bg-blue-100 focus:outline-none focus:ring-0 mr-4" href="{{route('public.uploadcv')}}">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 inline-block mr-1">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5" />
+                                  </svg>
+                                Upload Your Cv
                             </a>
 
-                            <a class="py-2.5 px-10 inline-block text-center leading-normal text-gray-100 bg-orange-600  border-b border-orange-800 hover:bg-orange-500 hover:text-white hover:ring-0 focus:outline-none focus:ring-0" href="{{route('public.uploadcv')}}"  title="Spontaneous Application">
+                            <!--a class="py-2.5 px-10 inline-block text-center leading-normal text-gray-100 bg-orange-600  border-b border-orange-800 hover:bg-orange-500 hover:text-white hover:ring-0 focus:outline-none focus:ring-0" href="{{route('public.uploadcv')}}"  title="Spontaneous Application">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 inline-block mr-1">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5" />
                                   </svg>
 
                                 Be a Jini
-                            </a>
+                            </a-->
                           </div>
 
                         </div>
@@ -274,6 +378,7 @@
 
                 </div><!--  End Content -->
 
+                <template>
                 <div id="bitcoins" class="section relative z-0 bg-slate-600">
                     <div class="flex -flex-wrap flex-row">
 
@@ -322,7 +427,7 @@
                     </div>
 
                 </div><!--  End Content -->
-
+                </template>
 
                 <!-- contact start -->
                 <!--div id="contact" class="section relative py-20 lg:py-36 bg-white dark:bg-gray-800">
