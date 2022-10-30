@@ -359,7 +359,29 @@
                     </div>
 
                 </div><!--  End Content -->
+                <!-- Portfolio Content -->
+                <div id="portfolio" class="section relative z-0 bg-slate-200">
+                    <div class="flex -flex-wrap flex-row">
+                        <div class=" bg-blue-900 md:w-2/5 md:min-h-96 px-10 py-20 lg:py-40 lg:w-1/2 md:py-12 md:px-4 lg:px-8 lg:pl-32 md:pl-24 items-center">
+                            <h3 class=" text-3xl md:text-4xl font-bold text-white">
+                                Over 500 CVs of experienced technical staff on file
+                            </h3>
+                            <div class="text-gray-50 text-lg mt-6 md:mt-10">
+                                Including engineers, software developers, analysts, drafters, managers, technical writers, planners, designers, technologists, buyers, technicians and tradespersons, as well as senior management.
+                            </div>
+                        </div>
 
+                        <div class="flex-1 bg-cover  bg-center  w-full" style="background-image: url({{asset('img/img4.jpeg')}})">
+                            <!--img src="{{asset('img/img1.webp')}}" class="w-full max-w-full h-auto rounded-lg shadow-md" alt="creative agency"-->
+                            <div class="md:py-12 bg-slate-900 bg-opacity-10 h-full md:px-12 hover:bg-opacity-20 transition-all duration-300">
+
+                            </div>
+
+                          </div><!-- end content -->
+
+                    </div>
+
+                </div--><!--  End Content -->
 
                 <template>
                 <div id="bitcoins" class="section relative z-0 bg-slate-600">
@@ -432,11 +454,26 @@
 
                 </div--><!-- End contact -->
 
-                <div id="contact" class="section relative z-0 bg-white-600 flex justify-items-center">
+                <div id="whyus" class="section relative z-0 bg-slate-600">
+                  <div class="flex -flex-wrap flex-col md:flex-row ">
 
-                      <div class=" .bg-gray-200 w-full md:w-3/5 md:mx-auto  px-6 py-10  lg:w-2/3  md:px-4 lg:px-8 lg:pr-26 md:pr-12 items-center">
 
-                          <div class=".bg-gray-200  w-full p-6 wow fadeInUp" >
+                      <div class="flex-1 bg-cover  bg-center  w-full" style="background-image: url({{asset('img/img2.webp')}})">
+                          <!--img src="{{asset('img/img1.webp')}}" class="w-full max-w-full h-auto rounded-lg shadow-md" alt="creative agency"-->
+                          <div class="md:py-20 bg-slate-900 bg-opacity-40 h-full md:px-2 lg:px-10 hover:bg-opacity-50 transition-all duration-300 items-center">
+                            <h3 class=" text-xl py-20 md:text-3xl lg:text-4xl px-6 font-bold text-white">
+
+                            </h3>
+                            <div class=" hidden lg:block text-white text-2xl">
+
+                            </div>
+                          </div>
+
+                      </div><!-- end content -->
+
+                      <div class=" bg-gray-200 md:w-3/5 .md:min-h-96 px-6 py-10  lg:w-1/2  md:px-4 lg:px-8 lg:pr-26 md:pr-12 items-center">
+
+                          <div class="bg-gray-200 border-b border-gray-100 w-full p-6 wow fadeInUp" >
                             <!-- section header -->
                             <header class="text-center mx-auto mb-10 lg:px-20">
                               <p class="text-gray-600 leading-relaxed font-light text-xl mx-auto pb-2">Have questions about service, please contact us.</p>
@@ -463,23 +500,23 @@
                               <div class="flex flex-wrap flex-row -mx-4">
                                 <div class="flex-shrink w-full max-w-full md:w-1/2 px-4 mb-6">
                                   <label class="inline-block mb-2" for="name">Your Name</label>
-                                  <input type="text" name="name" value="{{ old('name') }}" class="w-full leading-5 relative py-3 px-5 rounded text-gray-800 bg-white border-b border-gray-300 overflow-x-auto focus:outline-none focus:border-gray-400 focus:ring-0 dark:text-gray-400 dark:bg-gray-700 dark:border-gray-700 dark:focus:border-gray-600" id="name">
+                                  <input type="text" name="name" value="{{ old('name') }}" class="w-full leading-5 relative py-3 px-5 rounded text-gray-800 bg-white border-b border-gray-100 overflow-x-auto focus:outline-none focus:border-gray-400 focus:ring-0 dark:text-gray-400 dark:bg-gray-700 dark:border-gray-700 dark:focus:border-gray-600" id="name">
                                   <div class="validate"></div>
                                 </div>
                                 <div class="flex-shrink w-full max-w-full md:w-1/2 px-4 mb-6">
                                   <label class="inline-block mb-2" for="email">Your Email</label>
-                                  <input type="email" name="email" value="{{ old('email') }}" class="w-full leading-5 relative py-3 px-5 rounded text-gray-800 bg-white border-b border-gray-300 overflow-x-auto focus:outline-none focus:border-gray-400 focus:ring-0 dark:text-gray-400 dark:bg-gray-700 dark:border-gray-700 dark:focus:border-gray-600"  id="email">
+                                  <input type="email" name="email" value="{{ old('email') }}" class="w-full leading-5 relative py-3 px-5 rounded text-gray-800 bg-white border-b border-gray-100 overflow-x-auto focus:outline-none focus:border-gray-400 focus:ring-0 dark:text-gray-400 dark:bg-gray-700 dark:border-gray-700 dark:focus:border-gray-600"  id="email">
                                   <div class="validate"></div>
                                 </div>
                               </div>
                               <div class="mb-6">
                                 <label class="inline-block mb-2" for="subject">Subject</label>
-                                <input type="text" value="{{ old('subject') }}" class="w-full leading-5 relative py-3 px-5 rounded text-gray-800 bg-white border-b border-gray-300 overflow-x-auto focus:outline-none focus:border-gray-400 focus:ring-0 dark:text-gray-400 dark:bg-gray-700 dark:border-gray-700 dark:focus:border-gray-600" name="subject" id="subject">
+                                <input type="text" value="{{ old('subject') }}" class="w-full leading-5 relative py-3 px-5 rounded text-gray-800 bg-white border-b border-gray-100 overflow-x-auto focus:outline-none focus:border-gray-400 focus:ring-0 dark:text-gray-400 dark:bg-gray-700 dark:border-gray-700 dark:focus:border-gray-600" name="subject" id="subject">
                                 <div class="validate"></div>
                               </div>
                               <div class="mb-6">
                                 <label class="inline-block mb-2" for="messages">Message</label>
-                                <textarea  class="w-full leading-5 relative py-3 px-5 rounded text-gray-800 bg-white border-b border-gray-300 overflow-x-auto focus:outline-none focus:border-gray-400 focus:ring-0 dark:text-gray-400 dark:bg-gray-700 dark:border-gray-700 dark:focus:border-gray-600" name="message" rows="10" id="messages">{{ old('message') }}</textarea>
+                                <textarea  class="w-full leading-5 relative py-3 px-5 rounded text-gray-800 bg-white border-b border-gray-100 overflow-x-auto focus:outline-none focus:border-gray-400 focus:ring-0 dark:text-gray-400 dark:bg-gray-700 dark:border-gray-700 dark:focus:border-gray-600" name="message" rows="10" id="messages">{{ old('message') }}</textarea>
                                 <div class="validate"></div>
                               </div>
                               <div class="text-center">
@@ -492,7 +529,7 @@
                           </div>
                       </div>
 
-
+                  </div>
 
               </div><!--  End Content -->
 
