@@ -193,7 +193,7 @@
 
                 <!-- For  company-->
                 <!-- Hero 2 -->
-                <div id="hero2" class="section relative z-0 py-28 md:pt-32 md:pb-20 bg-blue-50">
+                <div id="companies" class="section relative z-0 py-28 md:pt-32 md:pb-20 bg-blue-100">
                     <div class="container xl:max-w-6xl mx-auto px-4">
                       <div class="flex flex-wrap flex-row -mx-4 justify-center">
                         <!-- content -->
@@ -252,11 +252,11 @@
                         </div>
                       </div>
                     </div>
-                  </div><!-- end Hero -->
+                </div><!-- end Hero -->
                 <!-- end  company-->
 
                 <!-- Hero 2 -->
-                <div id="hero2" class="section relative z-0 py-28 md:pt-32 md:pb-20 bg-gray-50">
+                <div id="candidates" class="section relative z-0 py-28 md:pt-32 md:pb-20 bg-gray-50">
                   <div class="container xl:max-w-6xl mx-auto px-4">
                     <div class="flex flex-wrap flex-row md:flex-row-reverse -mx-4 justify-center">
                       <!-- content -->
@@ -315,9 +315,9 @@
 
 
                  <!-- services Content -->
-                 <div id="services" class="hidden md:block section relative z-0 bg-blue-50 py-20">
+                 <div id="services" class="hidden md:block section relative z-0 bg-blue-100 py-20">
                     <div class="py-10">
-                        <h2 class="text-center text-3xl font-bold">Our Services</h2>
+                        <h2 class="text-center text-3xl font-bold">Social Proof</h2>
                     </div>
 
                     <div class=" md:flex flex-row  ">
@@ -413,24 +413,6 @@
                 </template>
 
                 <!-- contact start -->
-                <!--div id="contact" class="section relative py-20 lg:py-36 bg-white dark:bg-gray-800">
-                    <div class="mx-auto w-full md:w-3/5 px-10 ">
-                        <p class="text-center text-xl md:text-2xl lg:text-3xl font-bold">
-                            Recruiting qualified talent requires searching, targeting, approaching, meeting, evaluating, verifying, convincing, nurturing and continuing... and that's our job!
-                        </p>
-                        <!--p class="text-center text-lg mt-5 ">
-                            Recruiting qualified talent requires searching, targeting, approaching, meeting, evaluating, verifying, convincing, nurturing and continuing... and that's our job!
-                        </p->
-
-                        <p class="text-center text-lg mt-10  ">
-                            <a class="mx-auto py-2.5 px-10 inline-block text-center leading-normal text-gray-100 bg-orange-600  border-b border-orange-800 hover:bg-orange-500 hover:text-white hover:ring-0 focus:outline-none focus:ring-0" href="mailto:info@jinitalent.com">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="1.5rem" height="1.5rem" class="inline-block mr-1" fill="currentColor" viewBox="0 0 512 512"><rect x="48" y="96" width="416" height="320" rx="40" ry="40" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><polyline points="112 160 256 272 400 160" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/></svg>
-                                Contact Us
-                            </a>
-                        </p>
-                    </div>
-
-                </div--><!-- End contact -->
 
                 <div id="contact" class="section relative z-0 bg-white-600 flex justify-items-center">
 
