@@ -147,11 +147,19 @@
                   <div class="py-32  md:pt-32 md:pb-20 md:min-h-screen bg-black bg-opacity-50 flex items-center justify-center align-middle">
                     <div class="container max-w-full text-center px-10 w-full lg:w-6xl min-h-min h-full my-auto self-center place-items-center mx-auto" >
                         <h1 class="font-extrabold text-3xl lg:text-5xl text-white leading-normal lg:leading-relaxed py-4 ">
-                          SPECIALIST IN THE RECRUITMENT OF QUALIFIED PROFESSIONALS
+                          SPECIALIST IN THE RECRUITMENT OF <span>IT</span> TALENTS
                         </h1>
-                        <h3 class="font-bold text-white text-2xl mt-10 md:mt-4 ">
+                        <div class="font-bold text-white text-2xl mt-10 md:mt-4 ">
+                           " Find your genius in  <span class="px-2 pb-1 border-orange-400 hover:border-b-2 cursor-pointer">Bitcoins and other IT</span>  fields.
+                        </div>
+
+                        <button type="submit" class="mt-4 md:mt-8 lg:mt-12 py-2.5 px-10 inline-block text-center leading-normal text-gray-100 bg-orange-400  hover:bg-orange-600  hover:text-white hover:ring-0 focus:outline-none focus:ring-0" href="#project">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1.5rem" height="1.5rem" class="inline-block mr-1" fill="currentColor" viewBox="0 0 512 512"><rect x="48" y="96" width="416" height="320" rx="40" ry="40" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><polyline points="112 160 256 272 400 160" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/></svg>
+                             Send message
+                          </button>
+                        <!--h3 class="font-bold text-white text-2xl mt-10 md:mt-4 ">
                           We find talent for bitcoin companies in <span class="p-1 transition duration-300 rounded hover:bg-orange-500">Africa</span>
-                        </h3>
+                        </h3-->
                     </div><!-- end content -->
                   </div>
 
@@ -174,9 +182,10 @@
                                   Our Story
                               </h3>
                               <p class="text-blue-900 leading-relaxed font-light text-base mx-auto pb-2 ">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, aspernatur! Fugiat, eveniet atque officiis suscipit excepturi asperiores architecto ducimus aliquam doloribus quae dolorem eos,
-                                 maxime consequatur! Velit sed delectus aperiam.Voluptatibus sequi enim sit cumque corporis id voluptatum rerum delectus libero, deserunt ipsum consectetur tempore esse officia odit unde nemo maiores iure quibusdam impedit harum nam.
-                                Quis quibusdam laboriosam corrupti.
+                                We are expert talent hunters in IT, employability and human resources, united around a common mission: Helping companies find the right profile and enabling young people to get decent jobs.
+                              </p>
+                              <p class="text-blue-900 leading-relaxed font-light text-base mx-auto pb-2 ">
+                                Knowing the requirements of North American companies, we have the necessary network to find the right talent in Africa and elsewhere.
                               </p>
                               <!--p class="text-gray-800 leading-relaxed font-light text-base mx-auto pb-2">We are at your service.Our offices are open and our consultants are ready to help with your technical staffing needs during the COVID-19 pandemic. You can reach us quickly at 514-XXX-XXX.</p-->
                             </div>
@@ -375,7 +384,7 @@
                         </div><!-- end content -->
 
                         <div class=" bg-orange-600 md:w-2/5 md:min-h-96 px-10 py-20 lg:py-40 lg:w-1/2 md:py-12 md:px-4 lg:px-8 lg:pr-26 md:pr-12 items-center">
-                            <h3 class=" text-3xl md:text-4xl font-bold text-white">
+                            <h3 class="  text-3xl md:text-4xl font-bold text-white">
                                 Bitcoin Industry:
                             </h3>
                             <p class="text-white mt-3 text-lg">
@@ -418,9 +427,15 @@
 
                       <div class=" .bg-gray-200 w-full md:w-3/5 md:mx-auto  px-6 py-10  lg:w-2/3  md:px-4 lg:px-8 lg:pr-26 md:pr-12 items-center">
 
+
+
                           <div class=".bg-gray-200  w-full p-6 wow fadeInUp" >
+
                             <!-- section header -->
                             <header class="text-center mx-auto mb-10 lg:px-20">
+                                <h3 class="styledtitle text-3xl md:text-3xl font-bold text-blue-800">
+                                    Contact Us
+                                </h3>
                               <p class="text-gray-600 leading-relaxed font-light text-xl mx-auto pb-2">Have questions about service, please contact us.</p>
                             </header><!-- end section header -->
 
