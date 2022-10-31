@@ -78,7 +78,7 @@
                         </li>
 
                         <li class="relative hover:text-blue-900 border-blue-900 hover:border-b-2 transition-all duration-200">
-                            <a class="block py-3 lg:py-7 px-6 border-b-2 border-transparent" href="#services">Our Services</a>
+                            <a class="block py-3 lg:py-7 px-6 border-b-2 border-transparent" href="#ourMission">Our Mission</a>
                         </li>
 
                         <li class="relative hover:text-blue-900 border-blue-900 hover:border-b-2 transition-all duration-200">
@@ -116,12 +116,12 @@
                 </li>
 
                 <li class="relative hover:text-blue-900 hover:bg-orange-100" @click="toggle">
-                    <a class="block py-3 lg:py-7 px-6 border-b-2 border-transparent" href="#services">Our Services</a>
+                    <a class="block py-3 lg:py-7 px-6 border-b-2 border-transparent" href="#ourMission">Our Misssion</a>
                 </li>
 
-                <li class="relative hover:text-blue-900 hover:bg-orange-100" @click="toggle">
+                <!--li class="relative hover:text-blue-900 hover:bg-orange-100" @click="toggle">
                     <a class="block py-3 lg:py-7 px-6 border-b-2 border-transparent" href="#bitcoins">Bitcoin industry</a>
-                </li>
+                </li-->
                 <li class="relative hover:text-blue-900 hover:bg-orange-100" @click="toggle">
                     <a class="block py-3 lg:py-7 px-6 border-b-2 border-transparent" href="{{ route('public.uploadcv')}}">Be a Jini</a>
                 </li>
@@ -153,10 +153,10 @@
                            " Find your genius in  <span class="px-2 pb-1 border-orange-400 hover:border-b-2 cursor-pointer">Bitcoins and other IT</span>  fields.
                         </div>
 
-                        <button type="submit" class="mt-4 md:mt-8 lg:mt-12 py-2.5 px-10 inline-block text-center leading-normal text-gray-100 bg-orange-400  hover:bg-orange-600  hover:text-white hover:ring-0 focus:outline-none focus:ring-0" href="#project">
+                        <a type="submit" class="mt-4 md:mt-8 lg:mt-12 py-2.5 px-10 inline-block text-center leading-normal text-gray-100 bg-orange-400  hover:bg-orange-600  hover:text-white hover:ring-0 focus:outline-none focus:ring-0" href="#contact">
                             <svg xmlns="http://www.w3.org/2000/svg" width="1.5rem" height="1.5rem" class="inline-block mr-1" fill="currentColor" viewBox="0 0 512 512"><rect x="48" y="96" width="416" height="320" rx="40" ry="40" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><polyline points="112 160 256 272 400 160" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/></svg>
-                             Send message
-                          </button>
+                             Contact Us
+                        </a>
                         <!--h3 class="font-bold text-white text-2xl mt-10 md:mt-4 ">
                           We find talent for bitcoin companies in <span class="p-1 transition duration-300 rounded hover:bg-orange-500">Africa</span>
                         </h3-->
@@ -166,7 +166,7 @@
                 </div><!-- end Hero -->
 
                 <!-- Our Story -->
-                <div id="Our Story" class="section relative z-0 py-28 md:pt-32 md:pb-20 bg-gray-50">
+                <div id="ourMission" class="section relative z-0 py-28 md:pt-32 md:pb-20 bg-gray-50">
                     <div class="container xl:max-w-6xl mx-auto px-4">
                       <div class="flex flex-wrap flex-row md:flex-row-reverse -mx-4 justify-center">
                         <!-- content -->
@@ -179,7 +179,7 @@
                           <div class="text-center lg:text-left mt-6 lg:mt-0">
                             <div class="mb-8 lg:pl-10">
                               <h3 class="text-3xl leading-normal text-blue-900 font-bold mb-4 styledtitle">
-                                  Our Story
+                                  Our Mission
                               </h3>
                               <p class="text-blue-900 leading-relaxed font-light text-base mx-auto pb-2 ">
                                 We are expert talent hunters in IT, employability and human resources, united around a common mission: Helping companies find the right profile and enabling young people to get decent jobs.
@@ -243,9 +243,12 @@
                               </p>
                               <!--p class="text-gray-800 leading-relaxed font-light text-base mx-auto pb-2">We are at your service.Our offices are open and our consultants are ready to help with your technical staffing needs during the COVID-19 pandemic. You can reach us quickly at 514-XXX-XXX.</p-->
                             </div>
-                            <div class="flex flex-col md:flex-row gap-2 lg:px-10">
-                              <a class="py-2.5 px-10 inline-block text-center leading-normal text-gray-900 bg-white border-b border-gray-500 hover:text-white hover:ring-0 hover:bg-blue-900 hover:border-blue-50 focus:outline-none focus:ring-0 mr-4 transition duration-300" href="#services">
-                                  <svg xmlns="http://www.w3.org/2000/svg" class="inline-block mr-1" width="1.5rem" height="1.5rem" fill="currentColor" viewBox="0 0 512 512"><path d="M304,384V360c0-29,31.54-56.43,52-76,28.84-27.57,44-64.61,44-108,0-80-63.73-144-144-144A143.6,143.6,0,0,0,112,176c0,41.84,15.81,81.39,44,108,20.35,19.21,52,46.7,52,76v24" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><line x1="224" y1="480" x2="288" y2="480" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><line x1="208" y1="432" x2="304" y2="432" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><line x1="256" y1="384" x2="256" y2="256" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><path d="M294,240s-21.51,16-38,16-38-16-38-16" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/></svg>
+                            <div class="md:flex flex-col md:flex-row gap-2 lg:px-10">
+                              <a class="py-2.5 px-10 inline-block text-center leading-normal text-gray-900 bg-white border-b border-gray-500 hover:text-white hover:ring-0 hover:bg-blue-900 hover:border-blue-50 focus:outline-none focus:ring-0 mr-4 transition duration-300" href="#contact">
+                                  <svg xmlns="http://www.w3.org/2000/svg" class="inline-block mr-1" width="1.5rem" height="1.5rem" fill="currentColor" viewBox="0 0 512 512">
+                                    <path d="M304,384V360c0-29,31.54-56.43,52-76,28.84-27.57,44-64.61,44-108,0-80-63.73-144-144-144A143.6,143.6,0,0,0,112,176c0,41.84,15.81,81.39,44,108,20.35,19.21,52,46.7,52,76v24" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><line x1="224" y1="480" x2="288" y2="480" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/>
+                                        <line x1="208" y1="432" x2="304" y2="432" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><line x1="256" y1="384" x2="256" y2="256" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><path d="M294,240s-21.51,16-38,16-38-16-38-16" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/>
+                                    </svg>
                                   Submit Company
                               </a>
 
@@ -281,10 +284,10 @@
                             <h3 class="text-2xl leading-normal text-blue-900 font-bold mb-4 styledtitle">
                                 Looking for new Oportunity?
                             </h3>
-                            <p class="text-slate-600 leading-relaxed font-light text-base mx-auto pb-2 ">
+                            <!--p class="text-slate-600 leading-relaxed font-light text-base mx-auto pb-2 ">
                                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt nam non velit?
                                 Temporibus cupiditate dicta magni corporis sunt nostrum magnam aspernatur a in qui error sint soluta, doloribus earum eius?
-                              </p>
+                              </p-->
 
                             <p class="text-blue-900 leading-relaxed text-base font-light mx-auto pb-2" style="font-weight: 300">
                               <ul class="">
@@ -300,8 +303,8 @@
                             </p>
                             <!--p class="text-gray-800 leading-relaxed font-light text-base mx-auto pb-2">We are at your service.Our offices are open and our consultants are ready to help with your technical staffing needs during the COVID-19 pandemic. You can reach us quickly at 514-XXX-XXX.</p-->
                           </div>
-                          <div class="flex flex-col md:flex-row gap-2 lg:px-10">
-                            <a class="py-2.5 px-10 inline-block text-center leading-normal text-gray-900 bg-white border-b border-gray-500 hover:text-blue-900 hover:ring-0 hover:bg-blue-100 focus:outline-none focus:ring-0 mr-4" href="{{route('public.uploadcv')}}">
+                          <div class="md:flex flex-col md:flex-row gap-2 lg:px-10">
+                            <a class=" max-w-xs  py-2.5 px-10 inline-block text-center leading-normal text-gray-900 bg-white border-b border-gray-500 hover:text-blue-900 hover:ring-0 hover:bg-blue-100 focus:outline-none focus:ring-0 mr-4" href="{{route('public.uploadcv')}}">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 inline-block mr-1">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5" />
                                   </svg>
@@ -325,7 +328,7 @@
 
 
                  <!-- services Content -->
-                 <div id="services" class="hidden md:block section relative z-0 bg-blue-100 py-20">
+                 <!--div id="services" class="hidden md:block section relative z-0 bg-blue-100 py-20">
                     <div class="py-10">
                         <h2 class="text-center text-3xl font-bold">Social Proof</h2>
                     </div>
@@ -368,7 +371,7 @@
 
                     </div>
 
-                </div><!--  End Content -->
+                </div--><!--  End Content -->
 
 
                 <template>
