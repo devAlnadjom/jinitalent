@@ -218,32 +218,33 @@
                                   For Companies
                               </h3>
                               <p class="text-blue-900 leading-relaxed font-light text-base mx-auto pb-2 ">
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt nam non velit?
-                                Temporibus cupiditate dicta magni corporis sunt nostrum magnam aspernatur a in qui error sint soluta, doloribus earum eius?
                               </p>
 
                               <p class="text-blue-900 leading-relaxed font-light text-base mx-auto pb-2 ">
                                 <ul class="">
-                                  <li class=" px-2 py-1  hover:border-l-white hover:border-l-4 rounded  hover:bg-blue-900 hover:bg-opacity-5 transition-all duration-200">
-                                    - Helping African youth seize job opportunities in bitcoin</li>
+                                  <li class="text-blue-900 px-2 py-1  hover:border-l-white hover:border-l-4 rounded  hover:bg-blue-900 hover:bg-opacity-5 transition-all duration-200">
+                                    - Helping companies find the right profile</li>
 
-                                  <li class=" px-2 py-1 mt-1 hover:border-l-white hover:border-l-4 rounded  hover:bg-blue-900 hover:bg-opacity-5 transition-all duration-200">
-                                    - helping bitcoin companies find their talent in africa
+                                  <li class="text-blue-900 px-2 py-1  hover:border-l-white hover:border-l-4 rounded  hover:bg-blue-900 hover:bg-opacity-5 transition-all duration-200">
+                                    - Covering the recruitment process from A to Z for companies</li>
+
+                                  <li class="text-blue-900 px-2 py-1 mt-1 hover:border-l-white hover:border-l-4 rounded  hover:bg-blue-900 hover:bg-opacity-5 transition-all duration-200">
+                                    - Manage the human resources of companies
                                   </li>
 
-                                  <li class=" px-2 py-1 hover:border-l-white hover:border-l-4 rounded  hover:bg-blue-900 hover:bg-opacity-5 transition-all duration-200">
+                                  <!--li class=" px-2 py-1 hover:border-l-white hover:border-l-4 rounded  hover:bg-blue-900 hover:bg-opacity-5 transition-all duration-200">
                                     - Informing young Africans about job opportunities in bitcoin
                                   </li>
 
                                   <li class=" px-2 py-1 mt-1 hover:border-l-white hover:border-l-4 rounded  hover:bg-blue-900 hover:bg-opacity-5 transition-all duration-200">
                                     - Connecting bitcoin companies with African job seekers
-                                  </li>
+                                  </li-->
                                 </ul>
                               </p>
                               <!--p class="text-gray-800 leading-relaxed font-light text-base mx-auto pb-2">We are at your service.Our offices are open and our consultants are ready to help with your technical staffing needs during the COVID-19 pandemic. You can reach us quickly at 514-XXX-XXX.</p-->
                             </div>
                             <div class="flex flex-col md:flex-row gap-2 lg:px-10">
-                              <a class="py-2.5 px-10 inline-block text-center leading-normal text-gray-900 bg-white border-b border-gray-500 hover:text-blue-900 hover:ring-0 hover:bg-blue-100 focus:outline-none focus:ring-0 mr-4" href="#services">
+                              <a class="py-2.5 px-10 inline-block text-center leading-normal text-gray-900 bg-white border-b border-gray-500 hover:text-white hover:ring-0 hover:bg-blue-900 hover:border-blue-50 focus:outline-none focus:ring-0 mr-4 transition duration-300" href="#services">
                                   <svg xmlns="http://www.w3.org/2000/svg" class="inline-block mr-1" width="1.5rem" height="1.5rem" fill="currentColor" viewBox="0 0 512 512"><path d="M304,384V360c0-29,31.54-56.43,52-76,28.84-27.57,44-64.61,44-108,0-80-63.73-144-144-144A143.6,143.6,0,0,0,112,176c0,41.84,15.81,81.39,44,108,20.35,19.21,52,46.7,52,76v24" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><line x1="224" y1="480" x2="288" y2="480" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><line x1="208" y1="432" x2="304" y2="432" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><line x1="256" y1="384" x2="256" y2="256" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><path d="M294,240s-21.51,16-38,16-38-16-38-16" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/></svg>
                                   Submit Company
                               </a>
@@ -480,7 +481,7 @@
                                 <div class="validate"></div>
                               </div>
                               <div class="text-center">
-                                <button type="submit" class="py-2.5 px-10 inline-block text-center leading-normal text-gray-100 bg-black  hover:bg-orange-600  hover:text-white hover:ring-0 focus:outline-none focus:ring-0" href="#project">
+                                <button type="submit" class="py-2.5 px-10 inline-block text-center border border-blue-900 leading-normal text-blue-900 .bg-black  hover:bg-blue-900  hover:text-white hover:ring-0 focus:outline-none focus:ring-0 rounded" href="#project">
                                       <svg xmlns="http://www.w3.org/2000/svg" width="1.5rem" height="1.5rem" class="inline-block mr-1" fill="currentColor" viewBox="0 0 512 512"><rect x="48" y="96" width="416" height="320" rx="40" ry="40" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><polyline points="112 160 256 272 400 160" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/></svg>
                                        Send message
                                     </button>
@@ -497,35 +498,77 @@
           </main><!-- end main -->
 
           <footer class="bg-gray-50 text-gray-700">
+
+            <div class=" md:flex md:justify-between md:max-w-5xl mx-auto px-4 overflow-hidden md:pt-12">
+                <div class="flex items-center mb-2">
+                    <span class="text-3xl leading-normal mb-2 font-bold text-gray-800 mt-2">JiniTalent</span>
+                    <!-- <img src="src/img-min/logo.png" alt="LOGO"> -->
+                  </div>
+
+                  <div class="flex-shrink max-w-full w-1/2 md:w-1/3 mb-6 lg:mb-0 md:mt-4 text-center">
+                    <h4 class="text-base leading-normal mb-3 uppercase text-gray-800 font-semibold">Resources</h4>
+                    <ul class="inline-flex gap-8">
+                      <li class="py-1 hover:text-gray-900"><a href="mailto:info@jinitalent.com">Contact</a></li>
+                      <li class="py-1 hover:text-gray-900"><a href="{{ route('portal.index') }}">Job Portal</a></li>
+                    </ul>
+                  </div>
+
+
+                  <ul class="space-x-3 mt-6 mb-6 Lg:mb-0">
+                    <!--facebook-->
+                    <li class="inline-block">
+                      <a target="_blank" class="hover:text-gray-800" rel="noopener noreferrer" href="https://www.facebook.com/search/top?q=jinitalent&_ps=1" title="Facebook">
+                        <!-- <i class="fab fa-facebook fa-2x"></i> -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" viewBox="0 0 512 512"><path fill="currentColor" d="M455.27,32H56.73A24.74,24.74,0,0,0,32,56.73V455.27A24.74,24.74,0,0,0,56.73,480H256V304H202.45V240H256V189c0-57.86,40.13-89.36,91.82-89.36,24.73,0,51.33,1.86,57.51,2.68v60.43H364.15c-28.12,0-33.48,13.3-33.48,32.9V240h67l-8.75,64H330.67V480h124.6A24.74,24.74,0,0,0,480,455.27V56.73A24.74,24.74,0,0,0,455.27,32Z"></path></svg>
+                      </a>
+                    </li>
+                    <!--twitter-->
+                    <li class="inline-block">
+                      <a target="_blank" class="hover:text-gray-800" rel="noopener noreferrer" href="https://twitter.com/jinitalent" title="Twitter">
+                        <!-- <i class="fab fa-twitter fa-2x"></i> -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" viewBox="0 0 512 512"><path fill="currentColor" d="M496,109.5a201.8,201.8,0,0,1-56.55,15.3,97.51,97.51,0,0,0,43.33-53.6,197.74,197.74,0,0,1-62.56,23.5A99.14,99.14,0,0,0,348.31,64c-54.42,0-98.46,43.4-98.46,96.9a93.21,93.21,0,0,0,2.54,22.1,280.7,280.7,0,0,1-203-101.3A95.69,95.69,0,0,0,36,130.4C36,164,53.53,193.7,80,211.1A97.5,97.5,0,0,1,35.22,199v1.2c0,47,34,86.1,79,95a100.76,100.76,0,0,1-25.94,3.4,94.38,94.38,0,0,1-18.51-1.8c12.51,38.5,48.92,66.5,92.05,67.3A199.59,199.59,0,0,1,39.5,405.6,203,203,0,0,1,16,404.2,278.68,278.68,0,0,0,166.74,448c181.36,0,280.44-147.7,280.44-275.8,0-4.2-.11-8.4-.31-12.5A198.48,198.48,0,0,0,496,109.5Z"></path></svg>
+                      </a>
+                    </li>
+                    <!--youtube-->
+                    <li class="inline-block">
+                      <a target="_blank" class="hover:text-gray-800" rel="noopener noreferrer" href="https://www.linkedin.com/in/jinitalent/" title="Linkedin">
+                        <!-- <i class="fab fa-youtube fa-2x"></i> -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                      </a>
+                    </li>
+
+                  </ul>
+
+            </div>
             <!--Footer content-->
-            <div id="footer-content" class="relative pt-4 xl:pt-16 pb-6 xl:pb-12">
+            <!--div id="footer-content" class="relative pt-4 xl:pt-16 pb-6 xl:pb-12">
               <div class="container xl:max-w-6xl mx-auto px-4 overflow-hidden">
                 <div class="flex flex-wrap flex-row lg:justify-between -mx-3">
                   <div class="flex-shrink max-w-full w-full lg:w-2/5 px-3 lg:pr-16">
                     <div class="flex items-center mb-2">
                       <span class="text-3xl leading-normal mb-2 font-bold text-gray-800 mt-2">JiniTalent</span>
-                      <!-- <img src="src/img-min/logo.png" alt="LOGO"> -->
+                      <- <img src="src/img-min/logo.png" alt="LOGO"> ->
                     </div>
                     <p>Find your talented genius with us.</p>
                     <ul class="space-x-3 mt-6 mb-6 Lg:mb-0">
-                      <!--facebook-->
+                      <!-facebook->
                       <li class="inline-block">
                         <a target="_blank" class="hover:text-gray-800" rel="noopener noreferrer" href="https://www.facebook.com/search/top?q=jinitalent&_ps=1" title="Facebook">
-                          <!-- <i class="fab fa-facebook fa-2x"></i> -->
+                          <-- <i class="fab fa-facebook fa-2x"></i> ->
                           <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" viewBox="0 0 512 512"><path fill="currentColor" d="M455.27,32H56.73A24.74,24.74,0,0,0,32,56.73V455.27A24.74,24.74,0,0,0,56.73,480H256V304H202.45V240H256V189c0-57.86,40.13-89.36,91.82-89.36,24.73,0,51.33,1.86,57.51,2.68v60.43H364.15c-28.12,0-33.48,13.3-33.48,32.9V240h67l-8.75,64H330.67V480h124.6A24.74,24.74,0,0,0,480,455.27V56.73A24.74,24.74,0,0,0,455.27,32Z"></path></svg>
                         </a>
                       </li>
-                      <!--twitter-->
+                      <!-twitter->
                       <li class="inline-block">
                         <a target="_blank" class="hover:text-gray-800" rel="noopener noreferrer" href="https://twitter.com/jinitalent" title="Twitter">
-                          <!-- <i class="fab fa-twitter fa-2x"></i> -->
+                          <!-- <i class="fab fa-twitter fa-2x"></i> ->
                           <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" viewBox="0 0 512 512"><path fill="currentColor" d="M496,109.5a201.8,201.8,0,0,1-56.55,15.3,97.51,97.51,0,0,0,43.33-53.6,197.74,197.74,0,0,1-62.56,23.5A99.14,99.14,0,0,0,348.31,64c-54.42,0-98.46,43.4-98.46,96.9a93.21,93.21,0,0,0,2.54,22.1,280.7,280.7,0,0,1-203-101.3A95.69,95.69,0,0,0,36,130.4C36,164,53.53,193.7,80,211.1A97.5,97.5,0,0,1,35.22,199v1.2c0,47,34,86.1,79,95a100.76,100.76,0,0,1-25.94,3.4,94.38,94.38,0,0,1-18.51-1.8c12.51,38.5,48.92,66.5,92.05,67.3A199.59,199.59,0,0,1,39.5,405.6,203,203,0,0,1,16,404.2,278.68,278.68,0,0,0,166.74,448c181.36,0,280.44-147.7,280.44-275.8,0-4.2-.11-8.4-.31-12.5A198.48,198.48,0,0,0,496,109.5Z"></path></svg>
                         </a>
                       </li>
-                      <!--youtube-->
+                      <!--youtube->
                       <li class="inline-block">
                         <a target="_blank" class="hover:text-gray-800" rel="noopener noreferrer" href="https://www.linkedin.com/in/jinitalent/" title="Linkedin">
-                          <!-- <i class="fab fa-youtube fa-2x"></i> -->
+                          <!-- <i class="fab fa-youtube fa-2x"></i> ->
                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                         </a>
                       </li>
@@ -546,13 +589,13 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div-->
 
             <!--Start footer copyright-->
             <div class="footer-dark">
               <div class="container xl:max-w-6xl mx-auto px-4 py-2 border-t border-gray-200 border-opacity-10">
                 <div class="row">
-                  <div class="col-12 col-md text-center">
+                  <div class="col-12 col-md text-center border-t">
                     <p class="d-block my-3">Copyright © Jini Talent | by <a href="https://devalnadjom.com" class="hover:text-gray-900">@alnadjom</a></p>
                   </div>
                 </div>
