@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\UploadcvRequest;
 use App\Models\Candidate;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Redirect;
 use Inertia\Inertia;
 use PhpParser\Node\Stmt\TryCatch;
@@ -27,14 +29,24 @@ class CandidateRegisterController extends Controller
         $validated = $request->validated();
         $validated= $request->safe()->except(array('resume'));
 
-        $candidate= Candidate::create($validated);
+        // Create User
+        $user = User::create([
+            'email' => $validated['email'],
+            'password' => Hash::make(time()),
+            'name' => $validated['first_name'],
+        ]);
+
+        // User setRole Candidate
+        // Send mail to reset password
+
+        $candidate = Candidate::create($validated);
 
         if($request->hasFile('resume')){
             try{
                 $file= $request['resume'];
                 $fileName = 'resume-'.time().'.'.$file->getClientOriginalExtension();
                 $path = $file->storeAs('resume', $fileName);
-                $candidate->resume= 'resume/'.$fileName;
+                $candidate->resume = 'resume/'.$fileName;
                 $candidate->save();
             }
             catch(\Exception $e){
