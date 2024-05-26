@@ -26,13 +26,23 @@ class UploadcvRequest extends FormRequest
         return [
                 'first_name' =>'required|string|max:40',
                 'last_name' =>'required|string|max:100',
-                'email' =>'required|email|max:100',
+                'email' =>'required|email|max:100|unique:users',
                 'phone_number' =>'required|string|max:30',
                 'country' =>'required|string|max:40',
                 'city' =>'required|string|max:40',
                 'address' =>'required|string|max:100',
                 'summary' =>'string|max:250',
                 'resume' =>'nullable|file|mimes:pdf|max:5000',
+        ];
+    }
+
+    function messages() {
+        return [
+            'first_name.*' => 'Veuillez fournir un prenom valide.',
+            'last_name.*' => 'Veuillez fournir un nom valide.',
+            'address.*' => 'Veuillez fournir une addresse valide.',
+            'summary.*' => 'Veuillez fournir un titre valide.',
+            'email.unique' => 'Cet email est deja utilisé par un autre membre.'
         ];
     }
 }

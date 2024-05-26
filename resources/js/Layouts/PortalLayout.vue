@@ -55,6 +55,11 @@ const logout = () => {
 
                         <div class="hidden sm:flex sm:items-center sm:ml-6">
 
+                            <div v-if="$page.props.user?.name" class="hidden space-x-6 md:mr-6 sm:-my-px sm:ml-10 sm:flex">
+                                <JetNavLink :href="route('portal.cv.index')" :active="route().current('portal.index')">
+                                    Mon CV
+                                </JetNavLink>
+                            </div>
                             <div class="hidden space-x-8 md:mr-8 sm:-my-px sm:ml-10 sm:flex">
                                 <JetNavLink :href="route('portal.index')" :active="route().current('portal.index')">
                                     Jobs

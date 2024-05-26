@@ -36,4 +36,40 @@ class PortalController extends Controller
             'organization' => $organization,
         ]);
     }
+
+    public function cv_index()
+    {
+        if (!auth()?->id()) {
+            return redirect('login');
+        }
+        //dd($job);
+        return Inertia::render('Portal/CvIndex', [
+            'jobs' => [],
+            'organization' => [],
+        ]);
+    }
+
+    public function cv_education()
+    {
+        if (!auth()?->id()) {
+            return redirect('login');
+        }
+        //dd($job);
+        return Inertia::render('Portal/CvEducation', [
+            'jobs' => [],
+            'organization' => [],
+        ]);
+    }
+
+    public function cv_experience()
+    {
+        if (!auth()?->id()) {
+            return redirect('login');
+        }
+        //dd($job);
+        return Inertia::render('Portal/CvEducation', [
+            'jobs' => [],
+            'organization' => [],
+        ]);
+    }
 }

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\UploadcvRequest;
 use App\Models\Candidate;
 use App\Models\User;
+use Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Redirect;
@@ -34,12 +35,16 @@ class CandidateRegisterController extends Controller
             'email' => $validated['email'],
             'password' => Hash::make(time()),
             'name' => $validated['first_name'],
+            'users_type' => 'CANDIDATE',
         ]);
 
         // User setRole Candidate
         // Send mail to reset password
 
         $candidate = Candidate::create($validated);
+        $candidate->user_id = $user->id;
+        $candidate->save();
+        Auth::login($user);
 
         if($request->hasFile('resume')){
             try{
@@ -54,7 +59,7 @@ class CandidateRegisterController extends Controller
             }
 
         }
-
+        // auth()->user()->sendEmailVerificationNotification();
         return Redirect::route('public.confirmcv',[$candidate->id, sha1("jini".$candidate->id)]);
 
     }

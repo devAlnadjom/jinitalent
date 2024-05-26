@@ -27,6 +27,10 @@ use App\Http\Controllers\UserController;
 Route::view('/', 'welcome');
 
 //Portals Routes
+Route::get('/portal/cv/index', [PortalController::class, 'cv_index'])->name('portal.cv.index');
+Route::get('/portal/cv/experience', [PortalController::class, 'cv_experience'])->name('portal.cv.experience');
+Route::get('/portal/cv/education', [PortalController::class, 'cv_education'])->name('portal.cv.education');
+
 Route::get('/portal/jobs/{job}/info', [PortalController::class, 'show'])->name('portal.show');
 Route::get('/portal/jobs', [PortalController::class, 'index'])->name('portal.index');
 
@@ -45,14 +49,16 @@ Route::get('/welcome', function () {
     ]);
 });
 
+Route::get('/dashboard', function () {
+    return Inertia::render('Dashboard');
+        })->name('dashboard');
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
     'verified','only.admin'
 ])->group(function () {
-    Route::get('/dashboard', function () {
-        return Inertia::render('Dashboard');
-            })->name('dashboard');
+
 
     Route::resource('applications', ApplicationController::class);
     Route::resource('candidates', CandidateController::class);
