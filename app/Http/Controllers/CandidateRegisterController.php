@@ -60,7 +60,8 @@ class CandidateRegisterController extends Controller
 
         }
         // auth()->user()->sendEmailVerificationNotification();
-        return Redirect::route('public.confirmcv',[$candidate->id, sha1("jini".$candidate->id)]);
+        return Redirect::route('portal.cv.index');
+        //return Redirect::route('public.confirmcv',[$candidate->id, sha1("jini".$candidate->id)]);
 
     }
 

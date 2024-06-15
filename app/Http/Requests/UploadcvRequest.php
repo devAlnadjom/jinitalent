@@ -32,6 +32,7 @@ class UploadcvRequest extends FormRequest
                 'city' =>'required|string|max:40',
                 'address' =>'required|string|max:100',
                 'summary' =>'string|max:250',
+                'title' =>'string|max:250',
                 'resume' =>'nullable|file|mimes:pdf|max:5000',
         ];
     }

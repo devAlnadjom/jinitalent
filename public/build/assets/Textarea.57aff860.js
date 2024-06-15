@@ -1,0 +1,2 @@
+import{d as l,o as t,e as n}from"./app.9a0ee57d.js";const u=["value","placeholder"],s={__name:"Textarea",props:{modelValue:String,placeholder:String},emits:["update:modelValue"],setup(e){return l(null),(o,a)=>(t(),n("textarea",{class:"text-gray-900 w-full border-gray-300 focus:border-orange-200 focus:ring focus:ring-orange-100 focus:ring-opacity-50 rounded-md shadow-sm",value:e.modelValue,onInput:a[0]||(a[0]=r=>o.$emit("update:modelValue",r.target.value)),placeholder:e.placeholder||null},`
+    `,40,u))}};export{s as _};

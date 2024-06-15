@@ -27,6 +27,7 @@ const form = useForm({
     country: '',
     city: '',
     address: '',
+    title: '',
     resume: null,
     [props.honeypot.nameFieldName]: '',
     [props.honeypot.validFromFieldName]: props.honeypot.encryptedValidFrom,
@@ -93,7 +94,7 @@ const verificationLinkSent = computed(() => props.status === 'verification-link-
                         <div class="p-4">
                             <h3 class="text-2xl font-semibold mb-2">Informations de base</h3>
                             <hr/>
-                            <p class="text-sm mt-2"> Veuillez remplir ce formulaire pour commencer à la constitutiion de votre CV
+                            <p class="text-sm mt-2"> Veuillez remplir ce formulaire pour commencer à la constitution de votre CV
                             </p>
                         </div>
                     </div>
@@ -157,10 +158,18 @@ const verificationLinkSent = computed(() => props.status === 'verification-link-
                             </div>
 
                             <div class="mt-4">
+                                <JetLabel for="title" value="Votre Activité ou titre actuele" />
+                                <JetInput id="title" v-model="form.title" type="text"
+                                    placeholder="Ex: Etudiant, Ingénieur, En formation..."
+                                    class="mt-1 block w-full" autocomplete="off" />
+                                <JetInputError class="mt-2" :message="form.errors.title" />
+                            </div>
+
+                            <div class="mt-4">
                                 <JetLabel for="sumary" value="Bio" />
                                 <JetText id="sumary" v-model="form.summary" class="mt-1 block w-full text-sm" rows="5"
                                     placehoder="Any Sumamry?..." />
-                                <small class="text-orange-500">Ce texte vous présente brievement.</small>
+                                <small class="text-gray-500">Ce texte vous présente brièvement.</small>
                                 <JetInputError class="mt-2" :message="form.errors.summary" />
                             </div>
 
