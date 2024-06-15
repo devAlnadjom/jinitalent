@@ -31,6 +31,12 @@ Route::get('/portal/cv/index', [PortalController::class, 'cv_index'])->name('por
 Route::get('/portal/cv/experience', [PortalController::class, 'cv_experience'])->name('portal.cv.experience');
 Route::get('/portal/cv/education', [PortalController::class, 'cv_education'])->name('portal.cv.education');
 
+Route::post('/portal/cv/education/add', [PortalController::class, 'saveEducation'])->name('portal.cv.education.add');
+Route::delete('/portal/cv/education/delete/{education}', [PortalController::class, 'deleteEducation'])->name('portal.cv.education.delete');
+
+Route::post('/portal/cv/experience/add', [PortalController::class, 'saveExperience'])->name('portal.cv.experience.add');
+Route::delete('/portal/cv/experience/delete/{experience}', [PortalController::class, 'deleteExperience'])->name('portal.cv.experience.delete');
+
 Route::get('/portal/jobs/{job}/info', [PortalController::class, 'show'])->name('portal.show');
 Route::get('/portal/jobs', [PortalController::class, 'index'])->name('portal.index');
 
@@ -39,6 +45,8 @@ Route::post('/globals/uploadcv', [CandidateRegisterController::class, 'UploadCv'
 
 Route::get('/globals/uploadcv', [CandidateRegisterController::class, 'index'])->name('public.uploadcv');
 Route::get('/globals/confirm/{id}/success/{shakey}', [CandidateRegisterController::class, 'confirmCvSaved'])->name('public.confirmcv');
+
+
 
 Route::get('/welcome', function () {
     return Inertia::render('Welcome', [
@@ -56,7 +64,7 @@ Route::get('/dashboard', function () {
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
-    'verified','only.admin'
+    'verified', /*'only.admin'*/
 ])->group(function () {
 
 

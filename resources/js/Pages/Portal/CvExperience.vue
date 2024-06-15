@@ -1,7 +1,7 @@
 <script setup>
 import { computed, ref, watch } from 'vue';
 import { Inertia } from '@inertiajs/inertia';
-import { Head, Link, useForm, usePage } from '@inertiajs/inertia-vue3';
+import { Head, Link, useForm } from '@inertiajs/inertia-vue3';
 import PortalLayout from '@/Layouts/PortalLayout.vue';
 import dayjs from 'dayjs';
 import relativeTime from 'dayjs/plugin/relativeTime';
@@ -16,9 +16,9 @@ import JetTextarea from '@/Components/Textarea.vue';
 import Submenu from './partials/Submenu.vue';
 
 dayjs.extend(relativeTime);
-const page = usePage()
+
 const props = defineProps({
-    educations: Object,
+    experiences: Object,
     jobs: Object,
     filters: Object,
 });
@@ -35,15 +35,14 @@ const form = useForm({
     description: '',
     date_start: '',
     date_end: null,
-    school: '',
+    company: '',
     address: '',
     country: '',
-    note: '',
 });
 
 const submitForm = () => {
 
-    form.post(route('portal.cv.education.add'), {
+    form.post(route('portal.cv.experience.add'), {
         // preserveState: false,
         onError: (e) => (console.error(e)),
         onSuccess: () => {
@@ -56,7 +55,7 @@ const submitForm = () => {
 const deleteItem = (id) => {
     if( !confirm( "Voulez vous supprimer cette ligne?")) return;
 
-    Inertia.delete(route('portal.cv.education.delete', id), {
+    Inertia.delete(route('portal.cv.experience.delete', id), {
         onSuccess: (e) => { console.log(e)},
         onError: (e) => { console.error(e)},
     })
@@ -67,51 +66,51 @@ const deleteItem = (id) => {
 <template>
     <PortalLayout title="Portal">
         <template #header>
-            <submenu label="Formations & Educations" btn-label="Ajouter" @add-new="addNewShow"/>
+            <submenu label="Experiences Profressionnels" btn-label="Ajouter" @add-new="addNewShow"/>
         </template>
 
         <div class="py-12">
 
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 rounded bg-white pt-4 mb-8">
-                <h3 class="font-semibold text-gray-800 leading-tight mb-2">Ajouter une nouvelle éducation</h3>
+                <h3 class="font-semibold text-gray-800 leading-tight mb-2">Ajouter une nouvelle experience</h3>
                 <hr />
-                <div class="mt-4 py-4 pt-0" v-show="showForm">
+                <div class="mt-4 py-4" v-show="showForm">
                     <form  @submit.prevent="submitForm" >
                                 <div class="overflow-hidden .shadow sm:rounded-md">
-                                    <div class="bg-white px-4 pb-4 pt-0 sm:p-6">
+                                    <div class="bg-white px-4 py-5 sm:p-6">
                                         <div class="grid grid-cols-6 gap-6">
                                             <div class="col-span-2 sm:col-span-3">
-                                                <JetLabel for="code" value="Titre/Diplome" />
+                                                <JetLabel for="code" value="Intitulé du poste" />
                                                 <JetInput id="code" v-model="form.title" type="text"
                                                     class="mt-1 block w-full"
-                                                    placeholder="Ex: Master Ingénieur Systeme"
+                                                    placeholder="Ex:Ingénieur Systeme"
                                                     />
                                                 <JetInputError :message="form.errors.title" class="mt-2" />
                                             </div>
 
                                             <div class="col-span-4 sm:col-span-3">
-                                                <JetLabel for="school" value="Nom de l'ecole" />
-                                                <JetInput id="school" v-model="form.school" type="text"
+                                                <JetLabel for="company" value="Nom de la conpagnie/ Entreprise" />
+                                                <JetInput id="company" v-model="form.company" type="text"
                                                     class="mt-1 block w-full" autocomplete="off"
-                                                    placeholder="EX: Ecole Nationnale ..." />
-                                                <JetInputError :message="form.errors.school" class="mt-2" />
+                                                    placeholder="EX: Nom d'entreprise" />
+                                                <JetInputError :message="form.errors.company" class="mt-2" />
                                             </div>
 
 
                                             <div class="col-span-6 mb-6">
-                                                <JetLabel for="description" value="Job Description" class="mb-2"/>
+                                                <JetLabel for="description" value="Expliquer votre role" class="mb-2"/>
                                                 <!--QuillEditor theme="snow"  v-model:content="form.description" ref="moneditor" /-->
                                                 <JetTextarea name="description" id="description"  rows="6" v-model="form.description" placeholder="Parlez nous de votre diplome ou votre parcours..." />
                                                 <JetInputError :message="form.errors.description" class="mt-2" />
                                             </div>
 
                                             <div class="col-span-6 sm:col-span-3 lg:col-span-2">
-                                                <JetLabel for="orange-toggle" value="Concernant cet étude?" />
+                                                <JetLabel for="orange-toggle" value="A propos de cet emploi?" />
 
                                                 <label for="orange-toggle" class="inline-flex relative items-center mr-5 mt-2 cursor-pointer">
                                                     <input type="checkbox" v-model="showDateEnd" id="orange-toggle" class="sr-only peer" >
                                                     <div class="w-11 h-6 bg-gray-200 rounded-full peer dark:bg-gray-700 peer-focus:ring-4 peer-focus:ring-orange-300 dark:peer-focus:ring-orange-800 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-orange-500"></div>
-                                                    <span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">Êtes vous toujours entrain d'etudier?</span>
+                                                    <span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">Travaillez vous toujours là?</span>
                                                 </label>
 
                                                 <JetInputError :message="form.errors.public" class="mt-2" />
@@ -143,7 +142,7 @@ const deleteItem = (id) => {
                                             <div class="col-span-6 sm:col-span-6 lg:col-span-2">
                                                 <JetLabel for="location" value="Addresse" />
                                                 <JetInput id="location" v-model="form.address" type="text"
-                                                    class="mt-1 block w-full" placeholder="EX: City, Country" />
+                                                    class="mt-1 block w-full" placeholder="EX: Ville pays" />
                                                 <JetInputError :message="form.errors.address" class="mt-2" />
                                             </div>
 
@@ -175,17 +174,25 @@ const deleteItem = (id) => {
             </div>
 
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 rounded bg-white pt-4">
-                <h3 class="font-semibold text-gray-800 leading-tight mb-2">List des Educations</h3>
+                <div class="flex justify-between">
+                    <h3 class="font-semibold text-gray-800 leading-tight mb-2">Liste des Experience</h3>
+                    <h3 class=" text-gray-800 leading-tight mb-2">
+                        Total {{ props.experiences?.length || 0 }}
+                    </h3>
+
+                </div>
+
                 <hr />
 
                 <ul role="list" class="divide-y divide-gray-100" >
                     <li class="flex justify-between gap-x-6 py-4 px-1 hover:bg-gray-50"
-                        v-for="(item, index) in props.educations" :key="index"
+                        v-for="(item, index) in props.experiences" :key="index"
                     >
                         <div class="flex min-w-0 gap-x-4">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 h-12 w-12 flex-none rounded-full bg-gray-50">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
-                            </svg>
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0ZM3.75 12h.007v.008H3.75V12Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm-.375 5.25h.007v.008H3.75v-.008Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                        </svg>
+
                         <div class="min-w-0 flex-auto">
                             <p class="text-sm font-semibold leading-6 text-gray-900"> {{ item.title }}</p>
                             <p class="mt-1 truncate text-xs leading-5 text-gray-500">
