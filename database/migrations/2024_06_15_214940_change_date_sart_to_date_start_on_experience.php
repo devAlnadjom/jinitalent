@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::table('experiences', function (Blueprint $table) {
-            $table->renameColumn('date_sart', 'date_start');
+            $table->date('date_start')->nullable();
         });
     }
 
@@ -26,7 +26,7 @@ return new class extends Migration
     public function down()
     {
         Schema::table('experiences', function (Blueprint $table) {
-            $table->renameColumn('date_start', 'date_sart');
+            $table->date('date_start')->nullable();
         });
     }
 };

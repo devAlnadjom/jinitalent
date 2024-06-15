@@ -14,7 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::table('education', function (Blueprint $table) {
-            $table->renameColumn('date_sart', 'date_start');
+            // $table->renameColumn('date_sart', 'date_start');
+            $table->date('date_start')->nullable();
         });
     }
 
@@ -26,7 +27,8 @@ return new class extends Migration
     public function down()
     {
         Schema::table('education', function (Blueprint $table) {
-            $table->renameColumn('date_start', 'date_sart');
+            //$table->renameColumn('date_start', 'date_sart');
+            $table->dropColumn('date_start');
         });
     }
 };
