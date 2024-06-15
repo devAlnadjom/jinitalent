@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}" />
         <meta name="google-site-verification" content="Fvxek13UxYMyU6SIIssxirdTcrpS-rfoQQRqe9u-q3o" />
-        <title >JiniTalent - Find your talented genius with us.</title>
+        <title >JiniTalent - Evoluez vers le marché nord americain.</title>
         <meta name="description" content="At JiniTalent we specialize in the recruitment and placement of qualified technical personnel"/>
 
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -74,22 +74,19 @@
                     <!-- nav menu -->
                     <ul class="navbar bg-white lg:bg-transparent w-full hidden text-center lg:text-left lg:flex lg:flex-row text-gray-900 text-sm items-center font-bold">
                         <li class="relative hover:text-blue-900 border-blue-900 hover:border-b-2 transition-all duration-200 ">
-                            <a class="active block py-3 lg:py-7 px-6 border-b-2 border-transparent" href="#hero">Home</a>
+                            <a class="active block py-3 lg:py-7 px-6 border-b-2 border-transparent" href="#hero">Accueil</a>
                         </li>
 
                         <li class="relative hover:text-blue-900 border-blue-900 hover:border-b-2 transition-all duration-200">
-                            <a class="block py-3 lg:py-7 px-6 border-b-2 border-transparent" href="#ourMission">Our Mission</a>
+                            <a class="block py-3 lg:py-7 px-6 border-b-2 border-transparent" href="#ourMission">Notre mission</a>
                         </li>
 
-                        <li class="relative hover:text-blue-900 border-blue-900 hover:border-b-2 transition-all duration-200">
-                            <a class="block py-3 lg:py-7 px-6 border-b-2 border-transparent" href="#bitcoins">Bitcoin Industry</a>
-                        </li>
                         <li class="relative hover:text-blue-900 border-blue-900 hover:border-b-2 transition-all duration-200">
                             <a class="block py-3 lg:py-7 px-6 border-b-2 border-transparent" href="{{ route('public.uploadcv')}}" title="Spontaneous Application">Be a Jini</a>
                         </li>
-                        <li class="relative hover:text-blue-900 border-blue-900 hover:border-b-2 transition-all duration-200">
+                        <!--li class="relative hover:text-blue-900 border-blue-900 hover:border-b-2 transition-all duration-200">
                             <a class="block py-3 lg:py-7 px-6 border-b-2 border-transparent" href="{{ route('public.uploadcv')}}">Find Your Jini</a>
-                        </li>
+                        </li-->
                         <!--li class="relative hover:text-blue-900 border-blue-900 hover:border-b-2 transition-all duration-200">
                             <a class="block py-3 lg:py-7 px-6 border-b-2 border-transparent" href="#whyus">Why Us?</a>
                         </li-->
@@ -112,11 +109,11 @@
                 <!-- nav menu -->
                 <ul class="navbar bg-white lg:bg-transparent w-full text-center text-gray-900 text-lg items-center font-bold">
                 <li class="relative hover:text-blue-900 hover:bg-orange-100" @click="toggle">
-                    <a class="active block py-3 lg:py-7 px-6 border-b-2 border-transparent" href="#hero">Home</a>
+                    <a class="active block py-3 lg:py-7 px-6 border-b-2 border-transparent" href="#hero">Accueil</a>
                 </li>
 
                 <li class="relative hover:text-blue-900 hover:bg-orange-100" @click="toggle">
-                    <a class="block py-3 lg:py-7 px-6 border-b-2 border-transparent" href="#ourMission">Our Misssion</a>
+                    <a class="block py-3 lg:py-7 px-6 border-b-2 border-transparent" href="#ourMission">Notre Mission</a>
                 </li>
 
                 <!--li class="relative hover:text-blue-900 hover:bg-orange-100" @click="toggle">
@@ -125,10 +122,6 @@
                 <li class="relative hover:text-blue-900 hover:bg-orange-100" @click="toggle">
                     <a class="block py-3 lg:py-7 px-6 border-b-2 border-transparent" href="{{ route('public.uploadcv')}}">Be a Jini</a>
                 </li>
-                <li class="relative hover:text-blue-900 hover:bg-orange-100" @click="toggle">
-                    <a class="block py-3 lg:py-7 px-6 border-b-2 border-transparent" href="{{ route('public.uploadcv')}}">Find Your Jini</a>
-                </li>
-
 
                 <li class="relative hover:text-blue-900 hover:bg-orange-100" @click="toggle">
                     <a class="block py-3 lg:py-7 px-6 border-b-2 border-transparent" href="#contact">Contact</a>
@@ -147,15 +140,18 @@
                   <div class="py-32  md:pt-32 md:pb-20 md:min-h-screen bg-black bg-opacity-50 flex items-center justify-center align-middle">
                     <div class="container max-w-full text-center px-10 w-full lg:w-6xl min-h-min h-full my-auto self-center place-items-center mx-auto" >
                         <h1 class="font-extrabold text-3xl lg:text-5xl text-white leading-normal lg:leading-relaxed py-4 ">
-                          SPECIALIST IN THE RECRUITMENT OF <span>IT</span> TALENTS
+                          CONSEILERS EN RECRUTEMENT  <span> NORD AMERICAINS</span>
                         </h1>
                         <div class="font-bold text-white text-2xl mt-10 md:mt-4 ">
-                           " Find your genius in  <span class="px-2 pb-1 border-orange-400 hover:border-b-2 cursor-pointer">Bitcoins and other IT</span>  fields.
+                           "Maximiser vos chances <span class="px-2 pb-1 border-orange-400 hover:border-b-2 cursor-pointer"> avec des CV et des Conseils aux normes</span>  Canadiennes."
                         </div>
 
-                        <a type="submit" class="mt-4 md:mt-8 lg:mt-12 py-2.5 px-10 inline-block text-center leading-normal text-gray-100 bg-orange-400  hover:bg-orange-600  hover:text-white hover:ring-0 focus:outline-none focus:ring-0" href="#contact">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="1.5rem" height="1.5rem" class="inline-block mr-1" fill="currentColor" viewBox="0 0 512 512"><rect x="48" y="96" width="416" height="320" rx="40" ry="40" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><polyline points="112 160 256 272 400 160" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/></svg>
-                             Contact Us
+                        <a type="submit" class="mt-4 md:mt-8 lg:mt-12 py-2.5 px-10 inline-block text-center leading-normal text-gray-100 bg-orange-400  hover:bg-orange-600  hover:text-white hover:ring-0 focus:outline-none focus:ring-0" href="{{ route('public.uploadcv')}}">
+                            <!--svg xmlns="http://www.w3.org/2000/svg" width="1.5rem" height="1.5rem" class="inline-block mr-1" fill="currentColor" viewBox="0 0 512 512">
+                                <rect x="48" y="96" width="416" height="320" rx="40" ry="40" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/>
+                                <polyline points="112 160 256 272 400 160" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/>
+                            </svg-->
+                             Commencer maintenant
                         </a>
                         <!--h3 class="font-bold text-white text-2xl mt-10 md:mt-4 ">
                           We find talent for bitcoin companies in <span class="p-1 transition duration-300 rounded hover:bg-orange-500">Africa</span>
@@ -179,7 +175,7 @@
                           <div class="text-center lg:text-left mt-6 lg:mt-0">
                             <div class="mb-8 lg:pl-10">
                               <h3 class="text-3xl leading-normal text-blue-900 font-bold mb-4 styledtitle">
-                                  Our Mission
+                                  Notre Mission
                               </h3>
                               <p class="text-blue-900 leading-relaxed font-light text-base mx-auto pb-2 ">
                                 We are expert talent hunters in IT, employability and human resources, united around a common mission: Helping companies find the right profile and enabling young people to get decent jobs.
@@ -215,7 +211,7 @@
                           <div class="text-center lg:text-left mt-6 lg:mt-0">
                             <div class="mb-12 lg:pl-10">
                               <h3 class="text-3xl leading-normal text-blue-900 font-bold mb-4" style="font-family:niramit ,Lato">
-                                  For Companies
+                                  Pour des entreprises
                               </h3>
                               <p class="text-blue-900 leading-relaxed font-light text-base mx-auto pb-2 ">
                               </p>
@@ -223,13 +219,13 @@
                               <p class="text-blue-900 leading-relaxed font-light text-base mx-auto pb-2 ">
                                 <ul class="">
                                   <li class="text-blue-900 px-2 py-1  hover:border-l-white hover:border-l-4 rounded  hover:bg-blue-900 hover:bg-opacity-5 transition-all duration-200">
-                                    - Helping companies find the right profile</li>
+                                    - Trouvez les meilleurs candidats</li>
 
                                   <li class="text-blue-900 px-2 py-1  hover:border-l-white hover:border-l-4 rounded  hover:bg-blue-900 hover:bg-opacity-5 transition-all duration-200">
-                                    - Covering the recruitment process from A to Z for companies</li>
+                                    - Profitez d'une liste des talents pré-selectionés</li>
 
                                   <li class="text-blue-900 px-2 py-1 mt-1 hover:border-l-white hover:border-l-4 rounded  hover:bg-blue-900 hover:bg-opacity-5 transition-all duration-200">
-                                    - Manage the human resources of companies
+                                    - La garantie du meilleur choix
                                   </li>
 
                                   <!--li class=" px-2 py-1 hover:border-l-white hover:border-l-4 rounded  hover:bg-blue-900 hover:bg-opacity-5 transition-all duration-200">
@@ -244,13 +240,13 @@
                               <!--p class="text-gray-800 leading-relaxed font-light text-base mx-auto pb-2">We are at your service.Our offices are open and our consultants are ready to help with your technical staffing needs during the COVID-19 pandemic. You can reach us quickly at 514-XXX-XXX.</p-->
                             </div>
                             <div class="md:flex flex-col md:flex-row gap-2 lg:px-10">
-                              <a class="py-2.5 px-10 inline-block text-center leading-normal text-gray-900 bg-white border-b border-gray-500 hover:text-white hover:ring-0 hover:bg-blue-900 hover:border-blue-50 focus:outline-none focus:ring-0 mr-4 transition duration-300" href="#contact">
+                              {{-- <a class="py-2.5 px-10 inline-block text-center leading-normal text-gray-900 bg-white border-b border-gray-500 hover:text-white hover:ring-0 hover:bg-blue-900 hover:border-blue-50 focus:outline-none focus:ring-0 mr-4 transition duration-300" href="#contact">
                                   <svg xmlns="http://www.w3.org/2000/svg" class="inline-block mr-1" width="1.5rem" height="1.5rem" fill="currentColor" viewBox="0 0 512 512">
                                     <path d="M304,384V360c0-29,31.54-56.43,52-76,28.84-27.57,44-64.61,44-108,0-80-63.73-144-144-144A143.6,143.6,0,0,0,112,176c0,41.84,15.81,81.39,44,108,20.35,19.21,52,46.7,52,76v24" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><line x1="224" y1="480" x2="288" y2="480" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/>
                                         <line x1="208" y1="432" x2="304" y2="432" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><line x1="256" y1="384" x2="256" y2="256" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><path d="M294,240s-21.51,16-38,16-38-16-38-16" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/>
                                     </svg>
                                   Submit Company
-                              </a>
+                              </a> --}}
 
                               <!--a class="py-2.5 px-10 inline-block text-center leading-normal text-gray-100 bg-orange-600  border-b border-orange-800 hover:bg-orange-500 hover:text-white hover:ring-0 focus:outline-none focus:ring-0" href="{{route('public.uploadcv')}}"  title="Spontaneous Application">
                                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 inline-block mr-1">
@@ -282,22 +278,17 @@
                         <div class="text-center lg:text-left mt-6 lg:mt-0">
                           <div class="mb-12 lg:pl-10">
                             <h3 class="text-2xl leading-normal text-blue-900 font-bold mb-4 styledtitle">
-                                Looking for new Oportunity?
+                                Vous recherchez un nouveau défi pour le Canada?
                             </h3>
-                            <!--p class="text-slate-600 leading-relaxed font-light text-base mx-auto pb-2 ">
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt nam non velit?
-                                Temporibus cupiditate dicta magni corporis sunt nostrum magnam aspernatur a in qui error sint soluta, doloribus earum eius?
-                              </p-->
 
                             <p class="text-blue-900 leading-relaxed text-base font-light mx-auto pb-2" style="font-weight: 300">
                               <ul class="">
                                 <li class=" px-2 py-1 hover:border-l-white hover:border-l-4 rounded  hover:bg-blue-900 hover:bg-opacity-5 transition-all duration-200">
-                                  - Helping African youth seize job opportunities in bitcoin</li>
-
-
+                                  - Des conseils d'expert pour maximiser vos chances
+                                </li>
 
                                 <li class=" px-2 py-1 hover:border-l-white hover:border-l-4 rounded  hover:bg-blue-900 hover:bg-opacity-5 transition-all duration-200">
-                                  - Informing young Africans about job opportunities in bitcoin
+                                  - Un CV au format canadien revu par des experts
                                 </li>
                               </ul>
                             </p>
@@ -308,7 +299,7 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 inline-block mr-1">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5" />
                                   </svg>
-                                Upload Your Cv
+                                Créer un compte
                             </a>
 
                             <!--a class="py-2.5 px-10 inline-block text-center leading-normal text-gray-100 bg-orange-600  border-b border-orange-800 hover:bg-orange-500 hover:text-white hover:ring-0 focus:outline-none focus:ring-0" href="{{route('public.uploadcv')}}"  title="Spontaneous Application">
@@ -325,53 +316,6 @@
                     </div>
                   </div>
                 </div><!-- end Hero -->
-
-
-                 <!-- services Content -->
-                 <!--div id="services" class="hidden md:block section relative z-0 bg-blue-100 py-20">
-                    <div class="py-10">
-                        <h2 class="text-center text-3xl font-bold">Social Proof</h2>
-                    </div>
-
-                    <div class=" md:flex flex-row  ">
-
-                        <div class=" big-blue-900 md:w-2/5 md:min-h-96 px-10 py-10  lg:w-1/2 md:py-12 md:px-4 lg:px-8 lg:pl-32 md:pl-24 items-center">
-                            <div class="flex items-center">
-                                <div class="w-16 p-2 bg-blue-200 rounded-full">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12  rounded-full">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
-                                      </svg>
-                                </div>
-                                <h3 class="ml-4 text-3xl md:text-4xl font-bold text-slate-800 items-center">
-                                    Headhunting
-                                </h3>
-                            </div>
-                            <div class="text-slate-400 text-lg mt-6 md:mt-10">
-                                We’ve placed candidates in technology companies across North America, and often cross-hire across industries and subindustries, especially in the field of technology.
-                                 We cast a wide net to different types of companies to find just the right talent and personality that your business requires. </div>
-                        </div>
-
-                        <div class="flex-1 big-blue-900  md:min-h-96 px-10 py-10  lg:w-1/2 md:py-12 md:px-4 lg:px-8 lg:pl-32 md:pl-24 items-center">
-                            <div class="flex items-center">
-                                <div class="w-16 p-2 bg-blue-200 rounded-full">
-                                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z" />
-                                      </svg>
-                                </div>
-                                <h3 class="ml-4 text-3xl md:text-4xl font-bold text-slate-800 items-center">
-                                    Consulting
-                                </h3>
-                            </div>
-
-                            <div class="text-slate-400 text-lg mt-6 md:mt-10">
-
-                            </div>
-                        </div>
-
-
-                    </div>
-
-                </div--><!--  End Content -->
 
 
                 <template>
@@ -438,9 +382,9 @@
                             <!-- section header -->
                             <header class="text-center mx-auto mb-10 lg:px-20">
                                 <h3 class="styledtitle text-3xl md:text-3xl font-bold text-blue-800">
-                                    Contact Us
+                                    Nous contacter
                                 </h3>
-                              <p class="text-gray-600 leading-relaxed font-light text-xl mx-auto pb-2">Have questions about service, please contact us.</p>
+                              <p class="text-gray-600 leading-relaxed font-light text-xl mx-auto pb-2">Une question? laissez nous un message.</p>
                             </header><!-- end section header -->
 
                             <!-- contact form -->
@@ -463,18 +407,18 @@
                                 @honeypot
                               <div class="flex flex-wrap flex-row -mx-4">
                                 <div class="flex-shrink w-full max-w-full md:w-1/2 px-4 mb-6">
-                                  <label class="inline-block mb-2" for="name">Your Name</label>
+                                  <label class="inline-block mb-2" for="name">Votre Nom</label>
                                   <input type="text" name="name" value="{{ old('name') }}" class="w-full leading-5 relative py-3 px-5 rounded text-gray-800 bg-white border-b border-gray-300 overflow-x-auto focus:outline-none focus:border-gray-400 focus:ring-0 dark:text-gray-400 dark:bg-gray-700 dark:border-gray-700 dark:focus:border-gray-600" id="name">
                                   <div class="validate"></div>
                                 </div>
                                 <div class="flex-shrink w-full max-w-full md:w-1/2 px-4 mb-6">
-                                  <label class="inline-block mb-2" for="email">Your Email</label>
+                                  <label class="inline-block mb-2" for="email">Votre Email</label>
                                   <input type="email" name="email" value="{{ old('email') }}" class="w-full leading-5 relative py-3 px-5 rounded text-gray-800 bg-white border-b border-gray-300 overflow-x-auto focus:outline-none focus:border-gray-400 focus:ring-0 dark:text-gray-400 dark:bg-gray-700 dark:border-gray-700 dark:focus:border-gray-600"  id="email">
                                   <div class="validate"></div>
                                 </div>
                               </div>
                               <div class="mb-6">
-                                <label class="inline-block mb-2" for="subject">Subject</label>
+                                <label class="inline-block mb-2" for="subject">A Propos de?</label>
                                 <input type="text" value="{{ old('subject') }}" class="w-full leading-5 relative py-3 px-5 rounded text-gray-800 bg-white border-b border-gray-300 overflow-x-auto focus:outline-none focus:border-gray-400 focus:ring-0 dark:text-gray-400 dark:bg-gray-700 dark:border-gray-700 dark:focus:border-gray-600" name="subject" id="subject">
                                 <div class="validate"></div>
                               </div>
@@ -486,7 +430,7 @@
                               <div class="text-center">
                                 <button type="submit" class="py-2.5 px-10 inline-block text-center border border-blue-900 leading-normal text-blue-900 .bg-black  hover:bg-blue-900  hover:text-white hover:ring-0 focus:outline-none focus:ring-0 rounded" href="#project">
                                       <svg xmlns="http://www.w3.org/2000/svg" width="1.5rem" height="1.5rem" class="inline-block mr-1" fill="currentColor" viewBox="0 0 512 512"><rect x="48" y="96" width="416" height="320" rx="40" ry="40" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><polyline points="112 160 256 272 400 160" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/></svg>
-                                       Send message
+                                       Envoyer
                                     </button>
                               </div>
                             </form><!-- end contact form -->
